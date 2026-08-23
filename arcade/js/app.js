@@ -202,3 +202,21 @@ document.addEventListener("DOMContentLoaded", () => {
         // window.location.reload(); 
     });
 });
+
+
+// Auto Fullscreen on Rotation
+const mql = window.matchMedia("(orientation: landscape)");
+mql.addEventListener("change", (e) => {
+    try {
+        if (e.matches) {
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) { elem.requestFullscreen().catch(err=>{}); }
+            else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); }
+        } else {
+            if (document.exitFullscreen) { document.exitFullscreen().catch(err=>{}); }
+            else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
+        }
+    } catch(err) {
+        console.log("Fullscreen blocked by browser policy");
+    }
+});
