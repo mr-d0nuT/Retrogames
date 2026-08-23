@@ -117,7 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <img src="${game.cover}" alt="${game.title}" loading="lazy" onerror="this.src='${fallbackImage}'">
                     <div class="overlay"></div>
                     <div class="game-info">
-                        <div class="game-title">${game.title}</div>
+                        <div class="game-title-container">
+                            <div class="game-title">${game.title}</div>
+                        </div>
                     </div>
                 </div>
             `;
