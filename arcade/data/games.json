@@ -1,1 +1,302 @@
-[]
+[
+  {
+    "id": "mslug",
+    "title": "Metal Slug",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/mslug.zip",
+    "cover": "assets/covers/mslug.png"
+  },
+  {
+    "id": "mslug2",
+    "title": "Metal Slug 2",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/mslug2.zip",
+    "cover": "assets/covers/mslug2.png"
+  },
+  {
+    "id": "mslugx",
+    "title": "Metal Slug X",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/mslugx.zip",
+    "cover": "assets/covers/mslugx.png"
+  },
+  {
+    "id": "mslug3",
+    "title": "Metal Slug 3",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/mslug3.zip",
+    "cover": "assets/covers/mslug3.png"
+  },
+  {
+    "id": "sf2",
+    "title": "Street Fighter II: The World Warrior",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/sf2.zip",
+    "cover": "assets/covers/sf2.png"
+  },
+  {
+    "id": "sf2ce",
+    "title": "Street Fighter II' - Champion Edition",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/sf2ce.zip",
+    "cover": "assets/covers/sf2ce.png"
+  },
+  {
+    "id": "ssf2t",
+    "title": "Super Street Fighter II Turbo",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/ssf2t.zip",
+    "cover": "assets/covers/ssf2t.png"
+  },
+  {
+    "id": "pacman",
+    "title": "Pac-Man",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/pacman.zip",
+    "cover": "assets/covers/pacman.png"
+  },
+  {
+    "id": "mspacman",
+    "title": "Ms. Pac-Man",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/mspacman.zip",
+    "cover": "assets/covers/mspacman.png"
+  },
+  {
+    "id": "dkong",
+    "title": "Donkey Kong",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/dkong.zip",
+    "cover": "assets/covers/dkong.png"
+  },
+  {
+    "id": "galaga",
+    "title": "Galaga",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/galaga.zip",
+    "cover": "assets/covers/galaga.png"
+  },
+  {
+    "id": "tmnt",
+    "title": "Teenage Mutant Ninja Turtles",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/tmnt.zip",
+    "cover": "assets/covers/tmnt.png"
+  },
+  {
+    "id": "tmnt2",
+    "title": "Teenage Mutant Ninja Turtles - Turtles in Time",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/tmnt2.zip",
+    "cover": "assets/covers/tmnt2.png"
+  },
+  {
+    "id": "simpsons",
+    "title": "The Simpsons",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/simpsons.zip",
+    "cover": "assets/covers/simpsons.png"
+  },
+  {
+    "id": "xmen",
+    "title": "X-Men",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/xmen.zip",
+    "cover": "assets/covers/xmen.png"
+  },
+  {
+    "id": "avsp",
+    "title": "Alien vs. Predator",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/avsp.zip",
+    "cover": "assets/covers/avsp.png"
+  },
+  {
+    "id": "dino",
+    "title": "Cadillacs and Dinosaurs",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/dino.zip",
+    "cover": "assets/covers/dino.png"
+  },
+  {
+    "id": "ffight",
+    "title": "Final Fight",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/ffight.zip",
+    "cover": "assets/covers/ffight.png"
+  },
+  {
+    "id": "punisher",
+    "title": "The Punisher",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/punisher.zip",
+    "cover": "assets/covers/punisher.png"
+  },
+  {
+    "id": "captcomm",
+    "title": "Captain Commando",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/captcomm.zip",
+    "cover": "assets/covers/captcomm.png"
+  },
+  {
+    "id": "kof97",
+    "title": "The King of Fighters '97",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/kof97.zip",
+    "cover": "assets/covers/kof97.png"
+  },
+  {
+    "id": "kof98",
+    "title": "The King of Fighters '98",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/kof98.zip",
+    "cover": "assets/covers/kof98.png"
+  },
+  {
+    "id": "kof2002",
+    "title": "The King of Fighters 2002",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/kof2002.zip",
+    "cover": "assets/covers/kof2002.png"
+  },
+  {
+    "id": "samsho",
+    "title": "Samurai Shodown",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/samsho.zip",
+    "cover": "assets/covers/samsho.png"
+  },
+  {
+    "id": "samsho2",
+    "title": "Samurai Shodown II",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/samsho2.zip",
+    "cover": "assets/covers/samsho2.png"
+  },
+  {
+    "id": "garou",
+    "title": "Garou: Mark of the Wolves",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/garou.zip",
+    "cover": "assets/covers/garou.png"
+  },
+  {
+    "id": "fatfury2",
+    "title": "Fatal Fury 2",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/fatfury2.zip",
+    "cover": "assets/covers/fatfury2.png"
+  },
+  {
+    "id": "marvelvs",
+    "title": "Marvel vs. Capcom: Clash of Super Heroes",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/marvelvs.zip",
+    "cover": "assets/covers/marvelvs.png"
+  },
+  {
+    "id": "xmvsf",
+    "title": "X-Men vs. Street Fighter",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/xmvsf.zip",
+    "cover": "assets/covers/xmvsf.png"
+  },
+  {
+    "id": "mk",
+    "title": "Mortal Kombat",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/mk.zip",
+    "cover": "assets/covers/mk.png"
+  },
+  {
+    "id": "mk2",
+    "title": "Mortal Kombat II",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/mk2.zip",
+    "cover": "assets/covers/mk2.png"
+  },
+  {
+    "id": "umk3",
+    "title": "Ultimate Mortal Kombat 3",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/umk3.zip",
+    "cover": "assets/covers/umk3.png"
+  },
+  {
+    "id": "nbajam",
+    "title": "NBA Jam",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/nbajam.zip",
+    "cover": "assets/covers/nbajam.png"
+  },
+  {
+    "id": "nbajamte",
+    "title": "NBA Jam TE",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/nbajamte.zip",
+    "cover": "assets/covers/nbajamte.png"
+  },
+  {
+    "id": "pang",
+    "title": "Pang",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/pang.zip",
+    "cover": "assets/covers/pang.png"
+  },
+  {
+    "id": "spang",
+    "title": "Super Pang",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/spang.zip",
+    "cover": "assets/covers/spang.png"
+  },
+  {
+    "id": "snowbros",
+    "title": "Snow Bros.",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/snowbros.zip",
+    "cover": "assets/covers/snowbros.png"
+  },
+  {
+    "id": "tumblep",
+    "title": "Tumble Pop",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/tumblep.zip",
+    "cover": "assets/covers/tumblep.png"
+  },
+  {
+    "id": "bublbobl",
+    "title": "Bubble Bobble",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/bublbobl.zip",
+    "cover": "assets/covers/bublbobl.png"
+  },
+  {
+    "id": "outrun",
+    "title": "Out Run",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/outrun.zip",
+    "cover": "assets/covers/outrun.png"
+  },
+  {
+    "id": "sgunner",
+    "title": "Sunset Riders",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/sgunner.zip",
+    "cover": "assets/covers/sgunner.png"
+  },
+  {
+    "id": "toki",
+    "title": "Toki",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/toki.zip",
+    "cover": "assets/covers/toki.png"
+  },
+  {
+    "id": "ddragon",
+    "title": "Double Dragon",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/ddragon.zip",
+    "cover": "assets/covers/ddragon.png"
+  },
+  {
+    "id": "ddragon2",
+    "title": "Double Dragon II",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/ddragon2.zip",
+    "cover": "assets/covers/ddragon2.png"
+  },
+  {
+    "id": "goldenax",
+    "title": "Golden Axe",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/goldenax.zip",
+    "cover": "assets/covers/goldenax.png"
+  },
+  {
+    "id": "altbeast",
+    "title": "Altered Beast",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/altbeast.zip",
+    "cover": "assets/covers/altbeast.png"
+  },
+  {
+    "id": "shinobi",
+    "title": "Shinobi",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/shinobi.zip",
+    "cover": "assets/covers/shinobi.png"
+  },
+  {
+    "id": "ghouls",
+    "title": "Ghouls'n Ghosts",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/ghouls.zip",
+    "cover": "assets/covers/ghouls.png"
+  },
+  {
+    "id": "mwalk",
+    "title": "Moonwalker",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/mwalk.zip",
+    "cover": "assets/covers/mwalk.png"
+  },
+  {
+    "id": "vendetta",
+    "title": "Vendetta",
+    "rom": "https://archive.org/cors/MAME_2003-Plus_Reference_Set_2018/roms/vendetta.zip",
+    "cover": "assets/covers/vendetta.png"
+  }
+]
