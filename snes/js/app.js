@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Initialize EmulatorJS
         window.EJS_player = '#game';
-        window.EJS_core = 'snes';
+        window.EJS_core = 'snes9x2010';
         window.EJS_gameUrl = game.rom;
         window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
         
