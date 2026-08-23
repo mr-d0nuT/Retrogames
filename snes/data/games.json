@@ -1,20 +1,248 @@
 [
   {
-    "id": "donkey-kong-country",
-    "title": "Donkey Kong Country",
-    "rom": "roms/DonkeyKongCountry.smc",
-    "cover": "assets/covers/dkc.jpg"
+    "id": "2020-super-baseball",
+    "title": "2020 Super Baseball",
+    "rom": "roms/2020 Super Baseball (USA).zip",
+    "cover": "assets/covers/2020-super-baseball.jpg"
   },
   {
-    "id": "super-mario-world",
-    "title": "Super Mario World",
-    "rom": "roms/SuperMarioWorld.smc",
-    "cover": "assets/covers/smw.jpg"
+    "id": "3-ninjas-kick-back",
+    "title": "3 Ninjas Kick Back",
+    "rom": "roms/3 Ninjas Kick Back (USA).zip",
+    "cover": "assets/covers/3-ninjas-kick-back.jpg"
   },
   {
-    "id": "zelda-ltp",
-    "title": "Zelda: A Link to the Past",
-    "rom": "roms/ZeldaLTP.smc",
-    "cover": "assets/covers/zelda.jpg"
+    "id": "7th-saga-the",
+    "title": "7th Saga, The",
+    "rom": "roms/7th Saga, The (USA).zip",
+    "cover": "assets/covers/7th-saga-the.jpg"
+  },
+  {
+    "id": "a-s-p-air-strike-patrol",
+    "title": "A.S.P. - Air Strike Patrol",
+    "rom": "roms/A.S.P. - Air Strike Patrol (USA).zip",
+    "cover": "assets/covers/a-s-p-air-strike-patrol.jpg"
+  },
+  {
+    "id": "aaahh-real-monsters",
+    "title": "Aaahh!!! Real Monsters",
+    "rom": "roms/Aaahh!!! Real Monsters (USA).zip",
+    "cover": "assets/covers/aaahh-real-monsters.jpg"
+  },
+  {
+    "id": "abc-monday-night-football",
+    "title": "ABC Monday Night Football",
+    "rom": "roms/ABC Monday Night Football (USA).zip",
+    "cover": "assets/covers/abc-monday-night-football.jpg"
+  },
+  {
+    "id": "acme-animation-factory",
+    "title": "ACME Animation Factory",
+    "rom": "roms/ACME Animation Factory (USA).zip",
+    "cover": "assets/covers/acme-animation-factory.jpg"
+  },
+  {
+    "id": "actraiser",
+    "title": "ActRaiser",
+    "rom": "roms/ActRaiser (USA) (Arcade).zip",
+    "cover": "assets/covers/actraiser.jpg"
+  },
+  {
+    "id": "actraiser",
+    "title": "ActRaiser",
+    "rom": "roms/ActRaiser (USA).zip",
+    "cover": "assets/covers/actraiser.jpg"
+  },
+  {
+    "id": "actraiser-2",
+    "title": "ActRaiser 2",
+    "rom": "roms/ActRaiser 2 (USA).zip",
+    "cover": "assets/covers/actraiser-2.jpg"
+  },
+  {
+    "id": "addams-family-values",
+    "title": "Addams Family Values",
+    "rom": "roms/Addams Family Values (USA) (En,Fr,De).zip",
+    "cover": "assets/covers/addams-family-values.jpg"
+  },
+  {
+    "id": "addams-family-the",
+    "title": "Addams Family, The",
+    "rom": "roms/Addams Family, The (USA) (Arcade).zip",
+    "cover": "assets/covers/addams-family-the.jpg"
+  },
+  {
+    "id": "addams-family-the",
+    "title": "Addams Family, The",
+    "rom": "roms/Addams Family, The (USA).zip",
+    "cover": "assets/covers/addams-family-the.jpg"
+  },
+  {
+    "id": "addams-family-the-pugsley-s-scavenger-hunt",
+    "title": "Addams Family, The - Pugsley's Scavenger Hunt",
+    "rom": "roms/Addams Family, The - Pugsley's Scavenger Hunt (USA).zip",
+    "cover": "assets/covers/addams-family-the-pugsley-s-scavenger-hunt.jpg"
+  },
+  {
+    "id": "advanced-dungeons-dragons-eye-of-the-beholder",
+    "title": "Advanced Dungeons & Dragons - Eye of the Beholder",
+    "rom": "roms/Advanced Dungeons & Dragons - Eye of the Beholder (USA).zip",
+    "cover": "assets/covers/advanced-dungeons-dragons-eye-of-the-beholder.jpg"
+  },
+  {
+    "id": "adventures-of-batman-robin-the",
+    "title": "Adventures of Batman & Robin, The",
+    "rom": "roms/Adventures of Batman & Robin, The (USA).zip",
+    "cover": "assets/covers/adventures-of-batman-robin-the.jpg"
+  },
+  {
+    "id": "adventures-of-dr-franken-the",
+    "title": "Adventures of Dr. Franken, The",
+    "rom": "roms/Adventures of Dr. Franken, The (USA).zip",
+    "cover": "assets/covers/adventures-of-dr-franken-the.jpg"
+  },
+  {
+    "id": "adventures-of-kid-kleets-the",
+    "title": "Adventures of Kid Kleets, The",
+    "rom": "roms/Adventures of Kid Kleets, The (USA) (En,Fr,Es).zip",
+    "cover": "assets/covers/adventures-of-kid-kleets-the.jpg"
+  },
+  {
+    "id": "adventures-of-rocky-and-bullwinkle-and-friends-the",
+    "title": "Adventures of Rocky and Bullwinkle and Friends, The",
+    "rom": "roms/Adventures of Rocky and Bullwinkle and Friends, The (USA).zip",
+    "cover": "assets/covers/adventures-of-rocky-and-bullwinkle-and-friends-the.jpg"
+  },
+  {
+    "id": "adventures-of-yogi-bear",
+    "title": "Adventures of Yogi Bear",
+    "rom": "roms/Adventures of Yogi Bear (USA).zip",
+    "cover": "assets/covers/adventures-of-yogi-bear.jpg"
+  },
+  {
+    "id": "aero-fighters",
+    "title": "Aero Fighters",
+    "rom": "roms/Aero Fighters (USA).zip",
+    "cover": "assets/covers/aero-fighters.jpg"
+  },
+  {
+    "id": "aero-the-acro-bat",
+    "title": "Aero the Acro-Bat",
+    "rom": "roms/Aero the Acro-Bat (USA).zip",
+    "cover": "assets/covers/aero-the-acro-bat.jpg"
+  },
+  {
+    "id": "aero-the-acro-bat-2",
+    "title": "Aero the Acro-Bat 2",
+    "rom": "roms/Aero the Acro-Bat 2 (USA).zip",
+    "cover": "assets/covers/aero-the-acro-bat-2.jpg"
+  },
+  {
+    "id": "aerobiz",
+    "title": "Aerobiz",
+    "rom": "roms/Aerobiz (USA).zip",
+    "cover": "assets/covers/aerobiz.jpg"
+  },
+  {
+    "id": "aerobiz-supersonic",
+    "title": "Aerobiz Supersonic",
+    "rom": "roms/Aerobiz Supersonic (USA).zip",
+    "cover": "assets/covers/aerobiz-supersonic.jpg"
+  },
+  {
+    "id": "air-cavalry",
+    "title": "Air Cavalry",
+    "rom": "roms/Air Cavalry (USA).zip",
+    "cover": "assets/covers/air-cavalry.jpg"
+  },
+  {
+    "id": "al-unser-jr-s-road-to-the-top",
+    "title": "Al Unser Jr.'s Road to the Top",
+    "rom": "roms/Al Unser Jr.'s Road to the Top (USA).zip",
+    "cover": "assets/covers/al-unser-jr-s-road-to-the-top.jpg"
+  },
+  {
+    "id": "aladdin",
+    "title": "Aladdin",
+    "rom": "roms/Aladdin (USA).zip",
+    "cover": "assets/covers/aladdin.jpg"
+  },
+  {
+    "id": "alien-3",
+    "title": "Alien 3",
+    "rom": "roms/Alien 3 (USA).zip",
+    "cover": "assets/covers/alien-3.jpg"
+  },
+  {
+    "id": "alien-vs-predator",
+    "title": "Alien vs Predator",
+    "rom": "roms/Alien vs Predator (USA).zip",
+    "cover": "assets/covers/alien-vs-predator.jpg"
+  },
+  {
+    "id": "american-gladiators",
+    "title": "American Gladiators",
+    "rom": "roms/American Gladiators (USA).zip",
+    "cover": "assets/covers/american-gladiators.jpg"
+  },
+  {
+    "id": "american-tail-an-fievel-goes-west",
+    "title": "American Tail, An - Fievel Goes West",
+    "rom": "roms/American Tail, An - Fievel Goes West (USA).zip",
+    "cover": "assets/covers/american-tail-an-fievel-goes-west.jpg"
+  },
+  {
+    "id": "andre-agassi-tennis",
+    "title": "Andre Agassi Tennis",
+    "rom": "roms/Andre Agassi Tennis (USA).zip",
+    "cover": "assets/covers/andre-agassi-tennis.jpg"
+  },
+  {
+    "id": "animaniacs",
+    "title": "Animaniacs",
+    "rom": "roms/Animaniacs (USA).zip",
+    "cover": "assets/covers/animaniacs.jpg"
+  },
+  {
+    "id": "arcade-s-greatest-hits-the-atari-collection-1",
+    "title": "Arcade's Greatest Hits - The Atari Collection 1",
+    "rom": "roms/Arcade's Greatest Hits - The Atari Collection 1 (USA).zip",
+    "cover": "assets/covers/arcade-s-greatest-hits-the-atari-collection-1.jpg"
+  },
+  {
+    "id": "arcana",
+    "title": "Arcana",
+    "rom": "roms/Arcana (USA).zip",
+    "cover": "assets/covers/arcana.jpg"
+  },
+  {
+    "id": "arcus-spirits",
+    "title": "Arcus Spirits",
+    "rom": "roms/Arcus Spirits (USA) (Proto).zip",
+    "cover": "assets/covers/arcus-spirits.jpg"
+  },
+  {
+    "id": "ardy-lightfoot",
+    "title": "Ardy Lightfoot",
+    "rom": "roms/Ardy Lightfoot (USA).zip",
+    "cover": "assets/covers/ardy-lightfoot.jpg"
+  },
+  {
+    "id": "arkanoid-doh-it-again",
+    "title": "Arkanoid - Doh It Again",
+    "rom": "roms/Arkanoid - Doh It Again (USA).zip",
+    "cover": "assets/covers/arkanoid-doh-it-again.jpg"
+  },
+  {
+    "id": "art-of-fighting",
+    "title": "Art of Fighting",
+    "rom": "roms/Art of Fighting (USA).zip",
+    "cover": "assets/covers/art-of-fighting.jpg"
+  },
+  {
+    "id": "axelay",
+    "title": "Axelay",
+    "rom": "roms/Axelay (USA).zip",
+    "cover": "assets/covers/axelay.jpg"
   }
 ]
