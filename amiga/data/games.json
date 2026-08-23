@@ -40,16 +40,6 @@
     "cover": "assets/covers/Amazing Spider-Man.png"
   },
   {
-    "title": "Amega Mega Games",
-    "rom": "roms/Amega Mega Games.zip",
-    "cover": "assets/amiga-logo.png"
-  },
-  {
-    "title": "AmigaDOS Tutorial",
-    "rom": "roms/AmigaDOS Tutorial.zip",
-    "cover": "assets/amiga-logo.png"
-  },
-  {
     "title": "Apb",
     "rom": "roms/Apb.zip",
     "cover": "assets/covers/Apb.png"
@@ -447,7 +437,7 @@
   {
     "title": "Kings Quest 3",
     "rom": "roms/Kings Quest 3.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Kings Quest 3.png"
   },
   {
     "title": "Knightmare",
@@ -497,7 +487,7 @@
   {
     "title": "Livingstone 2",
     "rom": "roms/Livingstone 2.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Livingstone 2.png"
   },
   {
     "title": "Lotus Turbo Challenge I",
@@ -532,7 +522,7 @@
   {
     "title": "Master Axe",
     "rom": "roms/Master Axe.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Master Axe.png"
   },
   {
     "title": "Menace",
@@ -747,7 +737,7 @@
   {
     "title": "Samurai - The Way of the Warrior",
     "rom": "roms/Samurai - The Way of the Warrior.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Samurai - The Way of the Warrior.png"
   },
   {
     "title": "Second Samurai",
@@ -808,11 +798,6 @@
     "title": "Space Racer",
     "rom": "roms/Space Racer.zip",
     "cover": "assets/covers/Space Racer.png"
-  },
-  {
-    "title": "spanipirate",
-    "rom": "roms/spanipirate.zip",
-    "cover": "assets/amiga-logo.png"
   },
   {
     "title": "Speed ball",
@@ -932,7 +917,7 @@
   {
     "title": "The Shining Way of Kung Fu",
     "rom": "roms/The Shining Way of Kung Fu.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/The Shining Way of Kung Fu.png"
   },
   {
     "title": "Thunder Cat",
@@ -967,7 +952,7 @@
   {
     "title": "Twintris",
     "rom": "roms/Twintris.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Twintris.png"
   },
   {
     "title": "Wild Streets",
