@@ -216,12 +216,6 @@
     "cover": "assets/covers/arcana.png"
   },
   {
-    "id": "arcus-spirits",
-    "title": "Arcus Spirits",
-    "rom": "roms/Arcus Spirits (USA) (Proto).zip",
-    "cover": "assets/covers/arcus-spirits.png"
-  },
-  {
     "id": "ardy-lightfoot",
     "title": "Ardy Lightfoot",
     "rom": "roms/Ardy Lightfoot (USA).zip",
@@ -252,12 +246,6 @@
     "cover": "assets/covers/b-o-b.png"
   },
   {
-    "id": "baby-t-rex",
-    "title": "Baby T-Rex",
-    "rom": "roms/Baby T-Rex (USA) (Sample).zip",
-    "cover": "assets/covers/baby-t-rex.png"
-  },
-  {
     "id": "ballz-3d-fighting-at-its-ballziest",
     "title": "Ballz 3D - Fighting at Its Ballziest",
     "rom": "roms/Ballz 3D - Fighting at Its Ballziest (USA).zip",
@@ -268,12 +256,6 @@
     "title": "Barbie Super Model",
     "rom": "roms/Barbie Super Model (USA).zip",
     "cover": "assets/covers/barbie-super-model.png"
-  },
-  {
-    "id": "barbie-vacation-adventure",
-    "title": "Barbie Vacation Adventure",
-    "rom": "roms/Barbie Vacation Adventure (USA) (Proto).zip",
-    "cover": "assets/covers/barbie-vacation-adventure.png"
   },
   {
     "id": "barkley-shut-up-and-jam",
@@ -300,12 +282,6 @@
     "cover": "assets/covers/bassin-s-black-bass.png"
   },
   {
-    "id": "batman-revenge-of-the-joker",
-    "title": "Batman - Revenge of the Joker",
-    "rom": "roms/Batman - Revenge of the Joker (USA) (Proto).zip",
-    "cover": "assets/covers/batman-revenge-of-the-joker.png"
-  },
-  {
     "id": "batman-forever",
     "title": "Batman Forever",
     "rom": "roms/Batman Forever (USA).zip",
@@ -316,12 +292,6 @@
     "title": "Batman Returns",
     "rom": "roms/Batman Returns (USA).zip",
     "cover": "assets/covers/batman-returns.png"
-  },
-  {
-    "id": "batman-b",
-    "title": "Batman[b]",
-    "rom": "roms/Batman (USA) (Proto) [b].zip",
-    "cover": "assets/covers/batman-b.png"
   },
   {
     "id": "battle-blaze",
@@ -442,12 +412,6 @@
     "title": "Blues Brothers, The",
     "rom": "roms/Blues Brothers, The (USA).zip",
     "cover": "assets/covers/blues-brothers-the.png"
-  },
-  {
-    "id": "bobby-s-world",
-    "title": "Bobby's World",
-    "rom": "roms/Bobby's World (USA) (Proto).zip",
-    "cover": "assets/covers/bobby-s-world.png"
   },
   {
     "id": "bonkers",
@@ -768,12 +732,6 @@
     "cover": "assets/covers/combatribes-the.png"
   },
   {
-    "id": "congo-the-movie-secret-of-zinj",
-    "title": "Congo - The Movie - Secret of Zinj",
-    "rom": "roms/Congo - The Movie - Secret of Zinj (USA) (Proto).zip",
-    "cover": "assets/covers/congo-the-movie-secret-of-zinj.png"
-  },
-  {
     "id": "congo-s-caper",
     "title": "Congo's Caper",
     "rom": "roms/Congo's Caper (USA).zip",
@@ -1062,12 +1020,6 @@
     "cover": "assets/covers/espn-sunday-night-nfl.png"
   },
   {
-    "id": "eurit",
-    "title": "Eurit",
-    "rom": "roms/Eurit (USA) (Proto) (1995-05-29).zip",
-    "cover": "assets/covers/eurit.png"
-  },
-  {
     "id": "exertainment-mountain-bike-rally",
     "title": "Exertainment Mountain Bike Rally",
     "rom": "roms/Exertainment Mountain Bike Rally (USA).zip",
@@ -1114,12 +1066,6 @@
     "title": "Faceball 2000",
     "rom": "roms/Faceball 2000 (USA).zip",
     "cover": "assets/covers/faceball-2000.png"
-  },
-  {
-    "id": "falcon",
-    "title": "Falcon",
-    "rom": "roms/Falcon (USA) (Proto).zip",
-    "cover": "assets/covers/falcon.png"
   },
   {
     "id": "family-dog",
@@ -1218,12 +1164,6 @@
     "cover": "assets/covers/final-fight-guy.png"
   },
   {
-    "id": "firearm",
-    "title": "Firearm",
-    "rom": "roms/Firearm (USA) (Proto) (1993-12-17).zip",
-    "cover": "assets/covers/firearm.png"
-  },
-  {
     "id": "firepower-2000",
     "title": "Firepower 2000",
     "rom": "roms/Firepower 2000 (USA).zip",
@@ -1312,24 +1252,6 @@
     "title": "Fun 'n Games",
     "rom": "roms/Fun 'n Games (USA).zip",
     "cover": "assets/covers/fun-n-games.png"
-  },
-  {
-    "id": "game-genie",
-    "title": "Game Genie",
-    "rom": "roms/Game Genie (USA) (v2.0) (Unl).zip",
-    "cover": "assets/covers/game-genie.png"
-  },
-  {
-    "id": "game-genie-b",
-    "title": "Game Genie[b]",
-    "rom": "roms/Game Genie (USA) (Alt 1) (Unl) [b].zip",
-    "cover": "assets/covers/game-genie-b.png"
-  },
-  {
-    "id": "game-genie-b",
-    "title": "Game Genie[b]",
-    "rom": "roms/Game Genie (USA) (Unl) [b].zip",
-    "cover": "assets/covers/game-genie-b.png"
   },
   {
     "id": "garry-kitchen-s-super-battletank-war-in-the-gulf",
@@ -1456,12 +1378,6 @@
     "title": "Head-On Soccer",
     "rom": "roms/Head-On Soccer (USA).zip",
     "cover": "assets/covers/head-on-soccer.png"
-  },
-  {
-    "id": "hind-strike-b",
-    "title": "Hind Strike[b]",
-    "rom": "roms/Hind Strike (USA) (Unl) [b].zip",
-    "cover": "assets/covers/hind-strike-b.png"
   },
   {
     "id": "hit-the-ice-vhl-the-official-video-hockey-league",
@@ -1630,12 +1546,6 @@
     "title": "James Bond Jr",
     "rom": "roms/James Bond Jr (USA).zip",
     "cover": "assets/covers/james-bond-jr.png"
-  },
-  {
-    "id": "jeff-s-shoot-em-up",
-    "title": "Jeff's Shoot'Em Up",
-    "rom": "roms/Jeff's Shoot'Em Up (USA) (Proto).zip",
-    "cover": "assets/covers/jeff-s-shoot-em-up.png"
   },
   {
     "id": "jeopardy",
@@ -1956,12 +1866,6 @@
     "cover": "assets/covers/lion-king-the.png"
   },
   {
-    "id": "lobo",
-    "title": "Lobo",
-    "rom": "roms/Lobo (USA) (Proto).zip",
-    "cover": "assets/covers/lobo.png"
-  },
-  {
     "id": "lock-on",
     "title": "Lock On",
     "rom": "roms/Lock On (USA).zip",
@@ -2002,12 +1906,6 @@
     "title": "Lufia II - Rise of the Sinistrals",
     "rom": "roms/Lufia II - Rise of the Sinistrals (USA).zip",
     "cover": "assets/covers/lufia-ii-rise-of-the-sinistrals.png"
-  },
-  {
-    "id": "m-a-c-s-basic-rifle-marksmanship-b",
-    "title": "M.A.C.S. Basic Rifle Marksmanship[b]",
-    "rom": "roms/M.A.C.S. Basic Rifle Marksmanship (USA) [b].zip",
-    "cover": "assets/covers/m-a-c-s-basic-rifle-marksmanship-b.png"
   },
   {
     "id": "madden-nfl-94",
@@ -2178,12 +2076,6 @@
     "cover": "assets/covers/metal-combat-falcon-s-revenge.png"
   },
   {
-    "id": "metal-jack",
-    "title": "Metal Jack",
-    "rom": "roms/Metal Jack (USA) (Proto) (1992-07-30).zip",
-    "cover": "assets/covers/metal-jack.png"
-  },
-  {
     "id": "metal-marines",
     "title": "Metal Marines",
     "rom": "roms/Metal Marines (USA).zip",
@@ -2214,22 +2106,10 @@
     "cover": "assets/covers/michael-jordan-chaos-in-the-windy-city.png"
   },
   {
-    "id": "mick-mack-as-the-global-gladiators-b",
-    "title": "Mick & Mack as the Global Gladiators[b]",
-    "rom": "roms/Mick & Mack as the Global Gladiators (USA) (Proto) [b].zip",
-    "cover": "assets/covers/mick-mack-as-the-global-gladiators-b.png"
-  },
-  {
     "id": "mickey-mania-the-timeless-adventures-of-mickey-mouse",
     "title": "Mickey Mania - The Timeless Adventures of Mickey Mouse",
     "rom": "roms/Mickey Mania - The Timeless Adventures of Mickey Mouse (USA).zip",
     "cover": "assets/covers/mickey-mania-the-timeless-adventures-of-mickey-mouse.png"
-  },
-  {
-    "id": "mickey-s-playtown-adventure-a-day-of-discovery",
-    "title": "Mickey's Playtown Adventure - A Day of Discovery!",
-    "rom": "roms/Mickey's Playtown Adventure - A Day of Discovery! (USA) (Proto).zip",
-    "cover": "assets/covers/mickey-s-playtown-adventure-a-day-of-discovery.png"
   },
   {
     "id": "mickey-s-ultimate-challenge",
@@ -2242,12 +2122,6 @@
     "title": "Micro Machines",
     "rom": "roms/Micro Machines (USA).zip",
     "cover": "assets/covers/micro-machines.png"
-  },
-  {
-    "id": "might-and-magic-ii",
-    "title": "Might and Magic II",
-    "rom": "roms/Might and Magic II (USA) (Proto).zip",
-    "cover": "assets/covers/might-and-magic-ii.png"
   },
   {
     "id": "might-and-magic-iii-isles-of-terra",
@@ -2322,12 +2196,6 @@
     "cover": "assets/covers/mortal-kombat-ii.png"
   },
   {
-    "id": "mr-bloopy-saves-the-world",
-    "title": "Mr. Bloopy - Saves the World",
-    "rom": "roms/Mr. Bloopy - Saves the World (USA) (Proto) (1995-02-16).zip",
-    "cover": "assets/covers/mr-bloopy-saves-the-world.png"
-  },
-  {
     "id": "mr-do",
     "title": "Mr. Do!",
     "rom": "roms/Mr. Do! (USA).zip",
@@ -2344,12 +2212,6 @@
     "title": "Ms. Pac-Man",
     "rom": "roms/Ms. Pac-Man (USA).zip",
     "cover": "assets/covers/ms-pac-man.png"
-  },
-  {
-    "id": "muhammad-ali-heavyweight-boxing",
-    "title": "Muhammad Ali Heavyweight Boxing",
-    "rom": "roms/Muhammad Ali Heavyweight Boxing (USA) (Proto).zip",
-    "cover": "assets/covers/muhammad-ali-heavyweight-boxing.png"
   },
   {
     "id": "musya-the-classic-japanese-tale-of-horror",
@@ -2462,12 +2324,6 @@
   {
     "id": "nfl-football",
     "title": "NFL Football",
-    "rom": "roms/NFL Football (USA) (Proto).zip",
-    "cover": "assets/covers/nfl-football.png"
-  },
-  {
-    "id": "nfl-football",
-    "title": "NFL Football",
     "rom": "roms/NFL Football (USA).zip",
     "cover": "assets/covers/nfl-football.png"
   },
@@ -2536,12 +2392,6 @@
     "title": "Nigel Mansell's World Championship Racing",
     "rom": "roms/Nigel Mansell's World Championship Racing (USA).zip",
     "cover": "assets/covers/nigel-mansell-s-world-championship-racing.png"
-  },
-  {
-    "id": "nightmare-busters",
-    "title": "Nightmare Busters",
-    "rom": "roms/Nightmare Busters (USA) (Unl).zip",
-    "cover": "assets/covers/nightmare-busters.png"
   },
   {
     "id": "ninja-gaiden-trilogy",
@@ -2820,12 +2670,6 @@
     "cover": "assets/covers/porky-pig-s-haunted-holiday.png"
   },
   {
-    "id": "power-drive",
-    "title": "Power Drive",
-    "rom": "roms/Power Drive (USA) (En,Fr,De,Es,Pt) (Proto).zip",
-    "cover": "assets/covers/power-drive.png"
-  },
-  {
     "id": "power-instinct",
     "title": "Power Instinct",
     "rom": "roms/Power Instinct (USA).zip",
@@ -2866,12 +2710,6 @@
     "title": "Primal Rage",
     "rom": "roms/Primal Rage (USA).zip",
     "cover": "assets/covers/primal-rage.png"
-  },
-  {
-    "id": "prime",
-    "title": "Prime",
-    "rom": "roms/Prime (USA) (Proto).zip",
-    "cover": "assets/covers/prime.png"
   },
   {
     "id": "prince-of-persia",
@@ -2940,12 +2778,6 @@
     "cover": "assets/covers/raiden-trad.png"
   },
   {
-    "id": "rally-the-final-round-of-the-world-rally-championship",
-    "title": "Rally - The Final Round of the World Rally Championship",
-    "rom": "roms/Rally - The Final Round of the World Rally Championship (USA) (Proto).zip",
-    "cover": "assets/covers/rally-the-final-round-of-the-world-rally-championship.png"
-  },
-  {
     "id": "rampart",
     "title": "Rampart",
     "rom": "roms/Rampart (USA).zip",
@@ -2958,22 +2790,10 @@
     "cover": "assets/covers/ranma-1-2-hard-battle.png"
   },
   {
-    "id": "rap-basketball",
-    "title": "Rap Basketball",
-    "rom": "roms/Rap Basketball (USA) (Proto).zip",
-    "cover": "assets/covers/rap-basketball.png"
-  },
-  {
     "id": "rap-jam-volume-one",
     "title": "Rap Jam - Volume One",
     "rom": "roms/Rap Jam - Volume One (USA) (En,Fr,Es).zip",
     "cover": "assets/covers/rap-jam-volume-one.png"
-  },
-  {
-    "id": "rayman",
-    "title": "Rayman",
-    "rom": "roms/Rayman (USA) (Proto).zip",
-    "cover": "assets/covers/rayman.png"
   },
   {
     "id": "realm",
@@ -3028,12 +2848,6 @@
     "title": "Rex Ronan - Experimental Surgeon",
     "rom": "roms/Rex Ronan - Experimental Surgeon (USA) (En,Es).zip",
     "cover": "assets/covers/rex-ronan-experimental-surgeon.png"
-  },
-  {
-    "id": "rhi-roller-hockey-95",
-    "title": "RHI Roller Hockey '95",
-    "rom": "roms/RHI Roller Hockey '95 (USA) (Proto).zip",
-    "cover": "assets/covers/rhi-roller-hockey-95.png"
   },
   {
     "id": "riddick-bowe-boxing",
@@ -3204,12 +3018,6 @@
     "cover": "assets/covers/shadow-the.png"
   },
   {
-    "id": "shadowhawk",
-    "title": "Shadowhawk",
-    "rom": "roms/Shadowhawk (USA) (Proto).zip",
-    "cover": "assets/covers/shadowhawk.png"
-  },
-  {
     "id": "shadowrun",
     "title": "Shadowrun",
     "rom": "roms/Shadowrun (USA).zip",
@@ -3232,12 +3040,6 @@
     "title": "Shien's Revenge",
     "rom": "roms/Shien's Revenge (USA).zip",
     "cover": "assets/covers/shien-s-revenge.png"
-  },
-  {
-    "id": "shooter",
-    "title": "Shooter",
-    "rom": "roms/Shooter (USA) (Proto).zip",
-    "cover": "assets/covers/shooter.png"
   },
   {
     "id": "sid-meier-s-civilization",
@@ -3396,12 +3198,6 @@
     "cover": "assets/covers/speedy-gonzales-los-gatos-bandidos.png"
   },
   {
-    "id": "spellcraft-aspects-of-valor",
-    "title": "SpellCraft - Aspects of Valor",
-    "rom": "roms/SpellCraft - Aspects of Valor (USA) (Proto).zip",
-    "cover": "assets/covers/spellcraft-aspects-of-valor.png"
-  },
-  {
     "id": "spider-man",
     "title": "Spider-Man",
     "rom": "roms/Spider-Man (USA).zip",
@@ -3436,12 +3232,6 @@
     "title": "Sports Illustrated Championship Football & Baseball",
     "rom": "roms/Sports Illustrated Championship Football & Baseball (USA).zip",
     "cover": "assets/covers/sports-illustrated-championship-football-baseball.png"
-  },
-  {
-    "id": "spot-goes-to-hollywood",
-    "title": "Spot Goes to Hollywood",
-    "rom": "roms/Spot Goes to Hollywood (USA) (Proto).zip",
-    "cover": "assets/covers/spot-goes-to-hollywood.png"
   },
   {
     "id": "star-fox",
@@ -3490,12 +3280,6 @@
     "title": "Sterling Sharpe - End 2 End",
     "rom": "roms/Sterling Sharpe - End 2 End (USA).zip",
     "cover": "assets/covers/sterling-sharpe-end-2-end.png"
-  },
-  {
-    "id": "steven-seagal-is-the-final-option",
-    "title": "Steven Seagal Is The Final Option",
-    "rom": "roms/Steven Seagal Is The Final Option (USA) (Proto).zip",
-    "cover": "assets/covers/steven-seagal-is-the-final-option.png"
   },
   {
     "id": "stone-protectors",
@@ -3562,18 +3346,6 @@
     "title": "Sunset Riders",
     "rom": "roms/Sunset Riders (USA).zip",
     "cover": "assets/covers/sunset-riders.png"
-  },
-  {
-    "id": "super-3d-noah-s-ark",
-    "title": "Super 3D Noah's Ark",
-    "rom": "roms/Super 3D Noah's Ark (USA) (Unl).zip",
-    "cover": "assets/covers/super-3d-noah-s-ark.png"
-  },
-  {
-    "id": "super-8",
-    "title": "Super 8",
-    "rom": "roms/Super 8 (USA) (Unl).zip",
-    "cover": "assets/covers/super-8.png"
   },
   {
     "id": "super-adventure-island",
@@ -3708,12 +3480,6 @@
     "cover": "assets/covers/super-double-dragon.png"
   },
   {
-    "id": "super-drift-out-world-rally-championships",
-    "title": "Super Drift Out - World Rally Championships",
-    "rom": "roms/Super Drift Out - World Rally Championships (USA) (Proto).zip",
-    "cover": "assets/covers/super-drift-out-world-rally-championships.png"
-  },
-  {
     "id": "super-ghouls-n-ghosts",
     "title": "Super Ghouls 'N Ghosts",
     "rom": "roms/Super Ghouls 'N Ghosts (USA).zip",
@@ -3846,12 +3612,6 @@
     "cover": "assets/covers/super-scope-6.png"
   },
   {
-    "id": "super-shadow-of-the-beast",
-    "title": "Super Shadow of the Beast",
-    "rom": "roms/Super Shadow of the Beast (USA) (Proto).zip",
-    "cover": "assets/covers/super-shadow-of-the-beast.png"
-  },
-  {
     "id": "super-slam-dunk",
     "title": "Super Slam Dunk",
     "rom": "roms/Super Slam Dunk (USA).zip",
@@ -3982,18 +3742,6 @@
     "title": "SWAT Kats - The Radical Squadron",
     "rom": "roms/SWAT Kats - The Radical Squadron (USA).zip",
     "cover": "assets/covers/swat-kats-the-radical-squadron.png"
-  },
-  {
-    "id": "sylvester-and-tweety",
-    "title": "Sylvester and Tweety",
-    "rom": "roms/Sylvester and Tweety (USA) (Proto) (1993-10-11).zip",
-    "cover": "assets/covers/sylvester-and-tweety.png"
-  },
-  {
-    "id": "sylvester-and-tweety",
-    "title": "Sylvester and Tweety",
-    "rom": "roms/Sylvester and Tweety (USA) (Proto) (1993-12-15).zip",
-    "cover": "assets/covers/sylvester-and-tweety.png"
   },
   {
     "id": "syndicate",
@@ -4230,12 +3978,6 @@
     "cover": "assets/covers/toys-let-the-toy-wars-begin.png"
   },
   {
-    "id": "tri-star",
-    "title": "Tri-Star",
-    "rom": "roms/Tri-Star (USA) (Unl).zip",
-    "cover": "assets/covers/tri-star.png"
-  },
-  {
     "id": "troddlers",
     "title": "Troddlers",
     "rom": "roms/Troddlers (USA).zip",
@@ -4276,12 +4018,6 @@
     "title": "Tuff E Nuff",
     "rom": "roms/Tuff E Nuff (USA).zip",
     "cover": "assets/covers/tuff-e-nuff.png"
-  },
-  {
-    "id": "turbo-toons",
-    "title": "Turbo Toons",
-    "rom": "roms/Turbo Toons (USA) (Proto).zip",
-    "cover": "assets/covers/turbo-toons.png"
   },
   {
     "id": "turn-and-burn-no-fly-zone",
@@ -4350,12 +4086,6 @@
     "cover": "assets/covers/uniracers.png"
   },
   {
-    "id": "universal-soldier",
-    "title": "Universal Soldier",
-    "rom": "roms/Universal Soldier (USA) (Proto).zip",
-    "cover": "assets/covers/universal-soldier.png"
-  },
-  {
     "id": "untouchables-the",
     "title": "Untouchables, The",
     "rom": "roms/Untouchables, The (USA).zip",
@@ -4390,12 +4120,6 @@
     "title": "Virtual Bart",
     "rom": "roms/Virtual Bart (USA).zip",
     "cover": "assets/covers/virtual-bart.png"
-  },
-  {
-    "id": "virtual-soccer-b",
-    "title": "Virtual Soccer[b]",
-    "rom": "roms/Virtual Soccer (USA) (Proto) [b].zip",
-    "cover": "assets/covers/virtual-soccer-b.png"
   },
   {
     "id": "vortex",
