@@ -1,0 +1,33 @@
+name: Update Games Catalog
+
+on:
+  push:
+    paths:
+      - 'snes/roms/**'
+  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub si es necesario
+
+permissions:
+  contents: write
+
+jobs:
+  update-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run update script
+        run: node scripts/update-games-json.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add snes/data/games.json
+          git commit -m "Auto-update games.json catalog" || echo "No changes to commit"
+          git push
