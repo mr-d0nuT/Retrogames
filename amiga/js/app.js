@@ -180,6 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.EJS_core = 'puae';
                 window.EJS_gameUrl = '${game.rom}'; 
                 window.EJS_background = '../${game.cover}';
+                window.EJS_biosUrl = "../amiga/bios.zip";
                 window.EJS_pathtodata = '../emulatorjs/data/';
             </script>
             <script src="../emulatorjs/data/loader.js"></script>
