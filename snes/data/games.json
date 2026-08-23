@@ -54,10 +54,10 @@
     "cover": "assets/covers/actraiser-2.png"
   },
   {
-    "id": "addams-family-values",
-    "title": "Addams Family Values",
+    "id": "addams-family-values-enfrde",
+    "title": "Addams Family Values  (En,Fr,De)",
     "rom": "roms/Addams Family Values (USA) (En,Fr,De).zip",
-    "cover": "assets/covers/addams-family-values.png"
+    "cover": "assets/covers/addams-family-values-enfrde.png"
   },
   {
     "id": "addams-family-the",
@@ -90,10 +90,10 @@
     "cover": "assets/covers/adventures-of-dr-franken-the.png"
   },
   {
-    "id": "adventures-of-kid-kleets-the",
-    "title": "Adventures of Kid Kleets, The",
+    "id": "adventures-of-kid-kleets-the-enfres",
+    "title": "Adventures of Kid Kleets, The  (En,Fr,Es)",
     "rom": "roms/Adventures of Kid Kleets, The (USA) (En,Fr,Es).zip",
-    "cover": "assets/covers/adventures-of-kid-kleets-the.png"
+    "cover": "assets/covers/adventures-of-kid-kleets-the-enfres.png"
   },
   {
     "id": "adventures-of-rocky-and-bullwinkle-and-friends-the",
@@ -480,10 +480,10 @@
     "cover": "assets/covers/brett-hull-hockey-95.png"
   },
   {
-    "id": "bronkie-the-bronchiasaurus",
-    "title": "Bronkie the Bronchiasaurus",
+    "id": "bronkie-the-bronchiasaurus-enes",
+    "title": "Bronkie the Bronchiasaurus  (En,Es)",
     "rom": "roms/Bronkie the Bronchiasaurus (USA) (En,Es).zip",
-    "cover": "assets/covers/bronkie-the-bronchiasaurus.png"
+    "cover": "assets/covers/bronkie-the-bronchiasaurus-enes.png"
   },
   {
     "id": "brunswick-world-tournament-of-champions",
@@ -576,10 +576,10 @@
     "cover": "assets/covers/captain-commando.png"
   },
   {
-    "id": "captain-novolin",
-    "title": "Captain Novolin",
+    "id": "captain-novolin-enfres",
+    "title": "Captain Novolin  (En,Fr,Es)",
     "rom": "roms/Captain Novolin (USA) (En,Fr,Es).zip",
-    "cover": "assets/covers/captain-novolin.png"
+    "cover": "assets/covers/captain-novolin-enfres.png"
   },
   {
     "id": "carrier-aces",
@@ -600,10 +600,10 @@
     "cover": "assets/covers/castlevania-dracula-x.png"
   },
   {
-    "id": "champions-world-class-soccer",
-    "title": "Champions - World Class Soccer",
+    "id": "champions-world-class-soccer-enfrdees",
+    "title": "Champions - World Class Soccer  (En,Fr,De,Es)",
     "rom": "roms/Champions - World Class Soccer (USA) (En,Fr,De,Es).zip",
-    "cover": "assets/covers/champions-world-class-soccer.png"
+    "cover": "assets/covers/champions-world-class-soccer-enfrdees.png"
   },
   {
     "id": "championship-pool",
@@ -612,22 +612,22 @@
     "cover": "assets/covers/championship-pool.png"
   },
   {
-    "id": "championship-soccer-94",
-    "title": "Championship Soccer '94",
+    "id": "championship-soccer-94-enfrdeit",
+    "title": "Championship Soccer '94  (En,Fr,De,It)",
     "rom": "roms/Championship Soccer '94 (USA) (En,Fr,De,It).zip",
-    "cover": "assets/covers/championship-soccer-94.png"
+    "cover": "assets/covers/championship-soccer-94-enfrdeit.png"
   },
   {
-    "id": "chavez",
-    "title": "Chavez",
+    "id": "chavez-es",
+    "title": "Chavez  (Es)",
     "rom": "roms/Chavez (USA) (Es).zip",
-    "cover": "assets/covers/chavez.png"
+    "cover": "assets/covers/chavez-es.png"
   },
   {
-    "id": "chavez-ii",
-    "title": "Chavez II",
+    "id": "chavez-ii-es",
+    "title": "Chavez II  (Es)",
     "rom": "roms/Chavez II (USA) (Es).zip",
-    "cover": "assets/covers/chavez-ii.png"
+    "cover": "assets/covers/chavez-ii-es.png"
   },
   {
     "id": "chessmaster-the",
@@ -846,16 +846,16 @@
     "cover": "assets/covers/donkey-kong-country-competition-cartridge.png"
   },
   {
-    "id": "donkey-kong-country-2-diddys-kong-quest",
-    "title": "Donkey Kong Country 2 - Diddy's Kong Quest",
+    "id": "donkey-kong-country-2-diddys-kong-quest-enfr",
+    "title": "Donkey Kong Country 2 - Diddy's Kong Quest  (En,Fr)",
     "rom": "roms/Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr) (Rev 1).zip",
-    "cover": "assets/covers/donkey-kong-country-2-diddys-kong-quest.png"
+    "cover": "assets/covers/donkey-kong-country-2-diddys-kong-quest-enfr.png"
   },
   {
-    "id": "donkey-kong-country-3-dixie-kongs-double-trouble",
-    "title": "Donkey Kong Country 3 - Dixie Kong's Double Trouble!",
+    "id": "donkey-kong-country-3-dixie-kongs-double-trouble-enfr",
+    "title": "Donkey Kong Country 3 - Dixie Kong's Double Trouble!  (En,Fr)",
     "rom": "roms/Donkey Kong Country 3 - Dixie Kong's Double Trouble! (USA) (En,Fr).zip",
-    "cover": "assets/covers/donkey-kong-country-3-dixie-kongs-double-trouble.png"
+    "cover": "assets/covers/donkey-kong-country-3-dixie-kongs-double-trouble-enfr.png"
   },
   {
     "id": "doom",
@@ -1050,16 +1050,16 @@
     "cover": "assets/covers/fifa-international-soccer.png"
   },
   {
-    "id": "fifa-soccer-96",
-    "title": "FIFA Soccer 96",
+    "id": "fifa-soccer-96-enfrdeesitsv",
+    "title": "FIFA Soccer 96  (En,Fr,De,Es,It,Sv)",
     "rom": "roms/FIFA Soccer 96 (USA) (En,Fr,De,Es,It,Sv).zip",
-    "cover": "assets/covers/fifa-soccer-96.png"
+    "cover": "assets/covers/fifa-soccer-96-enfrdeesitsv.png"
   },
   {
-    "id": "fifa-soccer-97",
-    "title": "FIFA Soccer 97",
+    "id": "fifa-soccer-97-enfrdeesitsv",
+    "title": "FIFA Soccer 97  (En,Fr,De,Es,It,Sv)",
     "rom": "roms/FIFA Soccer 97 (USA) (En,Fr,De,Es,It,Sv).zip",
-    "cover": "assets/covers/fifa-soccer-97.png"
+    "cover": "assets/covers/fifa-soccer-97-enfrdeesitsv.png"
   },
   {
     "id": "faceball-2000",
@@ -1158,10 +1158,10 @@
     "cover": "assets/covers/firepower-2000.png"
   },
   {
-    "id": "fireteam-rogue",
-    "title": "Fireteam Rogue",
+    "id": "fireteam-rogue-proto-2-1995-01-16",
+    "title": "Fireteam Rogue  (Proto 2) (1995-01-16)",
     "rom": "roms/Fireteam Rogue (USA) (Proto 2) (1995-01-16).zip",
-    "cover": "assets/covers/fireteam-rogue.png"
+    "cover": "assets/covers/fireteam-rogue-proto-2-1995-01-16.png"
   },
   {
     "id": "first-samurai",
@@ -1170,16 +1170,16 @@
     "cover": "assets/covers/first-samurai.png"
   },
   {
-    "id": "flashback-the-quest-for-identity",
-    "title": "Flashback - The Quest for Identity",
+    "id": "flashback-the-quest-for-identity-enfrde",
+    "title": "Flashback - The Quest for Identity  (En,Fr,De)",
     "rom": "roms/Flashback - The Quest for Identity (USA) (En,Fr,De).zip",
-    "cover": "assets/covers/flashback-the-quest-for-identity.png"
+    "cover": "assets/covers/flashback-the-quest-for-identity-enfrde.png"
   },
   {
-    "id": "flintstones-the",
-    "title": "Flintstones, The",
+    "id": "flintstones-the-enfrdeesit",
+    "title": "Flintstones, The  (En,Fr,De,Es,It)",
     "rom": "roms/Flintstones, The (USA) (En,Fr,De,Es,It).zip",
-    "cover": "assets/covers/flintstones-the.png"
+    "cover": "assets/covers/flintstones-the-enfrdeesit.png"
   },
   {
     "id": "flintstones-the-the-treasure-of-sierra-madrock",
@@ -1614,10 +1614,10 @@
     "cover": "assets/covers/jurassic-park.png"
   },
   {
-    "id": "jurassic-park-part-2-the-chaos-continues",
-    "title": "Jurassic Park Part 2 - The Chaos Continues",
+    "id": "jurassic-park-part-2-the-chaos-continues-enfrdeit",
+    "title": "Jurassic Park Part 2 - The Chaos Continues  (En,Fr,De,It)",
     "rom": "roms/Jurassic Park Part 2 - The Chaos Continues (USA) (En,Fr,De,It).zip",
-    "cover": "assets/covers/jurassic-park-part-2-the-chaos-continues.png"
+    "cover": "assets/covers/jurassic-park-part-2-the-chaos-continues-enfrdeit.png"
   },
   {
     "id": "justice-league-task-force",
@@ -2166,10 +2166,10 @@
     "cover": "assets/covers/mr-do.png"
   },
   {
-    "id": "mr-nutz",
-    "title": "Mr. Nutz",
+    "id": "mr-nutz-enfr",
+    "title": "Mr. Nutz  (En,Fr)",
     "rom": "roms/Mr. Nutz (USA) (En,Fr).zip",
-    "cover": "assets/covers/mr-nutz.png"
+    "cover": "assets/covers/mr-nutz-enfr.png"
   },
   {
     "id": "ms-pac-man",
@@ -2310,10 +2310,10 @@
     "cover": "assets/covers/nhl-98.png"
   },
   {
-    "id": "nhl-stanley-cup",
-    "title": "NHL Stanley Cup",
+    "id": "nhl-stanley-cup-enfr",
+    "title": "NHL Stanley Cup  (En,Fr)",
     "rom": "roms/NHL Stanley Cup (USA) (En,Fr).zip",
-    "cover": "assets/covers/nhl-stanley-cup.png"
+    "cover": "assets/covers/nhl-stanley-cup-enfr.png"
   },
   {
     "id": "nhlpa-hockey-93",
@@ -2502,10 +2502,10 @@
     "cover": "assets/covers/pac-man-2-the-new-adventures.png"
   },
   {
-    "id": "packy-marlon",
-    "title": "Packy & Marlon",
+    "id": "packy-marlon-enfres",
+    "title": "Packy & Marlon  (En,Fr,Es)",
     "rom": "roms/Packy & Marlon (USA) (En,Fr,Es).zip",
-    "cover": "assets/covers/packy-marlon.png"
+    "cover": "assets/covers/packy-marlon-enfres.png"
   },
   {
     "id": "pagemaster-the",
@@ -2658,10 +2658,10 @@
     "cover": "assets/covers/powerfest-94.png"
   },
   {
-    "id": "prehistorik-man",
-    "title": "Prehistorik Man",
+    "id": "prehistorik-man-enfres",
+    "title": "Prehistorik Man  (En,Fr,Es)",
     "rom": "roms/Prehistorik Man (USA) (En,Fr,Es).zip",
-    "cover": "assets/covers/prehistorik-man.png"
+    "cover": "assets/covers/prehistorik-man-enfres.png"
   },
   {
     "id": "primal-rage",
@@ -2748,10 +2748,10 @@
     "cover": "assets/covers/ranma-1-2-hard-battle.png"
   },
   {
-    "id": "rap-jam-volume-one",
-    "title": "Rap Jam - Volume One",
+    "id": "rap-jam-volume-one-enfres",
+    "title": "Rap Jam - Volume One  (En,Fr,Es)",
     "rom": "roms/Rap Jam - Volume One (USA) (En,Fr,Es).zip",
-    "cover": "assets/covers/rap-jam-volume-one.png"
+    "cover": "assets/covers/rap-jam-volume-one-enfres.png"
   },
   {
     "id": "realm",
@@ -2802,10 +2802,10 @@
     "cover": "assets/covers/revolution-x.png"
   },
   {
-    "id": "rex-ronan-experimental-surgeon",
-    "title": "Rex Ronan - Experimental Surgeon",
+    "id": "rex-ronan-experimental-surgeon-enes",
+    "title": "Rex Ronan - Experimental Surgeon  (En,Es)",
     "rom": "roms/Rex Ronan - Experimental Surgeon (USA) (En,Es).zip",
-    "cover": "assets/covers/rex-ronan-experimental-surgeon.png"
+    "cover": "assets/covers/rex-ronan-experimental-surgeon-enes.png"
   },
   {
     "id": "riddick-bowe-boxing",
@@ -2970,10 +2970,10 @@
     "cover": "assets/covers/secret-of-mana.png"
   },
   {
-    "id": "shadow-the",
-    "title": "Shadow, The",
+    "id": "shadow-the-proto-2",
+    "title": "Shadow, The  (Proto 2)",
     "rom": "roms/Shadow, The (USA) (Proto 2).zip",
-    "cover": "assets/covers/shadow-the.png"
+    "cover": "assets/covers/shadow-the-proto-2.png"
   },
   {
     "id": "shadowrun",
@@ -3588,10 +3588,10 @@
     "cover": "assets/covers/super-soccer-champ.png"
   },
   {
-    "id": "super-solitaire",
-    "title": "Super Solitaire",
+    "id": "super-solitaire-enfrdeesit",
+    "title": "Super Solitaire  (En,Fr,De,Es,It)",
     "rom": "roms/Super Solitaire (USA) (En,Fr,De,Es,It).zip",
-    "cover": "assets/covers/super-solitaire.png"
+    "cover": "assets/covers/super-solitaire-enfrdeesit.png"
   },
   {
     "id": "super-star-fox-weekend",
@@ -3774,10 +3774,10 @@
     "cover": "assets/covers/tetris-2.png"
   },
   {
-    "id": "tetris-attack",
-    "title": "Tetris Attack",
+    "id": "tetris-attack-enja",
+    "title": "Tetris Attack  (En,Ja)",
     "rom": "roms/Tetris Attack (USA) (En,Ja).zip",
-    "cover": "assets/covers/tetris-attack.png"
+    "cover": "assets/covers/tetris-attack-enja.png"
   },
   {
     "id": "thomas-the-tank-engine-friends",
@@ -4044,10 +4044,10 @@
     "cover": "assets/covers/virtual-bart.png"
   },
   {
-    "id": "vortex",
-    "title": "Vortex",
+    "id": "vortex-enes",
+    "title": "Vortex  (En,Es)",
     "rom": "roms/Vortex (USA) (En,Es).zip",
-    "cover": "assets/covers/vortex.png"
+    "cover": "assets/covers/vortex-enes.png"
   },
   {
     "id": "wcw-super-brawl-wrestling",
@@ -4146,16 +4146,16 @@
     "cover": "assets/covers/wheel-of-fortune-deluxe-edition.png"
   },
   {
-    "id": "where-in-time-is-carmen-sandiego",
-    "title": "Where in Time Is Carmen Sandiego",
+    "id": "where-in-time-is-carmen-sandiego-enfrdeesit",
+    "title": "Where in Time Is Carmen Sandiego  (En,Fr,De,Es,It)",
     "rom": "roms/Where in Time Is Carmen Sandiego (USA) (En,Fr,De,Es,It).zip",
-    "cover": "assets/covers/where-in-time-is-carmen-sandiego.png"
+    "cover": "assets/covers/where-in-time-is-carmen-sandiego-enfrdeesit.png"
   },
   {
-    "id": "where-in-the-world-is-carmen-sandiego",
-    "title": "Where in the World Is Carmen Sandiego",
+    "id": "where-in-the-world-is-carmen-sandiego-enfrdeesit",
+    "title": "Where in the World Is Carmen Sandiego  (En,Fr,De,Es,It)",
     "rom": "roms/Where in the World Is Carmen Sandiego (USA) (En,Fr,De,Es,It).zip",
-    "cover": "assets/covers/where-in-the-world-is-carmen-sandiego.png"
+    "cover": "assets/covers/where-in-the-world-is-carmen-sandiego-enfrdeesit.png"
   },
   {
     "id": "whizz",
@@ -4200,10 +4200,10 @@
     "cover": "assets/covers/wings-2-aces-high.png"
   },
   {
-    "id": "winter-olympic-games-lillehammer-94",
-    "title": "Winter Olympic Games - Lillehammer '94",
+    "id": "winter-olympic-games-lillehammer-94-enfrdeesitptsvno",
+    "title": "Winter Olympic Games - Lillehammer '94  (En,Fr,De,Es,It,Pt,Sv,No)",
     "rom": "roms/Winter Olympic Games - Lillehammer '94 (USA) (En,Fr,De,Es,It,Pt,Sv,No).zip",
-    "cover": "assets/covers/winter-olympic-games-lillehammer-94.png"
+    "cover": "assets/covers/winter-olympic-games-lillehammer-94-enfrdeesitptsvno.png"
   },
   {
     "id": "wizard-of-oz-the",
@@ -4248,10 +4248,10 @@
     "cover": "assets/covers/world-class-service-super-nintendo-tester.png"
   },
   {
-    "id": "world-cup-usa-94",
-    "title": "World Cup USA 94",
+    "id": "world-cup-usa-94-enfrdeesitnlptsv",
+    "title": "World Cup USA 94  (En,Fr,De,Es,It,Nl,Pt,Sv)",
     "rom": "roms/World Cup USA 94 (USA) (En,Fr,De,Es,It,Nl,Pt,Sv).zip",
-    "cover": "assets/covers/world-cup-usa-94.png"
+    "cover": "assets/covers/world-cup-usa-94-enfrdeesitnlptsv.png"
   },
   {
     "id": "world-heroes",
