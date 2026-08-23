@@ -719,11 +719,11 @@
 
 .ejs_virtualGamepad_bottom {
     position: absolute;
-    bottom: 10px;
+    bottom: 190px;
     height: 30px;
     width: 124px;
-    left: 50%;
-    margin-left: -62px;
+    left: 10px;
+    margin-left: 0;
 }
 
 .ejs_virtualGamepad_left {
