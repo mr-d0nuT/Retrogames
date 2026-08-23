@@ -127,6 +127,15 @@ document.addEventListener("DOMContentLoaded", () => {
             card.addEventListener("click", () => launchGame(game));
             grid.appendChild(card);
         });
+        setTimeout(() => {
+            document.querySelectorAll('.game-title').forEach(title => {
+                if (title.scrollWidth > title.clientWidth) {
+                    const overflow = title.scrollWidth - title.clientWidth;
+                    title.style.setProperty('--overflow', '-' + overflow + 'px');
+                    title.style.animation = 'marquee-auto ' + (3 + overflow/20) + 's linear infinite alternate';
+                }
+            });
+        }, 100);
     }
 
     function launchGame(game) {
