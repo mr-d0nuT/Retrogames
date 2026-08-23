@@ -1,1 +1,1012 @@
-[]
+[
+  {
+    "title": "Addams Family",
+    "rom": "roms/Addams Family.zip",
+    "cover": "assets/covers/Addams Family.png"
+  },
+  {
+    "title": "After Burner II",
+    "rom": "roms/After Burner II.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "After Burner",
+    "rom": "roms/After Burner.zip",
+    "cover": "assets/covers/After Burner.png"
+  },
+  {
+    "title": "Aladdin",
+    "rom": "roms/Aladdin.zip",
+    "cover": "assets/covers/Aladdin.png"
+  },
+  {
+    "title": "Alcatraz",
+    "rom": "roms/Alcatraz.zip",
+    "cover": "assets/covers/Alcatraz.png"
+  },
+  {
+    "title": "Alfred Chicken",
+    "rom": "roms/Alfred Chicken.zip",
+    "cover": "assets/covers/Alfred Chicken.png"
+  },
+  {
+    "title": "Altered Beast",
+    "rom": "roms/Altered Beast.zip",
+    "cover": "assets/covers/Altered Beast.png"
+  },
+  {
+    "title": "Amazing Spider-Man",
+    "rom": "roms/Amazing Spider-Man.zip",
+    "cover": "assets/covers/Amazing Spider-Man.png"
+  },
+  {
+    "title": "Amega Mega Games",
+    "rom": "roms/Amega Mega Games.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "AmigaDOS Tutorial",
+    "rom": "roms/AmigaDOS Tutorial.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Apb",
+    "rom": "roms/Apb.zip",
+    "cover": "assets/covers/Apb.png"
+  },
+  {
+    "title": "Archon",
+    "rom": "roms/Archon.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Arkanoid",
+    "rom": "roms/Arkanoid.zip",
+    "cover": "assets/covers/Arkanoid.png"
+  },
+  {
+    "title": "Army Moves",
+    "rom": "roms/Army Moves.zip",
+    "cover": "assets/covers/Army Moves.png"
+  },
+  {
+    "title": "Assassin",
+    "rom": "roms/Assassin.zip",
+    "cover": "assets/covers/Assassin.png"
+  },
+  {
+    "title": "Awesome",
+    "rom": "roms/Awesome.zip",
+    "cover": "assets/covers/Awesome.png"
+  },
+  {
+    "title": "Back To The Future III",
+    "rom": "roms/Back To The Future III.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Back to the Future II",
+    "rom": "roms/Back to the Future II.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Bangkok Knights",
+    "rom": "roms/Bangkok Knights.zip",
+    "cover": "assets/covers/Bangkok Knights.png"
+  },
+  {
+    "title": "Barbarian - The Ultimate Warrior",
+    "rom": "roms/Barbarian - The Ultimate Warrior.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Barbarian1",
+    "rom": "roms/Barbarian1.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Barbarian2",
+    "rom": "roms/Barbarian2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Bart Simpson",
+    "rom": "roms/Bart Simpson.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "BartSimpson",
+    "rom": "roms/BartSimpson.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Batman - The Caped Crusader",
+    "rom": "roms/Batman - The Caped Crusader.zip",
+    "cover": "assets/covers/Batman - The Caped Crusader.png"
+  },
+  {
+    "title": "Batman - The Movie",
+    "rom": "roms/Batman - The Movie.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Batman Returns",
+    "rom": "roms/Batman Returns.zip",
+    "cover": "assets/covers/Batman Returns.png"
+  },
+  {
+    "title": "Battle Valley",
+    "rom": "roms/Battle Valley.zip",
+    "cover": "assets/covers/Battle Valley.png"
+  },
+  {
+    "title": "Beach Volley",
+    "rom": "roms/Beach Volley.zip",
+    "cover": "assets/covers/Beach Volley.png"
+  },
+  {
+    "title": "BeachVolley",
+    "rom": "roms/BeachVolley.zip",
+    "cover": "assets/covers/BeachVolley.png"
+  },
+  {
+    "title": "Beverly Hills Cop",
+    "rom": "roms/Beverly Hills Cop.zip",
+    "cover": "assets/covers/Beverly Hills Cop.png"
+  },
+  {
+    "title": "Beyond the Ice Palace",
+    "rom": "roms/Beyond the Ice Palace.zip",
+    "cover": "assets/covers/Beyond the Ice Palace.png"
+  },
+  {
+    "title": "Bionic Commando",
+    "rom": "roms/Bionic Commando.zip",
+    "cover": "assets/covers/Bionic Commando.png"
+  },
+  {
+    "title": "Blade Warrior",
+    "rom": "roms/Blade Warrior.zip",
+    "cover": "assets/covers/Blade Warrior.png"
+  },
+  {
+    "title": "Blood Money",
+    "rom": "roms/Blood Money.zip",
+    "cover": "assets/covers/Blood Money.png"
+  },
+  {
+    "title": "Blues Brothers",
+    "rom": "roms/Blues Brothers.zip",
+    "cover": "assets/covers/Blues Brothers.png"
+  },
+  {
+    "title": "Body Blows Galactic",
+    "rom": "roms/Body Blows Galactic.zip",
+    "cover": "assets/covers/Body Blows Galactic.png"
+  },
+  {
+    "title": "Body Blows",
+    "rom": "roms/Body Blows.zip",
+    "cover": "assets/covers/Body Blows.png"
+  },
+  {
+    "title": "Bomb Jack",
+    "rom": "roms/Bomb Jack.zip",
+    "cover": "assets/covers/Bomb Jack.png"
+  },
+  {
+    "title": "Bubble Bobble",
+    "rom": "roms/Bubble Bobble.zip",
+    "cover": "assets/covers/Bubble Bobble.png"
+  },
+  {
+    "title": "Budokan",
+    "rom": "roms/Budokan.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Cabal",
+    "rom": "roms/Cabal.zip",
+    "cover": "assets/covers/Cabal.png"
+  },
+  {
+    "title": "Chambers of Shaolin",
+    "rom": "roms/Chambers of Shaolin.zip",
+    "cover": "assets/covers/Chambers of Shaolin.png"
+  },
+  {
+    "title": "Chase HQ",
+    "rom": "roms/Chase HQ.zip",
+    "cover": "assets/covers/Chase HQ.png"
+  },
+  {
+    "title": "Chase HQ2",
+    "rom": "roms/Chase HQ2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Crazy Cars ++",
+    "rom": "roms/Crazy Cars ++.zip",
+    "cover": "assets/covers/Crazy Cars ++.png"
+  },
+  {
+    "title": "Crazy Cars II",
+    "rom": "roms/Crazy Cars II.zip",
+    "cover": "assets/covers/Crazy Cars II.png"
+  },
+  {
+    "title": "Crazy Cars III",
+    "rom": "roms/Crazy Cars III.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Crazy Cars",
+    "rom": "roms/Crazy Cars.zip",
+    "cover": "assets/covers/Crazy Cars.png"
+  },
+  {
+    "title": "Dan Dare III - The Escape!",
+    "rom": "roms/Dan Dare III - The Escape!.zip",
+    "cover": "assets/covers/Dan Dare III - The Escape!.png"
+  },
+  {
+    "title": "Defender Of The Crown",
+    "rom": "roms/Defender Of The Crown.zip",
+    "cover": "assets/covers/Defender Of The Crown.png"
+  },
+  {
+    "title": "DesertStrike",
+    "rom": "roms/DesertStrike.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Die Hard 2 - Die Harder",
+    "rom": "roms/Die Hard 2 - Die Harder.zip",
+    "cover": "assets/covers/Die Hard 2 - Die Harder.png"
+  },
+  {
+    "title": "Dogs Of War",
+    "rom": "roms/Dogs Of War.zip",
+    "cover": "assets/covers/Dogs Of War.png"
+  },
+  {
+    "title": "Double Dragon 1",
+    "rom": "roms/Double Dragon 1.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Double Dragon 2",
+    "rom": "roms/Double Dragon 2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Double Dragon 3",
+    "rom": "roms/Double Dragon 3.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Dragon Ninja",
+    "rom": "roms/Dragon Ninja.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Escape From Colditz",
+    "rom": "roms/Escape From Colditz.zip",
+    "cover": "assets/covers/Escape From Colditz.png"
+  },
+  {
+    "title": "F1",
+    "rom": "roms/F1.zip",
+    "cover": "assets/covers/F1.png"
+  },
+  {
+    "title": "F18 - Interceptor",
+    "rom": "roms/F18 - Interceptor.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Fighter Bomber",
+    "rom": "roms/Fighter Bomber.zip",
+    "cover": "assets/covers/Fighter Bomber.png"
+  },
+  {
+    "title": "Final Fight",
+    "rom": "roms/Final Fight.zip",
+    "cover": "assets/covers/Final Fight.png"
+  },
+  {
+    "title": "Final Whistle",
+    "rom": "roms/Final Whistle.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Fire & Ice",
+    "rom": "roms/Fire & Ice.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Fire and Forget ",
+    "rom": "roms/Fire and Forget .zip",
+    "cover": "assets/covers/Fire and Forget .png"
+  },
+  {
+    "title": "Fire and Forget II - The De",
+    "rom": "roms/Fire and Forget II - The De.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "First Samurai",
+    "rom": "roms/First Samurai.zip",
+    "cover": "assets/covers/First Samurai.png"
+  },
+  {
+    "title": "Flash Back",
+    "rom": "roms/Flash Back.zip",
+    "cover": "assets/covers/Flash Back.png"
+  },
+  {
+    "title": "Flood",
+    "rom": "roms/Flood.zip",
+    "cover": "assets/covers/Flood.png"
+  },
+  {
+    "title": "Forgotten Worlds",
+    "rom": "roms/Forgotten Worlds.zip",
+    "cover": "assets/covers/Forgotten Worlds.png"
+  },
+  {
+    "title": "Formula One Grand Prix",
+    "rom": "roms/Formula One Grand Prix.zip",
+    "cover": "assets/covers/Formula One Grand Prix.png"
+  },
+  {
+    "title": "Full Contact",
+    "rom": "roms/Full Contact.zip",
+    "cover": "assets/covers/Full Contact.png"
+  },
+  {
+    "title": "Future Basket",
+    "rom": "roms/Future Basket.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Fuzzball",
+    "rom": "roms/Fuzzball.zip",
+    "cover": "assets/covers/Fuzzball.png"
+  },
+  {
+    "title": "Giana Sisters",
+    "rom": "roms/Giana Sisters.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Goal",
+    "rom": "roms/Goal.zip",
+    "cover": "assets/covers/Goal.png"
+  },
+  {
+    "title": "Gods",
+    "rom": "roms/Gods.zip",
+    "cover": "assets/covers/Gods.png"
+  },
+  {
+    "title": "Golden Axe",
+    "rom": "roms/Golden Axe.zip",
+    "cover": "assets/covers/Golden Axe.png"
+  },
+  {
+    "title": "Great Courts 2",
+    "rom": "roms/Great Courts 2.zip",
+    "cover": "assets/covers/Great Courts 2.png"
+  },
+  {
+    "title": "Harley Davidson",
+    "rom": "roms/Harley Davidson.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Hook",
+    "rom": "roms/Hook.zip",
+    "cover": "assets/covers/Hook.png"
+  },
+  {
+    "title": "Hostages",
+    "rom": "roms/Hostages.zip",
+    "cover": "assets/covers/Hostages.png"
+  },
+  {
+    "title": "Hunter",
+    "rom": "roms/Hunter.zip",
+    "cover": "assets/covers/Hunter.png"
+  },
+  {
+    "title": "IkariWarriors",
+    "rom": "roms/IkariWarriors.zip",
+    "cover": "assets/covers/IkariWarriors.png"
+  },
+  {
+    "title": "Impossible Mission 2025",
+    "rom": "roms/Impossible Mission 2025.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Impossible Mission II",
+    "rom": "roms/Impossible Mission II.zip",
+    "cover": "assets/covers/Impossible Mission II.png"
+  },
+  {
+    "title": "International Karate +",
+    "rom": "roms/International Karate +.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "James Pond",
+    "rom": "roms/James Pond.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "KickOff 2",
+    "rom": "roms/KickOff 2.zip",
+    "cover": "assets/covers/KickOff 2.png"
+  },
+  {
+    "title": "Killing Game show",
+    "rom": "roms/Killing Game show.zip",
+    "cover": "assets/covers/Killing Game show.png"
+  },
+  {
+    "title": "Kings Quest 2",
+    "rom": "roms/Kings Quest 2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Kings Quest 3",
+    "rom": "roms/Kings Quest 3.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Kings Quest",
+    "rom": "roms/Kings Quest.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Knightmare",
+    "rom": "roms/Knightmare.zip",
+    "cover": "assets/covers/Knightmare.png"
+  },
+  {
+    "title": "Last Ninja 2",
+    "rom": "roms/Last Ninja 2.zip",
+    "cover": "assets/covers/Last Ninja 2.png"
+  },
+  {
+    "title": "Last Ninja 3",
+    "rom": "roms/Last Ninja 3.zip",
+    "cover": "assets/covers/Last Ninja 3.png"
+  },
+  {
+    "title": "Last Ninja Remix",
+    "rom": "roms/Last Ninja Remix.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Lethal Weapon",
+    "rom": "roms/Lethal Weapon.zip",
+    "cover": "assets/covers/Lethal Weapon.png"
+  },
+  {
+    "title": "Licence to Kill",
+    "rom": "roms/Licence to Kill.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Light Force",
+    "rom": "roms/Light Force.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Live and Let Die",
+    "rom": "roms/Live and Let Die.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Livingstone 2",
+    "rom": "roms/Livingstone 2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Lotus Turbo Challenge I",
+    "rom": "roms/Lotus Turbo Challenge I.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Lotus Turbo Challenge II",
+    "rom": "roms/Lotus Turbo Challenge II.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Lotus Turbo Challenge III",
+    "rom": "roms/Lotus Turbo Challenge III.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "M1 Tank Platoon",
+    "rom": "roms/M1 Tank Platoon.zip",
+    "cover": "assets/covers/M1 Tank Platoon.png"
+  },
+  {
+    "title": "Magic Pockets",
+    "rom": "roms/Magic Pockets.zip",
+    "cover": "assets/covers/Magic Pockets.png"
+  },
+  {
+    "title": "Maniac Mansion",
+    "rom": "roms/Maniac Mansion.zip",
+    "cover": "assets/covers/Maniac Mansion.png"
+  },
+  {
+    "title": "Master Axe",
+    "rom": "roms/Master Axe.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Menace",
+    "rom": "roms/Menace.zip",
+    "cover": "assets/covers/Menace.png"
+  },
+  {
+    "title": "Microprose Soccer",
+    "rom": "roms/Microprose Soccer.zip",
+    "cover": "assets/covers/Microprose Soccer.png"
+  },
+  {
+    "title": "Mission Elevator ",
+    "rom": "roms/Mission Elevator .zip",
+    "cover": "assets/covers/Mission Elevator .png"
+  },
+  {
+    "title": "More Lemmings",
+    "rom": "roms/More Lemmings.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Mortal Kombat",
+    "rom": "roms/Mortal Kombat.zip",
+    "cover": "assets/covers/Mortal Kombat.png"
+  },
+  {
+    "title": "Myth",
+    "rom": "roms/Myth.zip",
+    "cover": "assets/covers/Myth.png"
+  },
+  {
+    "title": "Nitro",
+    "rom": "roms/Nitro.zip",
+    "cover": "assets/covers/Nitro.png"
+  },
+  {
+    "title": "North And South",
+    "rom": "roms/North And South.zip",
+    "cover": "assets/covers/North And South.png"
+  },
+  {
+    "title": "Nuclear War",
+    "rom": "roms/Nuclear War.zip",
+    "cover": "assets/covers/Nuclear War.png"
+  },
+  {
+    "title": "Overlander",
+    "rom": "roms/Overlander.zip",
+    "cover": "assets/covers/Overlander.png"
+  },
+  {
+    "title": "P47 Thunderbolt",
+    "rom": "roms/P47 Thunderbolt.zip",
+    "cover": "assets/covers/P47 Thunderbolt.png"
+  },
+  {
+    "title": "Pacmania",
+    "rom": "roms/Pacmania.zip",
+    "cover": "assets/covers/Pacmania.png"
+  },
+  {
+    "title": "Pandora",
+    "rom": "roms/Pandora.zip",
+    "cover": "assets/covers/Pandora.png"
+  },
+  {
+    "title": "Pang",
+    "rom": "roms/Pang.zip",
+    "cover": "assets/covers/Pang.png"
+  },
+  {
+    "title": "Panza KickBoxing",
+    "rom": "roms/Panza KickBoxing.zip",
+    "cover": "assets/covers/Panza KickBoxing.png"
+  },
+  {
+    "title": "Paperboy 1",
+    "rom": "roms/Paperboy 1.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Paperboy 2",
+    "rom": "roms/Paperboy 2.zip",
+    "cover": "assets/covers/Paperboy 2.png"
+  },
+  {
+    "title": "Parasol Stars",
+    "rom": "roms/Parasol Stars.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Persian Gulf Inferno",
+    "rom": "roms/Persian Gulf Inferno.zip",
+    "cover": "assets/covers/Persian Gulf Inferno.png"
+  },
+  {
+    "title": "Platoon",
+    "rom": "roms/Platoon.zip",
+    "cover": "assets/covers/Platoon.png"
+  },
+  {
+    "title": "Powerdrome",
+    "rom": "roms/Powerdrome.zip",
+    "cover": "assets/covers/Powerdrome.png"
+  },
+  {
+    "title": "Predator",
+    "rom": "roms/Predator.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Prince of Persia",
+    "rom": "roms/Prince of Persia.zip",
+    "cover": "assets/covers/Prince of Persia.png"
+  },
+  {
+    "title": "Puzznic",
+    "rom": "roms/Puzznic.zip",
+    "cover": "assets/covers/Puzznic.png"
+  },
+  {
+    "title": "Rainbow Islands",
+    "rom": "roms/Rainbow Islands.zip",
+    "cover": "assets/covers/Rainbow Islands.png"
+  },
+  {
+    "title": "Rambo III",
+    "rom": "roms/Rambo III.zip",
+    "cover": "assets/covers/Rambo III.png"
+  },
+  {
+    "title": "Red Heat",
+    "rom": "roms/Red Heat.zip",
+    "cover": "assets/covers/Red Heat.png"
+  },
+  {
+    "title": "Renegade",
+    "rom": "roms/Renegade.zip",
+    "cover": "assets/covers/Renegade.png"
+  },
+  {
+    "title": "Retaliator",
+    "rom": "roms/Retaliator.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "RickDangerous",
+    "rom": "roms/RickDangerous.zip",
+    "cover": "assets/covers/RickDangerous.png"
+  },
+  {
+    "title": "RickDangerous2",
+    "rom": "roms/RickDangerous2.zip",
+    "cover": "assets/covers/RickDangerous2.png"
+  },
+  {
+    "title": "Rise Of The Robots",
+    "rom": "roms/Rise Of The Robots.zip",
+    "cover": "assets/covers/Rise Of The Robots.png"
+  },
+  {
+    "title": "Road Rash",
+    "rom": "roms/Road Rash.zip",
+    "cover": "assets/covers/Road Rash.png"
+  },
+  {
+    "title": "Robocod",
+    "rom": "roms/Robocod.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Robocop ++",
+    "rom": "roms/Robocop ++.zip",
+    "cover": "assets/covers/Robocop ++.png"
+  },
+  {
+    "title": "Robocop 2",
+    "rom": "roms/Robocop 2.zip",
+    "cover": "assets/covers/Robocop 2.png"
+  },
+  {
+    "title": "Robocop 3",
+    "rom": "roms/Robocop 3.zip",
+    "cover": "assets/covers/Robocop 3.png"
+  },
+  {
+    "title": "Robocop",
+    "rom": "roms/Robocop.zip",
+    "cover": "assets/covers/Robocop.png"
+  },
+  {
+    "title": "Rockstar Ate My Hamster",
+    "rom": "roms/Rockstar Ate My Hamster.zip",
+    "cover": "assets/covers/Rockstar Ate My Hamster.png"
+  },
+  {
+    "title": "Rodland",
+    "rom": "roms/Rodland.zip",
+    "cover": "assets/covers/Rodland.png"
+  },
+  {
+    "title": "Rogue Trooper",
+    "rom": "roms/Rogue Trooper.zip",
+    "cover": "assets/covers/Rogue Trooper.png"
+  },
+  {
+    "title": "Rolling Thunder",
+    "rom": "roms/Rolling Thunder.zip",
+    "cover": "assets/covers/Rolling Thunder.png"
+  },
+  {
+    "title": "Rtype 2",
+    "rom": "roms/Rtype 2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Samurai - The Way of the Warrior",
+    "rom": "roms/Samurai - The Way of the Warrior.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Second Samurai",
+    "rom": "roms/Second Samurai.zip",
+    "cover": "assets/covers/Second Samurai.png"
+  },
+  {
+    "title": "Shadow Dancer",
+    "rom": "roms/Shadow Dancer.zip",
+    "cover": "assets/covers/Shadow Dancer.png"
+  },
+  {
+    "title": "Shadow Warrior",
+    "rom": "roms/Shadow Warrior.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Shadow of the Beast",
+    "rom": "roms/Shadow of the Beast.zip",
+    "cover": "assets/covers/Shadow of the Beast.png"
+  },
+  {
+    "title": "Shinobi",
+    "rom": "roms/Shinobi.zip",
+    "cover": "assets/covers/Shinobi.png"
+  },
+  {
+    "title": "Shuffle puck Cafe",
+    "rom": "roms/Shuffle puck Cafe.zip",
+    "cover": "assets/covers/Shuffle puck Cafe.png"
+  },
+  {
+    "title": "Silkworm",
+    "rom": "roms/Silkworm.zip",
+    "cover": "assets/covers/Silkworm.png"
+  },
+  {
+    "title": "Simulcra",
+    "rom": "roms/Simulcra.zip",
+    "cover": "assets/covers/Simulcra.png"
+  },
+  {
+    "title": "Sinbad and the Throne of th",
+    "rom": "roms/Sinbad and the Throne of th.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Ski Or Die",
+    "rom": "roms/Ski Or Die.zip",
+    "cover": "assets/covers/Ski Or Die.png"
+  },
+  {
+    "title": "Space Quest 1",
+    "rom": "roms/Space Quest 1.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Space Racer",
+    "rom": "roms/Space Racer.zip",
+    "cover": "assets/covers/Space Racer.png"
+  },
+  {
+    "title": "Speed ball 2",
+    "rom": "roms/Speed ball 2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Speed ball",
+    "rom": "roms/Speed ball.zip",
+    "cover": "assets/covers/Speed ball.png"
+  },
+  {
+    "title": "SpindizzyWorlds",
+    "rom": "roms/SpindizzyWorlds.zip",
+    "cover": "assets/covers/SpindizzyWorlds.png"
+  },
+  {
+    "title": "Spy Who Loved Me",
+    "rom": "roms/Spy Who Loved Me.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Spy vs Spy - The Island Cap",
+    "rom": "roms/Spy vs Spy - The Island Cap.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Spy vs Spy",
+    "rom": "roms/Spy vs Spy.zip",
+    "cover": "assets/covers/Spy vs Spy.png"
+  },
+  {
+    "title": "Street Fighter",
+    "rom": "roms/Street Fighter.zip",
+    "cover": "assets/covers/Street Fighter.png"
+  },
+  {
+    "title": "Street Rod 1",
+    "rom": "roms/Street Rod 1.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Street Rod 2",
+    "rom": "roms/Street Rod 2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Street fighter 2",
+    "rom": "roms/Street fighter 2.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Strider",
+    "rom": "roms/Strider.zip",
+    "cover": "assets/covers/Strider.png"
+  },
+  {
+    "title": "Stunt Car Racer",
+    "rom": "roms/Stunt Car Racer.zip",
+    "cover": "assets/covers/Stunt Car Racer.png"
+  },
+  {
+    "title": "Summer Games I",
+    "rom": "roms/Summer Games I.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Summer Games II",
+    "rom": "roms/Summer Games II.zip",
+    "cover": "assets/covers/Summer Games II.png"
+  },
+  {
+    "title": "Super Hang On",
+    "rom": "roms/Super Hang On.zip",
+    "cover": "assets/covers/Super Hang On.png"
+  },
+  {
+    "title": "Swiv",
+    "rom": "roms/Swiv.zip",
+    "cover": "assets/covers/Swiv.png"
+  },
+  {
+    "title": "Team Suzuki",
+    "rom": "roms/Team Suzuki.zip",
+    "cover": "assets/covers/Team Suzuki.png"
+  },
+  {
+    "title": "Terminator 2 - Judgement Day",
+    "rom": "roms/Terminator 2 - Judgement Day.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Test Drive I",
+    "rom": "roms/Test Drive I.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Test Drive II - The Duel",
+    "rom": "roms/Test Drive II - The Duel.zip",
+    "cover": "assets/covers/Test Drive II - The Duel.png"
+  },
+  {
+    "title": "The Final Battle",
+    "rom": "roms/The Final Battle.zip",
+    "cover": "assets/covers/The Final Battle.png"
+  },
+  {
+    "title": "The NinjaWarriors",
+    "rom": "roms/The NinjaWarriors.zip",
+    "cover": "assets/covers/The NinjaWarriors.png"
+  },
+  {
+    "title": "The Running Man",
+    "rom": "roms/The Running Man.zip",
+    "cover": "assets/covers/The Running Man.png"
+  },
+  {
+    "title": "The Shining Way of Kung Fu",
+    "rom": "roms/The Shining Way of Kung Fu.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Thunder Cat",
+    "rom": "roms/Thunder Cat.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Toki",
+    "rom": "roms/Toki.zip",
+    "cover": "assets/covers/Toki.png"
+  },
+  {
+    "title": "TowerOfBabel",
+    "rom": "roms/TowerOfBabel.zip",
+    "cover": "assets/covers/TowerOfBabel.png"
+  },
+  {
+    "title": "Turbo Outrun",
+    "rom": "roms/Turbo Outrun.zip",
+    "cover": "assets/covers/Turbo Outrun.png"
+  },
+  {
+    "title": "Turrican",
+    "rom": "roms/Turrican.zip",
+    "cover": "assets/covers/Turrican.png"
+  },
+  {
+    "title": "Twintris",
+    "rom": "roms/Twintris.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Wild Streets",
+    "rom": "roms/Wild Streets.zip",
+    "cover": "assets/covers/Wild Streets.png"
+  },
+  {
+    "title": "Wings Of Fury",
+    "rom": "roms/Wings Of Fury.zip",
+    "cover": "assets/covers/Wings Of Fury.png"
+  },
+  {
+    "title": "Xenon",
+    "rom": "roms/Xenon.zip",
+    "cover": "assets/covers/Xenon.png"
+  },
+  {
+    "title": "Zak McKracken",
+    "rom": "roms/Zak McKracken.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "Zaxxon",
+    "rom": "roms/Zaxxon.zip",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
+    "title": "spanipirate",
+    "rom": "roms/spanipirate.zip",
+    "cover": "assets/amiga-logo.png"
+  }
+]
