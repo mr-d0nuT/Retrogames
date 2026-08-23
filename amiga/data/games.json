@@ -435,11 +435,6 @@
     "cover": "assets/covers/Kings Quest 2.png"
   },
   {
-    "title": "Kings Quest 3",
-    "rom": "roms/Kings Quest 3.zip",
-    "cover": "assets/covers/Kings Quest 3.png"
-  },
-  {
     "title": "Knightmare",
     "rom": "roms/Knightmare.zip",
     "cover": "assets/covers/Knightmare.png"
@@ -485,11 +480,6 @@
     "cover": "assets/covers/Live and Let Die.png"
   },
   {
-    "title": "Livingstone 2",
-    "rom": "roms/Livingstone 2.zip",
-    "cover": "assets/covers/Livingstone 2.png"
-  },
-  {
     "title": "Lotus Turbo Challenge I",
     "rom": "roms/Lotus Turbo Challenge I.zip",
     "cover": "assets/covers/Lotus Turbo Challenge I.png"
@@ -518,11 +508,6 @@
     "title": "Maniac Mansion",
     "rom": "roms/Maniac Mansion.zip",
     "cover": "assets/covers/Maniac Mansion.png"
-  },
-  {
-    "title": "Master Axe",
-    "rom": "roms/Master Axe.zip",
-    "cover": "assets/covers/Master Axe.png"
   },
   {
     "title": "Menace",
@@ -735,11 +720,6 @@
     "cover": "assets/covers/Rtype 2.png"
   },
   {
-    "title": "Samurai - The Way of the Warrior",
-    "rom": "roms/Samurai - The Way of the Warrior.zip",
-    "cover": "assets/covers/Samurai - The Way of the Warrior.png"
-  },
-  {
     "title": "Second Samurai",
     "rom": "roms/Second Samurai.zip",
     "cover": "assets/covers/Second Samurai.png"
@@ -840,16 +820,6 @@
     "cover": "assets/covers/Street fighter 2.png"
   },
   {
-    "title": "Street Rod 1",
-    "rom": "roms/Street Rod 1.zip",
-    "cover": "assets/covers/Street Rod 1.png"
-  },
-  {
-    "title": "Street Rod 2",
-    "rom": "roms/Street Rod 2.zip",
-    "cover": "assets/covers/Street Rod 2.png"
-  },
-  {
     "title": "Strider",
     "rom": "roms/Strider.zip",
     "cover": "assets/covers/Strider.png"
@@ -915,11 +885,6 @@
     "cover": "assets/covers/The Running Man.png"
   },
   {
-    "title": "The Shining Way of Kung Fu",
-    "rom": "roms/The Shining Way of Kung Fu.zip",
-    "cover": "assets/covers/The Shining Way of Kung Fu.png"
-  },
-  {
     "title": "Thunder Cat",
     "rom": "roms/Thunder Cat.zip",
     "cover": "assets/covers/Thunder Cat.png"
@@ -950,11 +915,6 @@
     "cover": "assets/covers/Turrican II - The Final Fight.png"
   },
   {
-    "title": "Twintris",
-    "rom": "roms/Twintris.zip",
-    "cover": "assets/covers/Twintris.png"
-  },
-  {
     "title": "Wild Streets",
     "rom": "roms/Wild Streets.zip",
     "cover": "assets/covers/Wild Streets.png"
@@ -973,10 +933,5 @@
     "title": "Zak McKracken",
     "rom": "roms/Zak McKracken.zip",
     "cover": "assets/covers/Zak McKracken.png"
-  },
-  {
-    "title": "Zaxxon",
-    "rom": "roms/Zaxxon.zip",
-    "cover": "assets/covers/Zaxxon.png"
   }
 ]
