@@ -10,11 +10,6 @@
     "cover": "assets/covers/astorm.png"
   },
   {
-    "title": "Alien vs. Predator",
-    "rom": "roms/avsp.zip",
-    "cover": "assets/covers/avsp.png"
-  },
-  {
     "title": "Captain Commando",
     "rom": "roms/captcomm.zip",
     "cover": "assets/covers/captcomm.png"
