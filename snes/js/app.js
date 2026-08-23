@@ -46,6 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
         // Clean up previous emulator instance if any
         document.getElementById("game-container").innerHTML = "<div id='game'></div>";
 
+        // Safari Audio Crackling Fix
+        window.AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (window.AudioContext && /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
+            const originalAudioContext = window.AudioContext;
+            window.AudioContext = function(options) {
+                return new originalAudioContext(Object.assign({ latencyHint: 'playback', sampleRate: 44100 }, options || {}));
+            };
+            window.AudioContext.prototype = originalAudioContext.prototype;
+        }
+
         // Initialize EmulatorJS
         window.EJS_player = '#game';
         window.EJS_core = 'snes';
