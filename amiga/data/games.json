@@ -82,12 +82,12 @@
   {
     "title": "Back to the Future II",
     "rom": "roms/Back to the Future II.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Back to the Future II.png"
   },
   {
     "title": "Back To The Future III",
     "rom": "roms/Back To The Future III.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Back To The Future III.png"
   },
   {
     "title": "Bangkok Knights",
@@ -107,7 +107,7 @@
   {
     "title": "Bart Simpson",
     "rom": "roms/Bart Simpson.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Bart Simpson.png"
   },
   {
     "title": "Batman - The Caped Crusader",
@@ -417,7 +417,7 @@
   {
     "title": "International Karate +",
     "rom": "roms/International Karate +.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/International Karate +.png"
   },
   {
     "title": "James Pond",
@@ -471,8 +471,8 @@
   },
   {
     "title": "Lemmings",
-    "rom": "roms/Lemmings.m3u",
-    "cover": "assets/amiga-logo.png"
+    "rom": "roms/Lemmings.zip",
+    "cover": "assets/covers/Lemmings.png"
   },
   {
     "title": "Lethal Weapon",
@@ -961,8 +961,8 @@
   },
   {
     "title": "Turrican II - The Final Fight",
-    "rom": "roms/Turrican II - The Final Fight.m3u",
-    "cover": "assets/amiga-logo.png"
+    "rom": "roms/Turrican II - The Final Fight.zip",
+    "cover": "assets/covers/Turrican II - The Final Fight.png"
   },
   {
     "title": "Twintris",
