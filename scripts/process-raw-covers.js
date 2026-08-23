@@ -1,38 +1,42 @@
 const fs = require('fs');
 const path = require('path');
 
-const rawDir = path.join(__dirname, '../snes/assets/raw_covers');
-const targetDir = path.join(__dirname, '../snes/assets/covers');
-
-if (!fs.existsSync(rawDir)) {
-    console.log("No raw_covers directory found. Skipping cover processing.");
-    process.exit(0);
-}
-if (!fs.existsSync(targetDir)) {
-    fs.mkdirSync(targetDir, { recursive: true });
+function slugify(text) {
+    return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
 }
 
-let count = 0;
-const rawFiles = fs.readdirSync(rawDir);
+function processPlatform(platform) {
+    const rawDir = path.join(__dirname, `../${platform}/assets/raw_covers/`);
+    const finalDir = path.join(__dirname, `../${platform}/assets/covers/`);
+    
+    if (!fs.existsSync(rawDir)) return;
+    if (!fs.existsSync(finalDir)) fs.mkdirSync(finalDir, { recursive: true });
 
-rawFiles.forEach(file => {
-    if (file.endsWith('.png') || file.endsWith('.jpg')) {
+    const files = fs.readdirSync(rawDir).filter(f => f.endsWith('.png') || f.endsWith('.jpg') || f.endsWith('.jpeg'));
+
+    let processed = 0;
+    files.forEach(file => {
         const ext = path.extname(file);
         const basename = path.basename(file, ext);
+        // Strip out common tags from the raw image name if any
+        const cleanName = basename.replace(/\(USA\)|\(Europe\)|\(Japan\)|\(Rev [0-9A-Z]\)/gi, '').trim();
+        const id = slugify(cleanName);
         
-        // Clean title logic
-        const cleanTitle = basename.replace(/\s*\(.*?\)\s*/g, '').trim();
-        const id = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        const sourcePath = path.join(rawDir, file);
+        const destPath = path.join(finalDir, `${id}.png`); // standardize to .png for the catalog
         
-        if (id) {
-            const srcPath = path.join(rawDir, file);
-            const destPath = path.join(targetDir, `${id}${ext}`); // Keep original extension but use ID
-            
-            // Move file
-            fs.renameSync(srcPath, destPath);
-            count++;
-        }
-    }
-});
+        fs.renameSync(sourcePath, destPath);
+        processed++;
+    });
 
-console.log(`Processed and moved ${count} covers from raw_covers to covers.`);
+    if (processed > 0) {
+        console.log(`Processed ${processed} raw covers for ${platform}.`);
+    }
+}
+
+['snes', 'arcade'].forEach(processPlatform);

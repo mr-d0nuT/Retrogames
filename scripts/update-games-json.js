@@ -1,38 +1,49 @@
 const fs = require('fs');
 const path = require('path');
 
-const romsDir = path.join(__dirname, '../snes/roms');
-const outputFile = path.join(__dirname, '../snes/data/games.json');
+const platform = process.argv[2] || 'snes';
 
-try {
-    const files = fs.readdirSync(romsDir);
-    const games = [];
+const romsDir = path.join(__dirname, `../${platform}/roms/`);
+const coversDir = path.join(__dirname, `../${platform}/assets/covers/`);
+const dataDir = path.join(__dirname, `../${platform}/data/`);
+const outputFile = path.join(dataDir, 'games.json');
 
-    files.forEach(file => {
-        if (file.endsWith('.zip') || file.endsWith('.smc') || file.endsWith('.sfc')) {
-            const ext = path.extname(file);
-            const basename = path.basename(file, ext);
-            
-            // Clean up the title by removing tags like (USA), (En,Fr,De), etc.
-            const cleanTitle = basename.replace(/\s*\(.*?\)\s*/g, '').trim();
-            
-            // Generate a URL-friendly ID
-            const id = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-            
-            games.push({
-                id: id,
-                title: cleanTitle,
-                rom: `roms/${file}`,
-                cover: `assets/covers/${id}.png`
-            });
-        }
-    });
-
-    // Sort alphabetically by title
-    games.sort((a, b) => a.title.localeCompare(b.title));
-
-    fs.writeFileSync(outputFile, JSON.stringify(games, null, 2));
-    console.log(`Successfully generated games.json with ${games.length} games.`);
-} catch (error) {
-    console.error("Error processing games:", error);
+function slugify(text) {
+    return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
 }
+
+// Create data directory if it doesn't exist
+if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+}
+
+// Check if roms directory exists
+if (!fs.existsSync(romsDir)) {
+    console.log(`No roms directory found for ${platform}`);
+    fs.writeFileSync(outputFile, JSON.stringify([], null, 2));
+    process.exit(0);
+}
+
+const romFiles = fs.readdirSync(romsDir).filter(file => file.endsWith('.zip') || file.endsWith('.smc') || file.endsWith('.sfc'));
+
+const gamesList = romFiles.map(file => {
+    // Basic title parsing (remove extension and common tags like (USA))
+    const rawTitle = file.replace(/\.zip|\.smc|\.sfc/g, '');
+    const cleanTitle = rawTitle.replace(/\(USA\)|\(Europe\)|\(Japan\)|\(Rev [0-9A-Z]\)/gi, '').trim();
+    const id = slugify(cleanTitle);
+
+    return {
+        id: id,
+        title: cleanTitle,
+        rom: `roms/${file}`,
+        cover: `assets/covers/${id}.png` // Default expected path
+    };
+});
+
+fs.writeFileSync(outputFile, JSON.stringify(gamesList, null, 2));
+console.log(`Successfully generated games.json for ${platform} with ${gamesList.length} games.`);

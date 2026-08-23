@@ -5,6 +5,8 @@ on:
     paths:
       - 'snes/roms/**'
       - 'snes/assets/raw_covers/**'
+      - 'arcade/roms/**'
+      - 'arcade/assets/raw_covers/**'
   workflow_dispatch:
 
 permissions:
@@ -25,13 +27,15 @@ jobs:
       - name: Process Raw Covers
         run: node scripts/process-raw-covers.js
 
-      - name: Run update script
-        run: node scripts/update-games-json.js
+      - name: Generate Catalogs
+        run: |
+          node scripts/update-games-json.js snes
+          node scripts/update-games-json.js arcade
 
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add snes/data/games.json snes/assets/
-          git commit -m "Auto-update games.json catalog and process covers" || echo "No changes to commit"
+          git add snes/data/games.json snes/assets/ arcade/data/games.json arcade/assets/
+          git commit -m "Auto-update games.json catalogs and process covers" || echo "No changes to commit"
           git push

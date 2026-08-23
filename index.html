@@ -203,24 +203,29 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
             
             <!-- SNES Card -->
-            <a href="snes/index.html" class="console-card p-8 flex flex-col items-center justify-center group">
-                <div class="text-6xl mb-6 group-hover:animate-bounce">🎮</div>
-                <h3 class="card-title group-hover:text-[#00ffff] transition-colors">SNES</h3>
-                <p class="text-gray-400 font-mono text-sm mt-4 text-center">Super Nintendo<br>Entertainment System</p>
-                <div class="mt-6 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-xs font-bold font-mono tracking-widest uppercase shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_25px_rgba(0,255,255,0.8)] transition-all">
-                    START PLAYER 1
+            <a href="snes/index.html" class="platform-card block bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all transform hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-indigo-900 to-purple-900 relative">
+                    <!-- Placeholder SNES logo or graphic -->
+                    <div class="absolute inset-0 flex items-center justify-center text-6xl opacity-50">🎮</div>
+                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-2 font-retro tracking-wide">Super Nintendo</h2>
+                    <p class="text-slate-400 text-sm font-medium">El cerebro de la bestia. Disfruta del catálogo completo en 16 bits.</p>
                 </div>
             </a>
 
-            <!-- Placeholder for NES -->
-            <div class="console-card p-8 flex flex-col items-center justify-center opacity-50 cursor-not-allowed">
-                <div class="text-6xl mb-6 grayscale">🕹️</div>
-                <h3 class="card-title text-gray-500">NES</h3>
-                <p class="text-gray-500 font-mono text-sm mt-4 text-center">Nintendo<br>Entertainment System</p>
-                <div class="mt-6 px-4 py-2 bg-gray-800 rounded-full text-xs font-bold font-mono tracking-widest uppercase text-gray-500">
-                    COMING SOON
+            <!-- Arcade Card -->
+            <a href="arcade/index.html" class="platform-card block bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all transform hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-red-900 to-orange-900 relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-6xl opacity-50">🕹️</div>
+                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900 to-transparent"></div>
                 </div>
-            </div>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500 mb-2 font-retro tracking-wide">Arcade Classics</h2>
+                    <p class="text-slate-400 text-sm font-medium">Las mejores recreativas de los salones. Inserta moneda para jugar.</p>
+                </div>
+            </a>
 
             <!-- Placeholder for SEGA -->
             <div class="console-card p-8 flex flex-col items-center justify-center opacity-50 cursor-not-allowed">
