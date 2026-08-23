@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETROGAMES HUB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Press+Start+2P&family=Vibur&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-blue: #00ffff;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #fff;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Animated Synthwave Grid */
+        .grid-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60vh;
+            perspective: 600px;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .synthwave-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            bottom: -50%;
+            left: -50%;
+            background-image: 
+                linear-gradient(var(--neon-pink) 2px, transparent 2px),
+                linear-gradient(90deg, var(--neon-pink) 2px, transparent 2px);
+            background-size: 50px 50px;
+            transform: rotateX(75deg);
+            animation: moveGrid 3s linear infinite;
+            box-shadow: 0 0 40px var(--neon-pink) inset;
+        }
+
+        @keyframes moveGrid {
+            0% { transform: rotateX(75deg) translateY(0); }
+            100% { transform: rotateX(75deg) translateY(50px); }
+        }
+
+        /* Glowing Text Styles */
+        .neon-title {
+            font-family: 'Monoton', cursive;
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px var(--neon-blue),
+                0 0 40px var(--neon-blue),
+                0 0 80px var(--neon-blue);
+            animation: flicker 4s infinite alternate;
+        }
+
+        .neon-subtitle {
+            font-family: 'Vibur', cursive;
+            font-size: 2.5rem;
+            color: var(--neon-pink);
+            text-shadow: 
+                0 0 5px #fff,
+                0 0 10px var(--neon-pink),
+                0 0 20px var(--neon-pink),
+                0 0 40px var(--neon-pink);
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow: 
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px var(--neon-blue),
+                0 0 40px var(--neon-blue),
+                0 0 80px var(--neon-blue);
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+            }
+        }
+
+        /* Console Cards */
+        .console-card {
+            background: rgba(10, 10, 10, 0.8);
+            border: 2px solid #333;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            text-decoration: none;
+            display: block;
+        }
+
+        .console-card:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 
+                0 0 10px var(--neon-blue),
+                0 0 20px var(--neon-blue) inset;
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .card-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0,0,0,0.2) 50%,
+                rgba(0,0,0,0.2)
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* Sun background */
+        .synthwave-sun {
+            position: fixed;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(to bottom, #ffea00 0%, #ff00ff 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 100px #ff00ff;
+            z-index: -2;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        /* Sun stripes */
+        .sun-stripes {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 10px,
+                var(--dark-bg) 10px,
+                var(--dark-bg) 20px
+            );
+        }
+    </style>
+</head>
+<body>
+    <!-- Retro Effects -->
+    <div class="scanlines"></div>
+    <div class="synthwave-sun">
+        <div class="sun-stripes"></div>
+    </div>
+    <div class="grid-container">
+        <div class="synthwave-grid"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-center p-6 relative z-10 text-center">
+        
+        <h1 class="neon-title mb-2 tracking-widest mt-12 md:text-7xl">RETROGAMES</h1>
+        <h2 class="neon-subtitle mb-16">The Ultimate Arcade Portal</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
+            
+            <!-- SNES Card -->
+            <a href="snes/index.html" class="console-card p-8 flex flex-col items-center justify-center group">
+                <div class="text-6xl mb-6 group-hover:animate-bounce">🎮</div>
+                <h3 class="card-title group-hover:text-[#00ffff] transition-colors">SNES</h3>
+                <p class="text-gray-400 font-mono text-sm mt-4 text-center">Super Nintendo<br>Entertainment System</p>
+                <div class="mt-6 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-xs font-bold font-mono tracking-widest uppercase shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_25px_rgba(0,255,255,0.8)] transition-all">
+                    START PLAYER 1
+                </div>
+            </a>
+
+            <!-- Placeholder for NES -->
+            <div class="console-card p-8 flex flex-col items-center justify-center opacity-50 cursor-not-allowed">
+                <div class="text-6xl mb-6 grayscale">🕹️</div>
+                <h3 class="card-title text-gray-500">NES</h3>
+                <p class="text-gray-500 font-mono text-sm mt-4 text-center">Nintendo<br>Entertainment System</p>
+                <div class="mt-6 px-4 py-2 bg-gray-800 rounded-full text-xs font-bold font-mono tracking-widest uppercase text-gray-500">
+                    COMING SOON
+                </div>
+            </div>
+
+            <!-- Placeholder for SEGA -->
+            <div class="console-card p-8 flex flex-col items-center justify-center opacity-50 cursor-not-allowed">
+                <div class="text-6xl mb-6 grayscale">🦔</div>
+                <h3 class="card-title text-gray-500">SEGA</h3>
+                <p class="text-gray-500 font-mono text-sm mt-4 text-center">Sega Mega Drive<br>Genesis</p>
+                <div class="mt-6 px-4 py-2 bg-gray-800 rounded-full text-xs font-bold font-mono tracking-widest uppercase text-gray-500">
+                    COMING SOON
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="p-6 text-center z-10 text-gray-500 font-mono text-xs">
+        <p>&copy; 2026 RETROGAMES PORTAL. INSERT COIN TO CONTINUE.</p>
+    </footer>
+
+</body>
+</html>
