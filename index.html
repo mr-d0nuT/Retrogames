@@ -141,17 +141,15 @@
 
         /* Sun background */
         .synthwave-sun {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
+            position: relative;
+            width: 200px;
+            height: 200px;
             background: linear-gradient(to bottom, #ffea00 0%, #ff00ff 100%);
             border-radius: 50%;
-            box-shadow: 0 0 100px #ff00ff;
+            box-shadow: 0 0 50px #ff00ff;
             z-index: 0;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            margin: 20px auto;
         }
         
         /* Sun stripes */
@@ -193,12 +191,12 @@
     <main class="flex-grow flex flex-col items-center justify-center p-6 relative z-10 text-center">
         
     <header class="w-full py-12 text-center relative z-10 flex flex-col items-center mt-20">
-        <div class="synthwave-sun">
-            <div class="sun-stripes"></div>
-        </div>
         <div class="flex flex-row items-center justify-center gap-6 relative z-10">
             <img src="assets/logo.png" alt="Mr Donut Logo" class="w-24 md:w-36 object-contain z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] animate-pulse">
             <h1 class="neon-title text-6xl md:text-8xl mb-2">RETROGAMES</h1>
+        </div>
+        <div class="synthwave-sun">
+            <div class="sun-stripes"></div>
         </div>
         <p class="neon-subtitle relative z-10 mt-4">The Ultimate Arcade Portal</p>
     </header>
