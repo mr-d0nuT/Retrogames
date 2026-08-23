@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Initialize EmulatorJS
         window.EJS_player = '#game';
         window.EJS_core = 'snes';
-        window.EJS_gameUrl = game.rom;
+        window.EJS_gameUrl = encodeURI(game.rom);
         window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
         
         // Load the EmulatorJS script dynamically
