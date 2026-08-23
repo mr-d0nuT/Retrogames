@@ -1,2 +1,2 @@
-# SNES Web Emulator
-Place your roms in the `snes/roms` directory.
+# Retrogames
+A multi-platform web emulator portal.
