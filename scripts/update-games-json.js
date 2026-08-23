@@ -23,7 +23,7 @@ try {
                 id: id,
                 title: cleanTitle,
                 rom: `roms/${file}`,
-                cover: `assets/covers/${id}.jpg`
+                cover: `assets/covers/${id}.png`
             });
         }
     });
