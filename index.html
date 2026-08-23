@@ -142,8 +142,8 @@
         /* Sun background */
         .synthwave-sun {
             position: relative;
-            width: 200px;
-            height: 200px;
+            width: 140px;
+            height: 140px;
             background: linear-gradient(to bottom, #ffea00 0%, #ff00ff 100%);
             border-radius: 50%;
             box-shadow: 0 0 50px #ff00ff;
@@ -178,6 +178,10 @@
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
         }
+    
+        @media (min-width: 768px) {
+            .synthwave-sun { width: 200px; height: 200px; }
+        }
     </style>
 </head>
 <body>
@@ -192,7 +196,7 @@
         
     <header class="w-full pt-[3px] pb-12 text-center relative z-10 flex flex-col items-center">
         <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 relative z-10 w-full px-2 max-w-[100vw] overflow-hidden">
-            <img src="assets/logo.png" alt="Mr Donut Logo" class="w-16 sm:w-24 md:w-36 object-contain z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] animate-pulse shrink-0">
+            <img src="assets/logo.png" alt="Mr Donut Logo" class="w-24 sm:w-28 md:w-36 object-contain z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] animate-pulse shrink-0">
             <h1 class="neon-title mb-0 shrink" style="font-size: clamp(2rem, 10vw, 6rem); line-height: 1;">RETROGAMES</h1>
         </div>
         <div class="synthwave-sun">
@@ -205,27 +209,27 @@
             
             <!-- SNES Card -->
             <a href="snes/index.html" class="platform-card block bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all transform hover:-translate-y-2">
-                <div class="h-48 bg-gradient-to-br from-indigo-900 to-purple-900 relative">
+                <div class="h-32 md:h-48 bg-gradient-to-br from-indigo-900 to-purple-900 relative">
                     <div class="absolute inset-0 flex items-center justify-center p-4">
                         <img src="assets/snes-console.png" alt="SNES Console" class="max-h-full object-contain drop-shadow-2xl hover:scale-110 transition-transform duration-300">
                     </div>
                     <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none"></div>
                 </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-2 font-retro tracking-wide">Super Nintendo</h2>
-                    <p class="text-slate-400 text-sm font-medium">El cerebro de la bestia. Disfruta del catálogo completo en 16 bits.</p>
+                <div class="p-4 md:p-6">
+                    <h2 class="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-2 font-retro tracking-wide">Super Nintendo</h2>
+                    <p class="text-slate-400 text-xs md:text-sm font-medium">El cerebro de la bestia. Disfruta del catálogo completo en 16 bits.</p>
                 </div>
             </a>
 
             <!-- Arcade Card -->
             <a href="arcade/index.html" class="platform-card block bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all transform hover:-translate-y-2">
-                <div class="h-48 bg-gradient-to-br from-red-900 to-orange-900 relative">
+                <div class="h-32 md:h-48 bg-gradient-to-br from-red-900 to-orange-900 relative">
                     <div class="absolute inset-0 flex items-center justify-center p-4"><img src="arcade/assets/arcade-machine.jpg" alt="Arcade Machine" class="max-h-full object-contain drop-shadow-2xl hover:scale-110 transition-transform duration-300" style="mix-blend-mode: lighten;"></div>
                     <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900 to-transparent"></div>
                 </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500 mb-2 font-retro tracking-wide">Arcade Classics</h2>
-                    <p class="text-slate-400 text-sm font-medium">Las mejores recreativas de los salones. Inserta moneda para jugar.</p>
+                <div class="p-4 md:p-6">
+                    <h2 class="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500 mb-2 font-retro tracking-wide">Arcade Classics</h2>
+                    <p class="text-slate-400 text-xs md:text-sm font-medium">Las mejores recreativas de los salones. Inserta moneda para jugar.</p>
                 </div>
             </a>
 
