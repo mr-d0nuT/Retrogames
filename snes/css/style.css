@@ -222,13 +222,15 @@ body {
 }
 
 /* When the card is hovered, animate the title */
-.game-card:hover .game-title {
-    /* We use a simple animation. For very long text, you can adjust the duration */
-    animation: marquee 5s linear infinite;
-}
 
 @keyframes marquee {
     0% { transform: translateX(0%); }
     20% { transform: translateX(0%); } /* Pause at start */
     100% { transform: translateX(-100%); }
+}
+
+
+@keyframes marquee-auto {
+    0%, 10% { transform: translateX(0); }
+    90%, 100% { transform: translateX(var(--overflow)); }
 }
