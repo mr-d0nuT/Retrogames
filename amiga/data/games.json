@@ -857,12 +857,12 @@
   {
     "title": "Street Rod 1",
     "rom": "roms/Street Rod 1.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Street Rod 1.png"
   },
   {
     "title": "Street Rod 2",
     "rom": "roms/Street Rod 2.zip",
-    "cover": "assets/amiga-logo.png"
+    "cover": "assets/covers/Street Rod 2.png"
   },
   {
     "title": "Strider",
