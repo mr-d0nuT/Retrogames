@@ -1,216 +1,259 @@
 [
   {
-    "title": "Altered Beast",
+    "id": "altbeast",
+    "title": "altbeast",
     "rom": "roms/altbeast.zip",
     "cover": "assets/covers/altbeast.png"
   },
   {
-    "title": "Captain Commando",
+    "id": "captcomm",
+    "title": "captcomm",
     "rom": "roms/captcomm.zip",
     "cover": "assets/covers/captcomm.png"
   },
   {
-    "title": "Double Dragon",
+    "id": "ddragon",
+    "title": "ddragon",
     "rom": "roms/ddragon.zip",
     "cover": "assets/covers/ddragon.png"
   },
   {
-    "title": "Double Dragon II: The Revenge",
+    "id": "ddragon2",
+    "title": "ddragon2",
     "rom": "roms/ddragon2.zip",
     "cover": "assets/covers/ddragon2.png"
   },
   {
-    "title": "Cadillacs and Dinosaurs",
+    "id": "dino",
+    "title": "dino",
     "rom": "roms/dino.zip",
     "cover": "assets/covers/dino.png"
   },
   {
-    "title": "Fatal Fury 2",
+    "id": "fatfury2",
+    "title": "fatfury2",
     "rom": "roms/fatfury2.zip",
     "cover": "assets/covers/fatfury2.png"
   },
   {
-    "title": "Final Fight",
+    "id": "ffight",
+    "title": "ffight",
     "rom": "roms/ffight.zip",
     "cover": "assets/covers/ffight.png"
   },
   {
-    "title": "Garou: Mark of the Wolves",
+    "id": "garou",
+    "title": "garou",
     "rom": "roms/garou.zip",
     "cover": "assets/covers/garou.png"
   },
   {
-    "title": "Ghouls 'n Ghosts",
+    "id": "ghouls",
+    "title": "ghouls",
     "rom": "roms/ghouls.zip",
     "cover": "assets/covers/ghouls.png"
   },
   {
-    "title": "Knights of the Round",
+    "id": "knights",
+    "title": "knights",
     "rom": "roms/knights.zip",
     "cover": "assets/covers/knights.png"
   },
   {
-    "title": "The King of Dragons",
+    "id": "kod",
+    "title": "kod",
     "rom": "roms/kod.zip",
     "cover": "assets/covers/kod.png"
   },
   {
-    "title": "The King of Fighters '97",
+    "id": "kof97",
+    "title": "kof97",
     "rom": "roms/kof97.zip",
     "cover": "assets/covers/kof97.png"
   },
   {
-    "title": "The King of Fighters '98",
+    "id": "kof98",
+    "title": "kof98",
     "rom": "roms/kof98.zip",
     "cover": "assets/covers/kof98.png"
   },
   {
-    "title": "The King of Fighters '99",
+    "id": "kof99",
+    "title": "kof99",
     "rom": "roms/kof99.zip",
     "cover": "assets/covers/kof99.png"
   },
   {
-    "title": "Mortal Kombat",
+    "id": "mk",
+    "title": "mk",
     "rom": "roms/mk.zip",
     "cover": "assets/covers/mk.png"
   },
   {
-    "title": "Marvel Super Heroes",
+    "id": "msh",
+    "title": "msh",
     "rom": "roms/msh.zip",
     "cover": "assets/covers/msh.png"
   },
   {
-    "title": "Metal Slug",
+    "id": "mslug",
+    "title": "mslug",
     "rom": "roms/mslug.zip",
     "cover": "assets/covers/mslug.png"
   },
   {
-    "title": "Metal Slug 2",
+    "id": "mslug2",
+    "title": "mslug2",
     "rom": "roms/mslug2.zip",
     "cover": "assets/covers/mslug2.png"
   },
   {
-    "title": "Metal Slug X",
+    "id": "mslugx",
+    "title": "mslugx",
     "rom": "roms/mslugx.zip",
     "cover": "assets/covers/mslugx.png"
   },
   {
-    "title": "Mystic Warriors",
+    "id": "mystwarr",
+    "title": "mystwarr",
     "rom": "roms/mystwarr.zip",
     "cover": "assets/covers/mystwarr.png"
   },
   {
-    "title": "Pang",
+    "id": "pang",
+    "title": "pang",
     "rom": "roms/pang.zip",
     "cover": "assets/covers/pang.png"
   },
   {
-    "title": "The Punisher",
+    "id": "punisher",
+    "title": "punisher",
     "rom": "roms/punisher.zip",
     "cover": "assets/covers/punisher.png"
   },
   {
-    "title": "Rastan",
+    "id": "rastan",
+    "title": "rastan",
     "rom": "roms/rastan.zip",
     "cover": "assets/covers/rastan.png"
   },
   {
-    "title": "Samurai Shodown",
+    "id": "samsho",
+    "title": "samsho",
     "rom": "roms/samsho.zip",
     "cover": "assets/covers/samsho.png"
   },
   {
-    "title": "Samurai Shodown II",
+    "id": "samsho2",
+    "title": "samsho2",
     "rom": "roms/samsho2.zip",
     "cover": "assets/covers/samsho2.png"
   },
   {
-    "title": "Samurai Shodown III",
+    "id": "samsho3",
+    "title": "samsho3",
     "rom": "roms/samsho3.zip",
     "cover": "assets/covers/samsho3.png"
   },
   {
-    "title": "Samurai Shodown IV",
+    "id": "samsho4",
+    "title": "samsho4",
     "rom": "roms/samsho4.zip",
     "cover": "assets/covers/samsho4.png"
   },
   {
-    "title": "Street Fighter II",
+    "id": "sf2",
+    "title": "sf2",
     "rom": "roms/sf2.zip",
     "cover": "assets/covers/sf2.png"
   },
   {
-    "title": "Street Fighter II': Champion Edition",
+    "id": "sf2ce",
+    "title": "sf2ce",
     "rom": "roms/sf2ce.zip",
     "cover": "assets/covers/sf2ce.png"
   },
   {
-    "title": "Snow Bros.",
+    "id": "snowbros",
+    "title": "snowbros",
     "rom": "roms/snowbros.zip",
     "cover": "assets/covers/snowbros.png"
   },
   {
-    "title": "Super Pang",
+    "id": "spang",
+    "title": "spang",
     "rom": "roms/spang.zip",
     "cover": "assets/covers/spang.png"
   },
   {
-    "title": "Super Street Fighter II Turbo",
+    "id": "ssf2t",
+    "title": "ssf2t",
     "rom": "roms/ssf2t.zip",
     "cover": "assets/covers/ssf2t.png"
   },
   {
-    "title": "Sunset Riders",
+    "id": "ssriders",
+    "title": "ssriders",
     "rom": "roms/ssriders.zip",
     "cover": "assets/covers/ssriders.png"
   },
   {
-    "title": "Teenage Mutant Ninja Turtles",
+    "id": "tmnt",
+    "title": "tmnt",
     "rom": "roms/tmnt.zip",
     "cover": "assets/covers/tmnt.png"
   },
   {
-    "title": "Teenage Mutant Ninja Turtles: Turtles in Time",
+    "id": "tmnt2",
+    "title": "tmnt2",
     "rom": "roms/tmnt2.zip",
     "cover": "assets/covers/tmnt2.png"
   },
   {
-    "title": "Toki",
+    "id": "toki",
+    "title": "toki",
     "rom": "roms/toki.zip",
     "cover": "assets/covers/toki.png"
   },
   {
-    "title": "Tumblepop",
+    "id": "tumblep",
+    "title": "tumblep",
     "rom": "roms/tumblep.zip",
     "cover": "assets/covers/tumblep.png"
   },
   {
-    "title": "Ultimate Mortal Kombat 3",
+    "id": "umk3",
+    "title": "umk3",
     "rom": "roms/umk3.zip",
     "cover": "assets/covers/umk3.png"
   },
   {
-    "title": "Vendetta",
+    "id": "vendetta",
+    "title": "vendetta",
     "rom": "roms/vendetta.zip",
     "cover": "assets/covers/vendetta.png"
   },
   {
-    "title": "Warriors of Fate",
+    "id": "wof",
+    "title": "wof",
     "rom": "roms/wof.zip",
     "cover": "assets/covers/wof.png"
   },
   {
-    "title": "X-Men: Children of the Atom",
+    "id": "xmcota",
+    "title": "xmcota",
     "rom": "roms/xmcota.zip",
     "cover": "assets/covers/xmcota.png"
   },
   {
-    "title": "X-Men",
+    "id": "xmen",
+    "title": "xmen",
     "rom": "roms/xmen.zip",
     "cover": "assets/covers/xmen.png"
   },
   {
-    "title": "X-Men vs. Street Fighter",
+    "id": "xmvsf",
+    "title": "xmvsf",
     "rom": "roms/xmvsf.zip",
     "cover": "assets/covers/xmvsf.png"
   }
