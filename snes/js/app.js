@@ -110,11 +110,11 @@ document.addEventListener("DOMContentLoaded", () => {
             card.className = "game-card glass";
             
             // Si la carátula falla al cargar, mostramos un color por defecto
-            const fallbackImage = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='400' viewBox='0 0 300 400'%3E%3Crect fill='%23334155' width='300' height='400'/%3E%3Ctext fill='%2394a3b8' font-family='sans-serif' font-size='24' dy='10.5' font-weight='bold' x='50%25' y='50%25' text-anchor='middle'%3ENo Cover%3C/text%3E%3C/svg%3E";
+            const fallbackImage = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22 viewBox=%220 0 300 400%22%3E%3Crect fill=%22%231e293b%22 width=%22300%22 height=%22400%22/%3E%3Ctext fill=%22%2394a3b8%22 font-family=%22monospace%22 font-size=%2224%22 dy=%2210.5%22 font-weight=%22bold%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3ENo Cover%3C/text%3E%3C/svg%3E";
 
             card.innerHTML = `
                 <div class="cover-wrapper">
-                    <img src="${game.cover}" alt="${game.title}" onerror="this.src='${fallbackImage}'">
+                    <img src="${game.cover}" alt="${game.title}" loading="lazy" onerror="this.src='${fallbackImage}'">
                     <div class="overlay"></div>
                     <div class="game-info">
                         <div class="game-title">${game.title}</div>
