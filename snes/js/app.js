@@ -131,27 +131,56 @@ document.addEventListener("DOMContentLoaded", () => {
         modalTitle.textContent = game.title;
         modal.classList.add("active");
         
-        // Clean up previous emulator instance if any
-        document.getElementById("game-container").innerHTML = "<div id='game'></div>";
-
-        // Safari Audio Unlocker
-        window.AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (window.AudioContext) {
-            const unlockCtx = new window.AudioContext();
-            unlockCtx.resume();
-        }
-
-        // Initialize EmulatorJS
-        window.EJS_player = '#game';
-        window.EJS_core = 'snes';
-        window.EJS_gameUrl = game.rom;
-        window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+        const container = document.getElementById("game-container");
+        container.innerHTML = "";
         
-        // Load the EmulatorJS script dynamically
-        const script = document.createElement("script");
-        script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
-        script.id = "ejs-loader";
-        document.body.appendChild(script);
+        // Create an iframe to sandbox the emulator. 
+        // This ensures audio and memory are perfectly wiped when closed.
+        const iframe = document.createElement("iframe");
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = "none";
+        iframe.id = "emulator-iframe";
+        
+        container.appendChild(iframe);
+
+        const iframeDoc = iframe.contentWindow.document;
+        
+        const html = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
+                #game { width: 100%; height: 100%; }
+            </style>
+        </head>
+        <body>
+            <div id="game"></div>
+            <script>
+                // Safari Audio Unlocker
+                window.AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (window.AudioContext) {
+                    const unlockCtx = new window.AudioContext();
+                    unlockCtx.resume();
+                }
+
+                window.EJS_player = '#game';
+                window.EJS_core = 'snes';
+                window.EJS_gameUrl = '${game.rom}'; 
+                window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+            </script>
+            <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+        </body>
+        </html>
+        `;
+        
+        iframeDoc.open();
+        iframeDoc.write(html);
+        iframeDoc.close();
+        
+        // Ensure iframe gets focus so gamepads/keyboard work without clicking
+        iframe.focus();
     }
 
     // Close emulator
