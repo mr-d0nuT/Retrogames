@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 window.EJS_player = '#game';
-                window.EJS_core = 'arcade';
+                window.EJS_core = 'mame2003_plus';
                 window.EJS_gameUrl = '${game.rom}';
                 window.EJS_background = '../${game.cover}';
                 window.EJS_pathtodata = '../emulatorjs/data/';
