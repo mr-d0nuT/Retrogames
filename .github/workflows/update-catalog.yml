@@ -4,7 +4,8 @@ on:
   push:
     paths:
       - 'snes/roms/**'
-  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub si es necesario
+      - 'snes/assets/raw_covers/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -20,6 +21,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Process Raw Covers
+        run: node scripts/process-raw-covers.js
 
       - name: Run update script
         run: node scripts/update-games-json.js
