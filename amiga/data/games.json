@@ -5,14 +5,14 @@
     "cover": "assets/covers/Addams Family.png"
   },
   {
-    "title": "After Burner II",
-    "rom": "roms/After Burner II.zip",
-    "cover": "assets/covers/After Burner II.png"
-  },
-  {
     "title": "After Burner",
     "rom": "roms/After Burner.zip",
     "cover": "assets/covers/After Burner.png"
+  },
+  {
+    "title": "After Burner II",
+    "rom": "roms/After Burner II.zip",
+    "cover": "assets/covers/After Burner II.png"
   },
   {
     "title": "Aladdin",
@@ -80,13 +80,13 @@
     "cover": "assets/covers/Awesome.png"
   },
   {
-    "title": "Back To The Future III",
-    "rom": "roms/Back To The Future III.zip",
+    "title": "Back to the Future II",
+    "rom": "roms/Back to the Future II.zip",
     "cover": "assets/amiga-logo.png"
   },
   {
-    "title": "Back to the Future II",
-    "rom": "roms/Back to the Future II.zip",
+    "title": "Back To The Future III",
+    "rom": "roms/Back To The Future III.zip",
     "cover": "assets/amiga-logo.png"
   },
   {
@@ -180,14 +180,14 @@
     "cover": "assets/covers/Blues Brothers.png"
   },
   {
-    "title": "Body Blows Galactic",
-    "rom": "roms/Body Blows Galactic.zip",
-    "cover": "assets/covers/Body Blows Galactic.png"
-  },
-  {
     "title": "Body Blows",
     "rom": "roms/Body Blows.zip",
     "cover": "assets/covers/Body Blows.png"
+  },
+  {
+    "title": "Body Blows Galactic",
+    "rom": "roms/Body Blows Galactic.zip",
+    "cover": "assets/covers/Body Blows Galactic.png"
   },
   {
     "title": "Bomb Jack",
@@ -225,6 +225,11 @@
     "cover": "assets/covers/Chase HQ2.png"
   },
   {
+    "title": "Crazy Cars",
+    "rom": "roms/Crazy Cars.zip",
+    "cover": "assets/covers/Crazy Cars.png"
+  },
+  {
     "title": "Crazy Cars ++",
     "rom": "roms/Crazy Cars ++.zip",
     "cover": "assets/covers/Crazy Cars ++.png"
@@ -238,11 +243,6 @@
     "title": "Crazy Cars III",
     "rom": "roms/Crazy Cars III.zip",
     "cover": "assets/covers/Crazy Cars III.png"
-  },
-  {
-    "title": "Crazy Cars",
-    "rom": "roms/Crazy Cars.zip",
-    "cover": "assets/covers/Crazy Cars.png"
   },
   {
     "title": "Dan Dare III - The Escape!",
@@ -455,6 +455,11 @@
     "cover": "assets/covers/Killing Game show.png"
   },
   {
+    "title": "Kings Quest",
+    "rom": "roms/Kings Quest.zip",
+    "cover": "assets/covers/Kings Quest.png"
+  },
+  {
     "title": "Kings Quest 2",
     "rom": "roms/Kings Quest 2.zip",
     "cover": "assets/covers/Kings Quest 2.png"
@@ -463,11 +468,6 @@
     "title": "Kings Quest 3",
     "rom": "roms/Kings Quest 3.zip",
     "cover": "assets/amiga-logo.png"
-  },
-  {
-    "title": "Kings Quest",
-    "rom": "roms/Kings Quest.zip",
-    "cover": "assets/covers/Kings Quest.png"
   },
   {
     "title": "Knightmare",
@@ -488,6 +488,11 @@
     "title": "Last Ninja Remix",
     "rom": "roms/Last Ninja Remix.zip",
     "cover": "assets/covers/Last Ninja Remix.png"
+  },
+  {
+    "title": "Lemmings",
+    "rom": "roms/Lemmings.m3u",
+    "cover": "assets/amiga-logo.png"
   },
   {
     "title": "Lethal Weapon",
@@ -720,6 +725,11 @@
     "cover": "assets/covers/Robocod.png"
   },
   {
+    "title": "Robocop",
+    "rom": "roms/Robocop.zip",
+    "cover": "assets/covers/Robocop.png"
+  },
+  {
     "title": "Robocop ++",
     "rom": "roms/Robocop ++.zip",
     "cover": "assets/covers/Robocop ++.png"
@@ -733,11 +743,6 @@
     "title": "Robocop 3",
     "rom": "roms/Robocop 3.zip",
     "cover": "assets/covers/Robocop 3.png"
-  },
-  {
-    "title": "Robocop",
-    "rom": "roms/Robocop.zip",
-    "cover": "assets/covers/Robocop.png"
   },
   {
     "title": "Rockstar Ate My Hamster",
@@ -780,14 +785,14 @@
     "cover": "assets/covers/Shadow Dancer.png"
   },
   {
-    "title": "Shadow Warrior",
-    "rom": "roms/Shadow Warrior.zip",
-    "cover": "assets/covers/Shadow Warrior.png"
-  },
-  {
     "title": "Shadow of the Beast",
     "rom": "roms/Shadow of the Beast.zip",
     "cover": "assets/covers/Shadow of the Beast.png"
+  },
+  {
+    "title": "Shadow Warrior",
+    "rom": "roms/Shadow Warrior.zip",
+    "cover": "assets/covers/Shadow Warrior.png"
   },
   {
     "title": "Shinobi",
@@ -830,9 +835,9 @@
     "cover": "assets/covers/Space Racer.png"
   },
   {
-    "title": "Speed ball 2",
-    "rom": "roms/Speed ball 2.zip",
-    "cover": "assets/covers/Speed ball 2.png"
+    "title": "spanipirate",
+    "rom": "roms/spanipirate.zip",
+    "cover": "assets/amiga-logo.png"
   },
   {
     "title": "Speed ball",
@@ -840,19 +845,14 @@
     "cover": "assets/covers/Speed ball.png"
   },
   {
+    "title": "Speed ball 2",
+    "rom": "roms/Speed ball 2.zip",
+    "cover": "assets/covers/Speed ball 2.png"
+  },
+  {
     "title": "SpindizzyWorlds",
     "rom": "roms/SpindizzyWorlds.zip",
     "cover": "assets/covers/SpindizzyWorlds.png"
-  },
-  {
-    "title": "Spy Who Loved Me",
-    "rom": "roms/Spy Who Loved Me.zip",
-    "cover": "assets/covers/Spy Who Loved Me.png"
-  },
-  {
-    "title": "Spy vs Spy - The Island Cap",
-    "rom": "roms/Spy vs Spy - The Island Cap.zip",
-    "cover": "assets/covers/Spy vs Spy - The Island Cap.png"
   },
   {
     "title": "Spy vs Spy",
@@ -860,9 +860,24 @@
     "cover": "assets/covers/Spy vs Spy.png"
   },
   {
+    "title": "Spy vs Spy - The Island Cap",
+    "rom": "roms/Spy vs Spy - The Island Cap.zip",
+    "cover": "assets/covers/Spy vs Spy - The Island Cap.png"
+  },
+  {
+    "title": "Spy Who Loved Me",
+    "rom": "roms/Spy Who Loved Me.zip",
+    "cover": "assets/covers/Spy Who Loved Me.png"
+  },
+  {
     "title": "Street Fighter",
     "rom": "roms/Street Fighter.zip",
     "cover": "assets/covers/Street Fighter.png"
+  },
+  {
+    "title": "Street fighter 2",
+    "rom": "roms/Street fighter 2.zip",
+    "cover": "assets/covers/Street fighter 2.png"
   },
   {
     "title": "Street Rod 1",
@@ -873,11 +888,6 @@
     "title": "Street Rod 2",
     "rom": "roms/Street Rod 2.zip",
     "cover": "assets/amiga-logo.png"
-  },
-  {
-    "title": "Street fighter 2",
-    "rom": "roms/Street fighter 2.zip",
-    "cover": "assets/covers/Street fighter 2.png"
   },
   {
     "title": "Strider",
@@ -975,6 +985,11 @@
     "cover": "assets/covers/Turrican.png"
   },
   {
+    "title": "Turrican II - The Final Fight",
+    "rom": "roms/Turrican II - The Final Fight.m3u",
+    "cover": "assets/amiga-logo.png"
+  },
+  {
     "title": "Twintris",
     "rom": "roms/Twintris.zip",
     "cover": "assets/amiga-logo.png"
@@ -1003,10 +1018,5 @@
     "title": "Zaxxon",
     "rom": "roms/Zaxxon.zip",
     "cover": "assets/covers/Zaxxon.png"
-  },
-  {
-    "title": "spanipirate",
-    "rom": "roms/spanipirate.zip",
-    "cover": "assets/amiga-logo.png"
   }
 ]
