@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNES Web Emulator</title>
+    <!-- Tailwind CSS for layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased min-h-screen flex flex-col relative">
+    
+    <!-- Background Design -->
+    <div class="fixed inset-0 z-[-1] bg-slate-900">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50"></div>
+        <div class="absolute top-0 w-full h-96 bg-gradient-to-b from-blue-900/20 to-transparent"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="w-full p-6 text-center">
+        <h1 class="text-3xl md:text-5xl font-retro text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-2 mt-8 shadow-sm">
+            SNES CLASSICS
+        </h1>
+        <p class="text-slate-400 font-medium">Juega tus ROMs directamente en el navegador.</p>
+        <p class="text-xs text-slate-500 mt-2">Compatible con Gamepads USB y Bluetooth 🎮</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8 max-w-6xl">
+        <div id="games-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <!-- Game cards will be injected here by app.js -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 text-slate-500 text-sm">
+        <p>Impulsado por <a href="https://emulatorjs.org/" target="_blank" class="text-blue-400 hover:underline">EmulatorJS</a>.</p>
+    </footer>
+
+    <!-- Emulator Modal -->
+    <div id="emulator-modal">
+        <div id="emulator-header">
+            <h2 id="modal-title" class="text-xl font-bold">Cargando...</h2>
+            <button id="close-emulator" class="close-btn font-retro text-xs">CERRAR X</button>
+        </div>
+        <div id="game-container">
+            <div id="game"></div>
+        </div>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="js/app.js"></script>
+</body>
+</html>

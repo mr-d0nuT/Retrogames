@@ -1,0 +1,20 @@
+[
+  {
+    "id": "donkey-kong-country",
+    "title": "Donkey Kong Country",
+    "rom": "snes/roms/DonkeyKongCountry.smc",
+    "cover": "assets/covers/dkc.jpg"
+  },
+  {
+    "id": "super-mario-world",
+    "title": "Super Mario World",
+    "rom": "snes/roms/SuperMarioWorld.smc",
+    "cover": "assets/covers/smw.jpg"
+  },
+  {
+    "id": "zelda-ltp",
+    "title": "Zelda: A Link to the Past",
+    "rom": "snes/roms/ZeldaLTP.smc",
+    "cover": "assets/covers/zelda.jpg"
+  }
+]
