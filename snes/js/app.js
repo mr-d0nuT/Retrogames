@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let allGames = [];
     let currentFilter = { text: "", letter: "ALL" };
 
-    // Load games from JSON
-    fetch("data/games.json")
+    // Load games from JSON (with cache buster to prevent old lists)
+    fetch("data/games.json?v=" + new Date().getTime())
         .then(response => response.json())
         .then(games => {
             // Sort alphabetically by title
@@ -40,6 +40,21 @@ document.addEventListener("DOMContentLoaded", () => {
         // Search Input Listener
         searchInput.addEventListener("input", (e) => {
             currentFilter.text = e.target.value.toLowerCase();
+            
+            // Auto-reset alphabet to ALL when typing to avoid confusion
+            if (currentFilter.text.length > 0 && currentFilter.letter !== "ALL") {
+                currentFilter.letter = "ALL";
+                allAlphaBtns.forEach(b => {
+                    b.classList.remove("text-white", "bg-purple-600", "shadow-[0_0_10px_rgba(168,85,247,0.8)]");
+                    b.classList.add("text-slate-400");
+                });
+                const allBtn = document.querySelector('.alpha-btn[data-letter="ALL"]');
+                if (allBtn) {
+                    allBtn.classList.remove("text-slate-400");
+                    allBtn.classList.add("text-white", "bg-purple-600", "shadow-[0_0_10px_rgba(168,85,247,0.8)]");
+                }
+            }
+            
             applyFilters();
         });
 
