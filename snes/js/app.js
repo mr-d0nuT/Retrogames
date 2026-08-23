@@ -169,9 +169,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.EJS_core = 'snes';
                 window.EJS_gameUrl = '${game.rom}'; 
                 window.EJS_background = '../${game.cover}';
-                window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+                window.EJS_pathtodata = '../emulatorjs/data/';
             </script>
-            <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+            <script src="../emulatorjs/data/loader.js"></script>
         </body>
         </html>
         `;
