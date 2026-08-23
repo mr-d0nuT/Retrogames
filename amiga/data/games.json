@@ -100,11 +100,6 @@
     "cover": "assets/covers/Barbarian - The Ultimate Warrior.png"
   },
   {
-    "title": "Barbarian1",
-    "rom": "roms/Barbarian1.zip",
-    "cover": "assets/covers/Barbarian1.png"
-  },
-  {
     "title": "Barbarian2",
     "rom": "roms/Barbarian2.zip",
     "cover": "assets/covers/Barbarian2.png"
@@ -112,11 +107,6 @@
   {
     "title": "Bart Simpson",
     "rom": "roms/Bart Simpson.zip",
-    "cover": "assets/amiga-logo.png"
-  },
-  {
-    "title": "BartSimpson",
-    "rom": "roms/BartSimpson.zip",
     "cover": "assets/amiga-logo.png"
   },
   {
@@ -143,11 +133,6 @@
     "title": "Beach Volley",
     "rom": "roms/Beach Volley.zip",
     "cover": "assets/covers/Beach Volley.png"
-  },
-  {
-    "title": "BeachVolley",
-    "rom": "roms/BeachVolley.zip",
-    "cover": "assets/covers/BeachVolley.png"
   },
   {
     "title": "Beverly Hills Cop",
@@ -228,11 +213,6 @@
     "title": "Crazy Cars",
     "rom": "roms/Crazy Cars.zip",
     "cover": "assets/covers/Crazy Cars.png"
-  },
-  {
-    "title": "Crazy Cars ++",
-    "rom": "roms/Crazy Cars ++.zip",
-    "cover": "assets/covers/Crazy Cars ++.png"
   },
   {
     "title": "Crazy Cars II",
@@ -728,11 +708,6 @@
     "title": "Robocop",
     "rom": "roms/Robocop.zip",
     "cover": "assets/covers/Robocop.png"
-  },
-  {
-    "title": "Robocop ++",
-    "rom": "roms/Robocop ++.zip",
-    "cover": "assets/covers/Robocop ++.png"
   },
   {
     "title": "Robocop 2",
