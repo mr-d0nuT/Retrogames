@@ -1,1 +1,272 @@
-[]
+[
+  {
+    "id": "altbeast",
+    "title": "altbeast",
+    "rom": "roms/altbeast.zip",
+    "cover": "assets/covers/altbeast.png"
+  },
+  {
+    "id": "astorm",
+    "title": "astorm",
+    "rom": "roms/astorm.zip",
+    "cover": "assets/covers/astorm.png"
+  },
+  {
+    "id": "avsp",
+    "title": "avsp",
+    "rom": "roms/avsp.zip",
+    "cover": "assets/covers/avsp.png"
+  },
+  {
+    "id": "captcomm",
+    "title": "captcomm",
+    "rom": "roms/captcomm.zip",
+    "cover": "assets/covers/captcomm.png"
+  },
+  {
+    "id": "ddragon",
+    "title": "ddragon",
+    "rom": "roms/ddragon.zip",
+    "cover": "assets/covers/ddragon.png"
+  },
+  {
+    "id": "ddragon2",
+    "title": "ddragon2",
+    "rom": "roms/ddragon2.zip",
+    "cover": "assets/covers/ddragon2.png"
+  },
+  {
+    "id": "dino",
+    "title": "dino",
+    "rom": "roms/dino.zip",
+    "cover": "assets/covers/dino.png"
+  },
+  {
+    "id": "fatfury2",
+    "title": "fatfury2",
+    "rom": "roms/fatfury2.zip",
+    "cover": "assets/covers/fatfury2.png"
+  },
+  {
+    "id": "ffight",
+    "title": "ffight",
+    "rom": "roms/ffight.zip",
+    "cover": "assets/covers/ffight.png"
+  },
+  {
+    "id": "garou",
+    "title": "garou",
+    "rom": "roms/garou.zip",
+    "cover": "assets/covers/garou.png"
+  },
+  {
+    "id": "ghouls",
+    "title": "ghouls",
+    "rom": "roms/ghouls.zip",
+    "cover": "assets/covers/ghouls.png"
+  },
+  {
+    "id": "knights",
+    "title": "knights",
+    "rom": "roms/knights.zip",
+    "cover": "assets/covers/knights.png"
+  },
+  {
+    "id": "kod",
+    "title": "kod",
+    "rom": "roms/kod.zip",
+    "cover": "assets/covers/kod.png"
+  },
+  {
+    "id": "kof97",
+    "title": "kof97",
+    "rom": "roms/kof97.zip",
+    "cover": "assets/covers/kof97.png"
+  },
+  {
+    "id": "kof98",
+    "title": "kof98",
+    "rom": "roms/kof98.zip",
+    "cover": "assets/covers/kof98.png"
+  },
+  {
+    "id": "kof99",
+    "title": "kof99",
+    "rom": "roms/kof99.zip",
+    "cover": "assets/covers/kof99.png"
+  },
+  {
+    "id": "mk",
+    "title": "mk",
+    "rom": "roms/mk.zip",
+    "cover": "assets/covers/mk.png"
+  },
+  {
+    "id": "msh",
+    "title": "msh",
+    "rom": "roms/msh.zip",
+    "cover": "assets/covers/msh.png"
+  },
+  {
+    "id": "mslug",
+    "title": "mslug",
+    "rom": "roms/mslug.zip",
+    "cover": "assets/covers/mslug.png"
+  },
+  {
+    "id": "mslug2",
+    "title": "mslug2",
+    "rom": "roms/mslug2.zip",
+    "cover": "assets/covers/mslug2.png"
+  },
+  {
+    "id": "mslugx",
+    "title": "mslugx",
+    "rom": "roms/mslugx.zip",
+    "cover": "assets/covers/mslugx.png"
+  },
+  {
+    "id": "mystwarr",
+    "title": "mystwarr",
+    "rom": "roms/mystwarr.zip",
+    "cover": "assets/covers/mystwarr.png"
+  },
+  {
+    "id": "pang",
+    "title": "pang",
+    "rom": "roms/pang.zip",
+    "cover": "assets/covers/pang.png"
+  },
+  {
+    "id": "punisher",
+    "title": "punisher",
+    "rom": "roms/punisher.zip",
+    "cover": "assets/covers/punisher.png"
+  },
+  {
+    "id": "rastan",
+    "title": "rastan",
+    "rom": "roms/rastan.zip",
+    "cover": "assets/covers/rastan.png"
+  },
+  {
+    "id": "samsho",
+    "title": "samsho",
+    "rom": "roms/samsho.zip",
+    "cover": "assets/covers/samsho.png"
+  },
+  {
+    "id": "samsho2",
+    "title": "samsho2",
+    "rom": "roms/samsho2.zip",
+    "cover": "assets/covers/samsho2.png"
+  },
+  {
+    "id": "samsho3",
+    "title": "samsho3",
+    "rom": "roms/samsho3.zip",
+    "cover": "assets/covers/samsho3.png"
+  },
+  {
+    "id": "samsho4",
+    "title": "samsho4",
+    "rom": "roms/samsho4.zip",
+    "cover": "assets/covers/samsho4.png"
+  },
+  {
+    "id": "sf2",
+    "title": "sf2",
+    "rom": "roms/sf2.zip",
+    "cover": "assets/covers/sf2.png"
+  },
+  {
+    "id": "sf2ce",
+    "title": "sf2ce",
+    "rom": "roms/sf2ce.zip",
+    "cover": "assets/covers/sf2ce.png"
+  },
+  {
+    "id": "snowbros",
+    "title": "snowbros",
+    "rom": "roms/snowbros.zip",
+    "cover": "assets/covers/snowbros.png"
+  },
+  {
+    "id": "spang",
+    "title": "spang",
+    "rom": "roms/spang.zip",
+    "cover": "assets/covers/spang.png"
+  },
+  {
+    "id": "ssf2t",
+    "title": "ssf2t",
+    "rom": "roms/ssf2t.zip",
+    "cover": "assets/covers/ssf2t.png"
+  },
+  {
+    "id": "ssriders",
+    "title": "ssriders",
+    "rom": "roms/ssriders.zip",
+    "cover": "assets/covers/ssriders.png"
+  },
+  {
+    "id": "tmnt",
+    "title": "tmnt",
+    "rom": "roms/tmnt.zip",
+    "cover": "assets/covers/tmnt.png"
+  },
+  {
+    "id": "tmnt2",
+    "title": "tmnt2",
+    "rom": "roms/tmnt2.zip",
+    "cover": "assets/covers/tmnt2.png"
+  },
+  {
+    "id": "toki",
+    "title": "toki",
+    "rom": "roms/toki.zip",
+    "cover": "assets/covers/toki.png"
+  },
+  {
+    "id": "tumblep",
+    "title": "tumblep",
+    "rom": "roms/tumblep.zip",
+    "cover": "assets/covers/tumblep.png"
+  },
+  {
+    "id": "umk3",
+    "title": "umk3",
+    "rom": "roms/umk3.zip",
+    "cover": "assets/covers/umk3.png"
+  },
+  {
+    "id": "vendetta",
+    "title": "vendetta",
+    "rom": "roms/vendetta.zip",
+    "cover": "assets/covers/vendetta.png"
+  },
+  {
+    "id": "wof",
+    "title": "wof",
+    "rom": "roms/wof.zip",
+    "cover": "assets/covers/wof.png"
+  },
+  {
+    "id": "xmcota",
+    "title": "xmcota",
+    "rom": "roms/xmcota.zip",
+    "cover": "assets/covers/xmcota.png"
+  },
+  {
+    "id": "xmen",
+    "title": "xmen",
+    "rom": "roms/xmen.zip",
+    "cover": "assets/covers/xmen.png"
+  },
+  {
+    "id": "xmvsf",
+    "title": "xmvsf",
+    "rom": "roms/xmvsf.zip",
+    "cover": "assets/covers/xmvsf.png"
+  }
+]
