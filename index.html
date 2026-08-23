@@ -168,6 +168,18 @@
                 var(--dark-bg) 20px
             );
         }
+
+        /* Logo styling */
+        .neon-logo {
+            filter: drop-shadow(0 0 10px var(--neon-pink)) drop-shadow(0 0 20px var(--neon-blue));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
 <body>
@@ -183,7 +195,9 @@
     <!-- Main Content -->
     <main class="flex-grow flex flex-col items-center justify-center p-6 relative z-10 text-center">
         
-        <h1 class="neon-title mb-2 tracking-widest mt-12 md:text-7xl">RETROGAMES</h1>
+        <img src="assets/logo.png" alt="Mr Donut Logo" class="neon-logo w-48 h-48 md:w-64 md:h-64 object-contain mt-8 mb-4">
+        
+        <h1 class="neon-title mb-2 tracking-widest md:text-7xl">RETROGAMES</h1>
         <h2 class="neon-subtitle mb-16">The Ultimate Arcade Portal</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
