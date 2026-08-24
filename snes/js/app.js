@@ -159,7 +159,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         border-color: #ff00ff;
                     }
                 }
+            
+                @media screen and (orientation: landscape) {
+                    #select { top: auto !important; bottom: 3px !important; left: 5vw !important; right: auto !important; }
+                    #start { top: auto !important; bottom: 3px !important; left: 20vw !important; right: auto !important; }
+                    #speed_slow { top: auto !important; bottom: 3px !important; right: 20vw !important; left: auto !important; }
+                    #speed_fast { top: auto !important; bottom: 3px !important; right: 5vw !important; left: auto !important; }
+                }
             </style>
+
         </head>
         <body>
             <div id="game"></div>
