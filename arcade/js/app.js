@@ -23,19 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function setupSearch() {
         const searchInput = document.getElementById("search-input");
-        const alphaContainer = document.getElementById("alphabet-container");
+        const alphaSelect = document.getElementById("alphabet-select");
         
-        // Generate A-Z buttons
+        // Generate A-Z options
         const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
         letters.forEach(letter => {
-            const btn = document.createElement("button");
-            btn.className = "alpha-btn px-2.5 py-1.5 rounded-md text-xs font-mono font-bold text-slate-400 hover:text-white hover:bg-purple-600/50 transition-all";
-            btn.dataset.letter = letter;
-            btn.textContent = letter;
-            alphaContainer.appendChild(btn);
+            const opt = document.createElement("option");
+            opt.value = letter;
+            opt.textContent = letter;
+            alphaSelect.appendChild(opt);
         });
-
-        const allAlphaBtns = document.querySelectorAll(".alpha-btn");
 
         // Search Input Listener
         searchInput.addEventListener("input", (e) => {
@@ -44,37 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
             // Auto-reset alphabet to ALL when typing to avoid confusion
             if (currentFilter.text.length > 0 && currentFilter.letter !== "ALL") {
                 currentFilter.letter = "ALL";
-                allAlphaBtns.forEach(b => {
-                    b.classList.remove("text-white", "bg-purple-600", "shadow-[0_0_10px_rgba(168,85,247,0.8)]");
-                    b.classList.add("text-slate-400");
-                });
-                const allBtn = document.querySelector('.alpha-btn[data-letter="ALL"]');
-                if (allBtn) {
-                    allBtn.classList.remove("text-slate-400");
-                    allBtn.classList.add("text-white", "bg-purple-600", "shadow-[0_0_10px_rgba(168,85,247,0.8)]");
-                }
+                alphaSelect.value = "ALL";
             }
             
             applyFilters();
         });
 
-        // Alphabet Listener
-        allAlphaBtns.forEach(btn => {
-            btn.addEventListener("click", (e) => {
-                // Remove active styling from all buttons
-                allAlphaBtns.forEach(b => {
-                    b.classList.remove("text-white", "bg-purple-600", "shadow-[0_0_10px_rgba(168,85,247,0.8)]");
-                    b.classList.add("text-slate-400");
-                });
-                
-                // Add active styling to clicked button
-                const target = e.target;
-                target.classList.remove("text-slate-400");
-                target.classList.add("text-white", "bg-purple-600", "shadow-[0_0_10px_rgba(168,85,247,0.8)]");
-                
-                currentFilter.letter = target.dataset.letter;
-                applyFilters();
-            });
+        // Alphabet Dropdown Listener
+        alphaSelect.addEventListener("change", (e) => {
+            currentFilter.letter = e.target.value;
+            applyFilters();
         });
     }
 
