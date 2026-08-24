@@ -161,11 +161,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             
                 
-                                                                                /* Virtual gamepad central top positioning */
-                .b_select { top: 15px !important; bottom: auto !important; left: 10px !important; right: auto !important; margin: 0 !important; transform: none !important; }
-                .b_start { top: 15px !important; bottom: auto !important; left: 80px !important; right: auto !important; margin: 0 !important; transform: none !important; }
-                .b_speed_slow { top: 15px !important; bottom: auto !important; left: 150px !important; right: auto !important; margin: 0 !important; transform: none !important; }
-                .b_speed_fast { top: 15px !important; bottom: auto !important; left: 220px !important; right: auto !important; margin: 0 !important; transform: none !important; }
+                                                                                                /* Virtual gamepad central top positioning */
+                .b_select, .b_start, .b_speed_slow, .b_speed_fast { position: fixed !important; top: 15px !important; bottom: auto !important; margin: 0 !important; transform: none !important; }
+                .b_select { left: calc(50vw - 150px) !important; right: auto !important; }
+                .b_start { left: calc(50vw - 50px) !important; right: auto !important; }
+                .b_speed_slow { left: calc(50vw + 50px) !important; right: auto !important; }
+                .b_speed_fast { left: calc(50vw + 150px) !important; right: auto !important; }
 
             </style>
 
