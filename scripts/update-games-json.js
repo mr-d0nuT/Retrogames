@@ -8,6 +8,11 @@ const coversDir = path.join(__dirname, `../${platform}/assets/covers/`);
 const dataDir = path.join(__dirname, `../${platform}/data/`);
 const outputFile = path.join(dataDir, 'games.json');
 
+let arcadeDict = {};
+if (platform === 'arcade') {
+    arcadeDict = JSON.parse(fs.readFileSync(path.join(__dirname, 'arcade-dict.json'), 'utf8'));
+}
+
 function slugify(text) {
     return text.toString().toLowerCase()
         .replace(/\s+/g, '-')
@@ -34,14 +39,20 @@ const romFiles = fs.readdirSync(romsDir).filter(file => file.endsWith('.zip') ||
 const gamesList = romFiles.map(file => {
     // Basic title parsing (remove extension and common tags like (USA))
     const rawTitle = file.replace(/\.zip|\.smc|\.sfc/g, '');
-    const cleanTitle = rawTitle.replace(/\(USA\)|\(Europe\)|\(Japan\)|\(Rev [0-9A-Z]\)/gi, '').trim();
-    const id = slugify(cleanTitle);
+    let cleanTitle = rawTitle.replace(/\(USA\)|\(Europe\)|\(Japan\)|\(Rev [0-9A-Z]\)/gi, '').trim();
+    
+    if (platform === 'arcade' && arcadeDict[cleanTitle]) {
+        cleanTitle = arcadeDict[cleanTitle];
+    }
+    
+    // For covers, we use the original shortname so the images don't break
+    const coverId = platform === 'arcade' ? rawTitle : slugify(cleanTitle);
 
     return {
-        id: id,
+        id: slugify(cleanTitle),
         title: cleanTitle,
         rom: `roms/${file}`,
-        cover: `assets/covers/${id}.png` // Default expected path
+        cover: `assets/covers/${coverId}.png`
     };
 });
 
