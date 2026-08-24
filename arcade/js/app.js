@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             
                 /* Bulletproof Virtual Gamepad 2x2 Grid */
-                .b_select, .b_start, .b_speed_slow, .b_speed_fast { 
+                .b_select, .b_start { 
                     position: fixed !important; 
                     top: auto !important; 
                     right: auto !important; 
@@ -175,6 +175,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     z-index: 999999 !important; 
                     display: block !important;
                 }
+                .b_speed_slow, .b_speed_fast {
+                    display: none !important;
+                }
+                .b_select { bottom: 250px !important; left: 15px !important; }
+                .b_start  { bottom: 250px !important; left: 105px !important; }
                 .b_select { bottom: 210px !important; left: 15px !important; }
                 .b_start  { bottom: 210px !important; left: 105px !important; }
                 .b_speed_slow { bottom: 150px !important; left: 15px !important; }
