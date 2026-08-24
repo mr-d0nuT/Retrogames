@@ -129,8 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         setTimeout(() => {
             document.querySelectorAll('.game-title').forEach(title => {
-                if (title.scrollWidth > title.clientWidth) {
-                    const overflow = title.scrollWidth - title.clientWidth;
+                if (title.scrollWidth > title.parentElement.clientWidth) {
+                    const overflow = title.scrollWidth - title.parentElement.clientWidth;
                     title.style.setProperty('--overflow', '-' + overflow + 'px');
                     title.style.animation = 'marquee-auto ' + (3 + overflow/20) + 's linear infinite alternate';
                 }
