@@ -194,6 +194,58 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.EJS_backgroundBlur = true;
                 window.EJS_biosUrl = "../amiga/bios.zip";
                 window.EJS_pathtodata = '../emulatorjs/data/';
+            
+                // Amiga Touch-to-Mouse emulation
+                let checkCanvas = setInterval(() => {
+                    const canvas = document.querySelector('canvas');
+                    if (canvas) {
+                        clearInterval(checkCanvas);
+                        let lastTouch = null;
+                        
+                        canvas.addEventListener('touchstart', (e) => {
+                            // Only capture single finger touches on the canvas
+                            if (e.touches.length === 1) {
+                                lastTouch = e.touches[0];
+                                const clickEvent = new MouseEvent('mousedown', {
+                                    bubbles: true, cancelable: true,
+                                    clientX: lastTouch.clientX, clientY: lastTouch.clientY,
+                                    button: 0
+                                });
+                                canvas.dispatchEvent(clickEvent);
+                            }
+                        }, {passive: false});
+
+                        canvas.addEventListener('touchmove', (e) => {
+                            if (e.touches.length === 1 && lastTouch) {
+                                e.preventDefault();
+                                const touch = e.touches[0];
+                                // Emulate mouse speed multiplier for better UX
+                                const speed = 1.5; 
+                                const mx = (touch.clientX - lastTouch.clientX) * speed;
+                                const my = (touch.clientY - lastTouch.clientY) * speed;
+                                
+                                const moveEvent = new MouseEvent('mousemove', {
+                                    bubbles: true, cancelable: true,
+                                    clientX: touch.clientX, clientY: touch.clientY
+                                });
+                                Object.defineProperty(moveEvent, 'movementX', {value: mx});
+                                Object.defineProperty(moveEvent, 'movementY', {value: my});
+                                canvas.dispatchEvent(moveEvent);
+                                
+                                lastTouch = touch;
+                            }
+                        }, {passive: false});
+
+                        canvas.addEventListener('touchend', (e) => {
+                            lastTouch = null;
+                            const clickEvent = new MouseEvent('mouseup', {
+                                bubbles: true, cancelable: true,
+                                button: 0
+                            });
+                            canvas.dispatchEvent(clickEvent);
+                        }, {passive: false});
+                    }
+                }, 500);
             </script>
             <script src="../emulatorjs/data/loader.js"></script>
         </body>
