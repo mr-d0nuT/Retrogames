@@ -179,7 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.EJS_player = '#game';
                 window.EJS_core = 'mame2003_plus';
                 window.EJS_gameUrl = '${game.rom}';
-                window.EJS_background = '../${game.cover}';
+                window.EJS_backgroundImage = '../${game.cover}';
+                window.EJS_backgroundBlur = true;
                 window.EJS_pathtodata = '../emulatorjs/data/';
             </script>
             <script src="../emulatorjs/data/loader.js"></script>
