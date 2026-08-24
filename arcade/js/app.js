@@ -138,8 +138,27 @@ document.addEventListener("DOMContentLoaded", () => {
         <html>
         <head>
             <style>
-                body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
+                                body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
                 #game { width: 100%; height: 100%; }
+                .ejs_start_button {
+                    animation: pulse-neon 1.5s infinite alternate !important;
+                    border: 3px solid #ff00ff !important;
+                    border-radius: 50px !important;
+                }
+                @keyframes pulse-neon {
+                    0% {
+                        box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, inset 0 0 10px #ff00ff;
+                        border-color: #ff00ff;
+                    }
+                    50% {
+                        box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, inset 0 0 15px #00ffff;
+                        border-color: #00ffff;
+                    }
+                    100% {
+                        box-shadow: 0 0 10px #ff00ff, 0 0 25px #ff00ff, inset 0 0 10px #ff00ff;
+                        border-color: #ff00ff;
+                    }
+                }
             </style>
         </head>
         <body>
