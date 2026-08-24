@@ -161,11 +161,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             
                 
-                                                /* Virtual gamepad central top positioning */
-                #select, #start, #speed_slow, #speed_fast { 
-                    top: 40px !important; 
-                    bottom: auto !important; 
-                }
+                                                                /* Virtual gamepad central top positioning */
+                .b_select { top: 15px !important; bottom: auto !important; left: 20% !important; right: auto !important; margin: 0 !important; }
+                .b_start { top: 15px !important; bottom: auto !important; left: 40% !important; right: auto !important; margin: 0 !important; }
+                .b_speed_slow { top: 15px !important; bottom: auto !important; left: auto !important; right: 40% !important; margin: 0 !important; }
+                .b_speed_fast { top: 15px !important; bottom: auto !important; left: auto !important; right: 20% !important; margin: 0 !important; }
 
             </style>
 
