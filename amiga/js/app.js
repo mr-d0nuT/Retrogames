@@ -162,14 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
                 
                                                                                                                 
-                .b_select      { bottom: 200px !important; left: 10px !important; }
-                .b_start       { bottom: 200px !important; left: 100px !important; }
-                .b_speed_slow  { bottom: 150px !important; left: 10px !important; }
-                .b_speed_fast  { bottom: 150px !important; left: 100px !important; }
-                .b_select { left: calc(50vw - 150px) !important; right: auto !important; }
-                .b_start { left: calc(50vw - 50px) !important; right: auto !important; }
-                .b_speed_slow { left: calc(50vw + 50px) !important; right: auto !important; }
-                .b_speed_fast { left: calc(50vw + 150px) !important; right: auto !important; }
+                
 
             
                 /* Bulletproof Virtual Gamepad 2x2 Grid */

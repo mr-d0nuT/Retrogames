@@ -162,14 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
                 
                                                                                                                 
-                .b_select      { bottom: 200px !important; left: 10px !important; }
-                .b_start       { bottom: 200px !important; left: 100px !important; }
-                .b_speed_slow  { bottom: 150px !important; left: 10px !important; }
-                .b_speed_fast  { bottom: 150px !important; left: 100px !important; }
-                .b_select { left: calc(50vw - 150px) !important; right: auto !important; }
-                .b_start { left: calc(50vw - 50px) !important; right: auto !important; }
-                .b_speed_slow { left: calc(50vw + 50px) !important; right: auto !important; }
-                .b_speed_fast { left: calc(50vw + 150px) !important; right: auto !important; }
+                
 
             
                 /* Bulletproof Virtual Gamepad 2x2 Grid */
@@ -206,8 +199,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.EJS_backgroundImage = window.location.origin + window.location.pathname.replace('index.html', '') + '${game.cover}';
                 window.EJS_backgroundBlur = true;
                 window.EJS_pathtodata = '../emulatorjs/data/';
-            
-                
+
+                // Reparent virtual gamepad buttons to document.body to escape transforms
+                setInterval(() => {
+                    const selectors = ['.b_select', '.b_start', '.b_speed_slow', '.b_speed_fast'];
+                    selectors.forEach(sel => {
+                        const btns = document.querySelectorAll(sel);
+                        if (btns.length > 1) {
+                            // Clean up duplicates if emulator recreates them
+                            for (let i = 0; i < btns.length - 1; i++) {
+                                btns[i].remove();
+                            }
+                        }
+                        const btn = document.querySelector(sel);
+                        if (btn && btn.parentElement !== document.body) {
+                            document.body.appendChild(btn);
+                        }
+                    });
+                }, 500);
+            </script>
             <script src="../emulatorjs/data/loader.js"></script>
         </body>
         </html>
