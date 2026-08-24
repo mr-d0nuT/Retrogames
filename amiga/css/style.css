@@ -234,3 +234,15 @@ body {
     0%, 15% { transform: translateX(0); }
     85%, 100% { transform: translateX(var(--overflow)); }
 }
+
+/* Virtual Gamepad Overrides */
+@media screen and (orientation: landscape) {
+    #start, #select {
+        top: 3px !important;
+        bottom: auto !important;
+    }
+    #speed_fast, #speed_slow {
+        bottom: 3px !important;
+        top: auto !important;
+    }
+}

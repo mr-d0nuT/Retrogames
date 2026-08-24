@@ -181,10 +181,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.EJS_core_options = {
                     "puae_mapper_x": "space",
                     
-                    "puae_mapper_l": "space",
+                    "puae_mapper_l": "mouse_left",
                     
                     "puae_mapper_y": "return",
-                    "puae_mapper_r": "return"
+                    "puae_mapper_r": "mouse_right"
                 };
                 window.EJS_gameUrl = '${game.rom}'; 
                 window.EJS_background = '../${game.cover}';
