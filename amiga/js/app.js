@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "puae_mapper_r": "mouse_right"
                 };
                 window.EJS_gameUrl = '${game.rom}'; 
-                window.EJS_backgroundImage = '${game.cover}';
+                window.EJS_backgroundImage = window.location.origin + window.location.pathname.replace('index.html', '') + '${game.cover}';
                 window.EJS_backgroundBlur = true;
                 window.EJS_biosUrl = "../amiga/bios.zip";
                 window.EJS_pathtodata = '../emulatorjs/data/';

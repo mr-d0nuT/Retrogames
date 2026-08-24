@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.EJS_player = '#game';
                 window.EJS_core = 'snes';
                 window.EJS_gameUrl = '${game.rom}'; 
-                window.EJS_backgroundImage = '${game.cover}';
+                window.EJS_backgroundImage = window.location.origin + window.location.pathname.replace('index.html', '') + '${game.cover}';
                 window.EJS_backgroundBlur = true;
                 window.EJS_pathtodata = '../emulatorjs/data/';
             </script>
