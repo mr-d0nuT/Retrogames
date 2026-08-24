@@ -161,15 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             
                 
-                                                                                                                /* Virtual gamepad 2x2 grid above joystick */
-                .b_select, .b_start, .b_speed_slow, .b_speed_fast { 
-                    position: fixed !important; 
-                    top: auto !important; 
-                    right: auto !important; 
-                    margin: 0 !important; 
-                    transform: none !important; 
-                    z-index: 9999 !important; 
-                }
+                                                                                                                
                 .b_select      { bottom: 200px !important; left: 10px !important; }
                 .b_start       { bottom: 200px !important; left: 100px !important; }
                 .b_speed_slow  { bottom: 150px !important; left: 10px !important; }
@@ -179,7 +171,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 .b_speed_slow { left: calc(50vw + 50px) !important; right: auto !important; }
                 .b_speed_fast { left: calc(50vw + 150px) !important; right: auto !important; }
 
+            
+                /* Bulletproof Virtual Gamepad 2x2 Grid */
+                .b_select, .b_start, .b_speed_slow, .b_speed_fast { 
+                    position: fixed !important; 
+                    top: auto !important; 
+                    right: auto !important; 
+                    margin: 0 !important; 
+                    transform: none !important; 
+                    z-index: 999999 !important; 
+                    display: block !important;
+                }
+                .b_select { bottom: 210px !important; left: 15px !important; }
+                .b_start  { bottom: 210px !important; left: 105px !important; }
+                .b_speed_slow { bottom: 150px !important; left: 15px !important; }
+                .b_speed_fast { bottom: 150px !important; left: 105px !important; }
             </style>
+
 
         </head>
         <body>
@@ -199,25 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.EJS_backgroundBlur = true;
                 window.EJS_pathtodata = '../emulatorjs/data/';
             
-                // Reparent virtual gamepad buttons to break out of scaled containers
-                let checkButtons = setInterval(() => {
-                    const selectBtn = document.querySelector('.b_select');
-                    const startBtn = document.querySelector('.b_start');
-                    const slowBtn = document.querySelector('.b_speed_slow');
-                    const fastBtn = document.querySelector('.b_speed_fast');
-                    const gameContainer = document.querySelector('#game');
-                    
-                    if (startBtn && selectBtn && gameContainer) {
-                        clearInterval(checkButtons);
-                        [selectBtn, startBtn, slowBtn, fastBtn].forEach(btn => {
-                            if (btn) {
-                                btn.style.zIndex = '9999';
-                                gameContainer.appendChild(btn);
-                            }
-                        });
-                    }
-                }, 500);
-            </script>
+                
             <script src="../emulatorjs/data/loader.js"></script>
         </body>
         </html>
