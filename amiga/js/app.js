@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <html>
         <head>
             <style>
-                                body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
+                                body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; overscroll-behavior: none; }
                 #game { width: 100%; height: 100%; }
                 .ejs_start_button {
                     animation: pulse-neon 1.5s infinite alternate !important;
@@ -159,34 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         border-color: #ff00ff;
                     }
                 }
-            
-                
-                                                                                                                
-                
-
-            
-                /* Bulletproof Virtual Gamepad 2x2 Grid */
-                .b_select, .b_start { 
-                    position: fixed !important; 
-                    top: auto !important; 
-                    right: auto !important; 
-                    margin: 0 !important; 
-                    transform: none !important; 
-                    z-index: 999999 !important; 
-                    display: block !important;
-                }
-                .b_speed_slow, .b_speed_fast {
-                    display: none !important;
-                }
-                .b_select { bottom: 250px !important; left: 15px !important; }
-                .b_start  { bottom: 250px !important; left: 105px !important; }
-                .b_select { bottom: 210px !important; left: 15px !important; }
-                .b_start  { bottom: 210px !important; left: 105px !important; }
-                .b_speed_slow { bottom: 150px !important; left: 15px !important; }
-                .b_speed_fast { bottom: 150px !important; left: 105px !important; }
             </style>
 
-
+            <!-- HUD de controles tactiles (posiciones por sistema y orientacion) -->
+            <link rel="stylesheet" href="../assets/emulator/touch-controls.css?v=1">
         </head>
         <body>
             <div id="game"></div>
@@ -200,14 +176,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 window.EJS_player = '#game';
                 window.EJS_core = 'puae';
-                window.EJS_core_options = {
-                    "puae_mapper_x": "space",
-                    
-                    "puae_mapper_l": "mouse_left",
-                    
-                    "puae_mapper_y": "return",
-                    "puae_mapper_r": "mouse_right"
-                };
+                // El mapeo de teclas del nucleo PUAE (Space, Return, botones de
+                // raton y teclado virtual) lo declara touch-controls.js con los
+                // valores que espera EmulatorJS en EJS_defaultOptions.
                 window.EJS_gameUrl = '${game.rom}'; 
                 window.EJS_backgroundImage = window.location.origin + window.location.pathname.replace('index.html', '') + '${game.cover}';
                 window.EJS_backgroundBlur = true;
@@ -265,8 +236,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         }, {passive: false});
                     }
                 }, 500);
-            
-                
+            </script>
+
+            <script>window.RG_SYSTEM = 'amiga';</script>
+            <script src="../assets/emulator/touch-controls.js?v=1"></script>
             <script src="../emulatorjs/data/loader.js"></script>
         </body>
         </html>

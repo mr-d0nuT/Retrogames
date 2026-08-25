@@ -1,0 +1,475 @@
+/* ==========================================================================
+   RETROGAMES · HUD de controles táctiles
+   --------------------------------------------------------------------------
+   Se carga DENTRO del iframe del emulador (junto a touch-controls.js).
+   Redefine por completo la posición y el aspecto del gamepad virtual de
+   EmulatorJS: una distribución distinta por sistema (SNES / ARCADE / AMIGA)
+   y por orientación (vertical / horizontal), sin solapes entre botones.
+
+   Reglas del diseño
+   -----------------
+   1. Los contenedores de EmulatorJS pasan a ser "bandas" y "clusters"
+      absolutos con `pointer-events:none`; solo los botones capturan el dedo.
+   2. Cada cluster es un CSS Grid con áreas nombradas: el solape entre
+      botones es imposible por construcción, no por ajuste de píxeles.
+   3. Todas las medidas salen de `vmin` (el lado corto de la pantalla), así
+      que el mando tiene el mismo tamaño físico en vertical y en horizontal
+      y escala solo en tablets.
+   4. En vertical el mando se apila bajo la imagen del juego (EmulatorJS la
+      ancla arriba), así que no la tapa; en horizontal la cruceta y los
+      botones caen sobre las bandas negras laterales.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* --------------------------------------------------------------------------
+   1. Lienzo del mando
+   -------------------------------------------------------------------------- */
+
+.ejs_virtualGamepad_parent.rg-pad {
+    position: absolute !important;
+    inset: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    pointer-events: none;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: 'Press Start 2P', ui-monospace, "SFMono-Regular", Menlo, monospace;
+    transition: opacity .3s ease;
+
+    /* --- Escala global -------------------------------------------------- */
+    --rg-btn: clamp(46px, 13vmin, 74px);      /* diámetro botón de acción   */
+    --rg-dpad: clamp(112px, 33vmin, 190px);   /* lado de la cruceta         */
+    --rg-gap: clamp(7px, 1.7vmin, 13px);      /* separación entre botones   */
+    --rg-pill-h: clamp(28px, 7.5vmin, 42px);  /* alto de las píldoras       */
+    --rg-pill-fs: clamp(8px, 2.4vmin, 13px);
+    --rg-pill-pad: clamp(7px, 1.8vmin, 14px);
+    --rg-face-fs: clamp(16px, 3.6vmin, 26px);
+
+    /* --- Márgenes de seguridad (JS los reescribe con los del padre) ------ */
+    --rg-sat: env(safe-area-inset-top, 0px);
+    --rg-sab: env(safe-area-inset-bottom, 0px);
+    --rg-sal: env(safe-area-inset-left, 0px);
+    --rg-sar: env(safe-area-inset-right, 0px);
+    --rg-edge-x: 12px;
+    --rg-edge-b: 12px;
+    --rg-left: calc(var(--rg-edge-x) + var(--rg-sal));
+    --rg-right: calc(var(--rg-edge-x) + var(--rg-sar));
+    --rg-bottom: calc(var(--rg-edge-b) + var(--rg-sab));
+
+    /* --- Paleta --------------------------------------------------------- */
+    --rg-glass: rgba(9, 12, 26, .58);
+    --rg-glass-deep: rgba(6, 8, 20, .74);
+    --rg-tone: 148, 163, 184;                 /* gris pizarra por defecto   */
+}
+
+/* Tablets y pantallas grandes: más aire contra los bordes. */
+@media (min-width: 780px) and (min-height: 560px) {
+    .ejs_virtualGamepad_parent.rg-pad {
+        --rg-edge-x: 26px;
+        --rg-edge-b: 22px;
+    }
+}
+
+/* Atenuado por inactividad: sigue siendo pulsable, molesta menos. */
+.ejs_virtualGamepad_parent.rg-pad.rg-idle { opacity: .7; }
+
+/* --------------------------------------------------------------------------
+   2. Bandas y clusters (contenedores de EmulatorJS reposicionados)
+   -------------------------------------------------------------------------- */
+
+.rg-pad .rg-band,
+.rg-pad .rg-cluster {
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none;
+    top: auto !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+/* Cluster principal (cruceta) — se ancla al lado marcado por EmulatorJS,
+   de modo que el "modo zurdo" del menú sigue funcionando. */
+.rg-pad .rg-cluster-primary,
+.rg-pad .rg-cluster-action {
+    display: grid;
+    place-items: center;
+    gap: var(--rg-cluster-gap, var(--rg-gap));
+}
+
+/* Altura que ocupa el cluster más alto: de ella cuelga la banda superior,
+   así que los gatillos nunca pueden pisar los botones de acción. */
+.rg-pad { --rg-tier: max(var(--rg-dpad), var(--rg-stack, 0px)); }
+
+.rg-pad .rg-cluster-primary {
+    width: var(--rg-dpad) !important;
+    height: var(--rg-dpad) !important;
+}
+
+.rg-pad .ejs_virtualGamepad_left {
+    left: var(--rg-left) !important;
+    right: auto !important;
+}
+
+.rg-pad .ejs_virtualGamepad_right {
+    right: var(--rg-right) !important;
+    left: auto !important;
+}
+
+/* Banda superior: gatillos / botones de ratón, pegados a los extremos. */
+.rg-pad .rg-band-top {
+    left: var(--rg-left) !important;
+    right: var(--rg-right) !important;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Banda central: píldoras de sistema, siempre centradas en horizontal. */
+.rg-pad .rg-band-center {
+    left: 50% !important;
+    right: auto !important;
+    width: -webkit-max-content !important;
+    width: max-content !important;
+    transform: translateX(-50%);
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--rg-gap);
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Vertical: la banda superior y la central comparten franja, justo
+       encima de la cruceta; el conjunto cabe en el marco negro inferior. --- */
+@media (orientation: portrait) {
+    .rg-pad .rg-cluster-primary,
+    .rg-pad .rg-cluster-action { bottom: var(--rg-bottom) !important; }
+
+    .rg-pad .rg-band-top,
+    .rg-pad .rg-band-center {
+        bottom: calc(var(--rg-bottom) + var(--rg-tier) + var(--rg-gap)) !important;
+    }
+
+    /* Amiga tiene cinco píldoras y en vertical no caben en una sola franja:
+       los dos botones de ratón bajan al hueco muerto entre la cruceta y el
+       disparo, apilados como los dos botones de un ratón real. */
+    .rg-pad.rg-sys-amiga .rg-band-top {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%);
+        bottom: var(--rg-bottom) !important;
+        width: -webkit-max-content !important;
+        width: max-content !important;
+        grid-auto-flow: row;
+        gap: var(--rg-gap);
+        justify-content: center;
+    }
+}
+
+/* --- Horizontal: gatillos sobre cada cluster, píldoras abajo al centro. --- */
+@media (orientation: landscape) {
+    .rg-pad .rg-cluster-primary,
+    .rg-pad .rg-cluster-action { bottom: var(--rg-bottom) !important; }
+
+    .rg-pad .rg-band-top {
+        bottom: calc(var(--rg-bottom) + var(--rg-tier) + var(--rg-gap)) !important;
+    }
+
+    .rg-pad .rg-band-center {
+        bottom: calc(var(--rg-sab) + 8px) !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. Botones
+   -------------------------------------------------------------------------- */
+
+.rg-pad .ejs_virtualGamepad_button {
+    position: static !important;      /* anula el left/top en línea de EJS   */
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    pointer-events: auto;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: #fff !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    white-space: nowrap;
+    background-color: transparent;
+    transform: translateY(var(--rg-stagger, 0px));
+    transition: transform .07s ease-out, box-shadow .13s ease, background-color .13s ease, border-color .13s ease;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Botón redondo (cara del mando) */
+.rg-pad .rg-round {
+    width: var(--rg-btn) !important;
+    height: var(--rg-btn) !important;
+    border-radius: 50% !important;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: var(--rg-face-fs) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0 !important;
+    border: 1.5px solid rgba(var(--rg-tone), .72) !important;
+    background:
+        radial-gradient(115% 115% at 50% 14%, rgba(255, 255, 255, .22), rgba(255, 255, 255, 0) 58%),
+        linear-gradient(180deg, rgba(var(--rg-tone), .30), rgba(var(--rg-tone), .07)),
+        var(--rg-glass) !important;
+    box-shadow:
+        0 3px 0 rgba(0, 0, 0, .38),
+        0 10px 20px rgba(0, 0, 0, .40),
+        inset 0 1px 0 rgba(255, 255, 255, .22),
+        0 0 16px rgba(var(--rg-tone), .20) !important;
+    text-shadow: 0 0 10px rgba(var(--rg-tone), .85), 0 1px 2px rgba(0, 0, 0, .8);
+}
+
+/* Píldora (SELECT, START, teclas…) */
+.rg-pad .rg-pill {
+    height: var(--rg-pill-h) !important;
+    width: -webkit-max-content !important;
+    width: max-content !important;
+    min-width: calc(var(--rg-pill-h) * 1.9) !important;
+    padding: 0 var(--rg-pill-pad) !important;
+    border-radius: 999px !important;
+    font-family: 'Press Start 2P', ui-monospace, "SFMono-Regular", Menlo, monospace !important;
+    font-size: var(--rg-pill-fs) !important;
+    font-weight: 400 !important;
+    letter-spacing: .04em;
+    border: 1.5px solid rgba(var(--rg-tone), .60) !important;
+    background:
+        linear-gradient(180deg, rgba(var(--rg-tone), .26), rgba(var(--rg-tone), .06)),
+        var(--rg-glass-deep) !important;
+    box-shadow:
+        0 2px 0 rgba(0, 0, 0, .34),
+        0 6px 14px rgba(0, 0, 0, .38),
+        inset 0 1px 0 rgba(255, 255, 255, .16) !important;
+    text-shadow: 0 0 8px rgba(var(--rg-tone), .8), 0 1px 2px rgba(0, 0, 0, .8);
+}
+
+/* Estado pulsado — `.is-down` lo pone touch-controls.js y
+   `.ejs_virtualGamepad_button_down` es el de EmulatorJS (respaldo). */
+.rg-pad .ejs_virtualGamepad_button.is-down,
+.rg-pad .ejs_virtualGamepad_button.ejs_virtualGamepad_button_down {
+    transform: translateY(calc(var(--rg-stagger, 0px) + 2px)) scale(.93);
+    border-color: rgb(var(--rg-tone)) !important;
+    background:
+        radial-gradient(115% 115% at 50% 14%, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 60%),
+        linear-gradient(180deg, rgba(var(--rg-tone), .72), rgba(var(--rg-tone), .34)),
+        var(--rg-glass) !important;
+    box-shadow:
+        0 0 0 rgba(0, 0, 0, 0),
+        0 0 22px rgba(var(--rg-tone), .8),
+        inset 0 0 16px rgba(var(--rg-tone), .45) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Cruceta
+   -------------------------------------------------------------------------- */
+
+.rg-pad .b_dpad {
+    --rg-tone: 56, 189, 248;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+}
+
+/* Superficie táctil de EmulatorJS: se conserva, se oculta su dibujo. */
+.rg-pad .ejs_dpad_main {
+    opacity: 1 !important;
+    pointer-events: auto;
+    touch-action: none;
+}
+
+.rg-pad .ejs_dpad_horizontal,
+.rg-pad .ejs_dpad_vertical { display: none !important; }
+
+.rg-pad .rg-dpad-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.rg-pad .rg-dpad-body {
+    fill: rgba(9, 12, 26, .70);
+    stroke: rgba(var(--rg-tone), .62);
+    stroke-width: 1.6;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .5));
+}
+
+.rg-pad .rg-seg {
+    fill: rgb(var(--rg-tone));
+    opacity: 0;
+    transition: opacity .07s linear;
+}
+
+.rg-pad .rg-arrow {
+    fill: rgba(226, 240, 255, .62);
+    transition: fill .07s linear;
+}
+
+.rg-pad .rg-hub {
+    fill: none;
+    stroke: rgba(var(--rg-tone), .35);
+    stroke-width: 1.4;
+}
+
+.rg-pad .ejs_dpad_up_pressed    .rg-seg-up,
+.rg-pad .ejs_dpad_down_pressed  .rg-seg-down,
+.rg-pad .ejs_dpad_left_pressed  .rg-seg-left,
+.rg-pad .ejs_dpad_right_pressed .rg-seg-right { opacity: .55; }
+
+.rg-pad .ejs_dpad_up_pressed    .rg-arrow-up,
+.rg-pad .ejs_dpad_down_pressed  .rg-arrow-down,
+.rg-pad .ejs_dpad_left_pressed  .rg-arrow-left,
+.rg-pad .ejs_dpad_right_pressed .rg-arrow-right { fill: #fff; }
+
+/* --------------------------------------------------------------------------
+   5. Distribución y color · SNES
+       X arriba, Y izquierda, A derecha, B abajo (diamante Super Famicom).
+   -------------------------------------------------------------------------- */
+
+/* El diamante no necesita separación: los botones son diagonales entre sí y
+   así el cluster mide tres botones justos de alto. */
+.rg-pad.rg-sys-snes { --rg-cluster-gap: 0px; --rg-stack: calc(var(--rg-btn) * 3); }
+
+.rg-sys-snes .rg-cluster-action {
+    grid-template-columns: repeat(3, var(--rg-btn));
+    grid-template-rows: repeat(3, var(--rg-btn));
+    grid-template-areas:
+        ".  x  ."
+        "y  .  a"
+        ".  b  .";
+}
+
+.rg-sys-snes .b_x { grid-area: x; --rg-tone: 77, 171, 255; }
+.rg-sys-snes .b_y { grid-area: y; --rg-tone: 74, 222, 128; }
+.rg-sys-snes .b_a { grid-area: a; --rg-tone: 255, 77, 109; }
+.rg-sys-snes .b_b { grid-area: b; --rg-tone: 255, 217, 61; }
+.rg-sys-snes .b_l,
+.rg-sys-snes .b_r { --rg-tone: 192, 132, 252; }
+.rg-sys-snes .b_select { --rg-tone: 148, 163, 184; }
+.rg-sys-snes .b_start { --rg-tone: 34, 211, 238; }
+
+/* --------------------------------------------------------------------------
+   6. Distribución y color · ARCADE (MAME)
+       Panel de 6 botones 3x3+3, con el arqueo natural de los dedos.
+   -------------------------------------------------------------------------- */
+
+.rg-pad.rg-sys-arcade { --rg-stack: calc(var(--rg-btn) * 2 + var(--rg-gap)); }
+
+.rg-sys-arcade .rg-cluster-action {
+    grid-template-columns: repeat(3, var(--rg-btn));
+    grid-template-rows: repeat(2, var(--rg-btn));
+    grid-template-areas:
+        "b1 b2 b3"
+        "b4 b5 b6";
+}
+
+.rg-sys-arcade .b_btn1 { grid-area: b1; --rg-tone: 255, 46, 99;  --rg-stagger: 0px; }
+.rg-sys-arcade .b_btn2 { grid-area: b2; --rg-tone: 255, 217, 61; --rg-stagger: -7px; }
+.rg-sys-arcade .b_btn3 { grid-area: b3; --rg-tone: 61, 220, 132; --rg-stagger: -4px; }
+.rg-sys-arcade .b_btn4 { grid-area: b4; --rg-tone: 77, 171, 255; --rg-stagger: 0px; }
+.rg-sys-arcade .b_btn5 { grid-area: b5; --rg-tone: 192, 132, 252; --rg-stagger: -7px; }
+.rg-sys-arcade .b_btn6 { grid-area: b6; --rg-tone: 255, 159, 28; --rg-stagger: -4px; }
+.rg-sys-arcade .b_coin { --rg-tone: 255, 217, 61; }
+.rg-sys-arcade .b_start { --rg-tone: 255, 46, 99; }
+
+/* --------------------------------------------------------------------------
+   7. Distribución y color · AMIGA (PUAE)
+       Disparo grande abajo-derecha, salto encima, 2º disparo a la izquierda.
+   -------------------------------------------------------------------------- */
+
+/* Amiga tiene las etiquetas más largas (TECLADO, MOUSE L…): píldoras algo
+   más compactas para que la fila central nunca alcance a los botones de
+   ratón, que van en los extremos de la misma franja en vertical. */
+.rg-pad.rg-sys-amiga {
+    --rg-stack: calc(var(--rg-btn) * 2.24 + var(--rg-gap));
+    --rg-pill-fs: clamp(7px, 2vmin, 12px);
+    --rg-pill-pad: clamp(6px, 1.5vmin, 13px);
+}
+
+.rg-sys-amiga .rg-cluster-action {
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content;
+    grid-template-areas:
+        ".     jump"
+        "fire2 fire";
+}
+
+.rg-sys-amiga .b_jump {
+    grid-area: jump;
+    --rg-tone: 34, 211, 238;
+    font-size: clamp(17px, 4vmin, 28px) !important;
+}
+
+.rg-sys-amiga .b_fire2 { grid-area: fire2; --rg-tone: 255, 143, 59; }
+
+.rg-sys-amiga .b_fire {
+    grid-area: fire;
+    --rg-tone: 255, 59, 59;
+    width: calc(var(--rg-btn) * 1.24) !important;
+    height: calc(var(--rg-btn) * 1.24) !important;
+    font-size: clamp(11px, 2.4vmin, 16px) !important;
+}
+
+.rg-sys-amiga .b_space { --rg-tone: 165, 180, 252; }
+.rg-sys-amiga .b_enter { --rg-tone: 165, 180, 252; }
+.rg-sys-amiga .b_vkbd { --rg-tone: 240, 171, 252; }
+.rg-sys-amiga .b_mouse_l,
+.rg-sys-amiga .b_mouse_r { --rg-tone: 125, 211, 252; }
+
+/* --------------------------------------------------------------------------
+   8. Botón de menú de EmulatorJS
+       Se agranda el área táctil y se aparta de la "X" de cerrar del modal.
+   -------------------------------------------------------------------------- */
+
+.ejs_virtualGamepad_open.rg-menu {
+    width: 42px !important;
+    height: 42px !important;
+    padding: 11px !important;
+    box-sizing: border-box !important;
+    border-radius: 13px;
+    border: 1px solid rgba(148, 163, 184, .45);
+    background: rgba(6, 8, 20, .6);
+    top: max(9px, env(safe-area-inset-top, 0px)) !important;
+    right: max(9px, env(safe-area-inset-right, 0px)) !important;
+}
+
+.ejs_virtualGamepad_open.rg-menu svg {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (orientation: landscape) {
+    /* En horizontal la cabecera del modal flota sobre el juego: bajamos el
+       botón para que no se pise con "CERRAR X". */
+    .ejs_virtualGamepad_open.rg-menu { top: 52px !important; }
+}
+
+/* --------------------------------------------------------------------------
+   9. Restos del gamepad por defecto que no usamos
+   -------------------------------------------------------------------------- */
+
+.rg-pad .b_speed_fast,
+.rg-pad .b_speed_slow,
+.rg-pad .b_speed_rewind,
+.rg-pad .nipple { display: none !important; }
