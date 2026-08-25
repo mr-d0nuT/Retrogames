@@ -134,6 +134,19 @@
        2. Utilidades
        ---------------------------------------------------------------------- */
 
+    /* La pagina anfitriona pone musica mientras se descarga y carga el juego;
+       le avisamos cuando la partida arranca para que la retire. */
+    function notifyHost(kind) {
+        try {
+            var target = "*";
+            try {
+                var origin = window.parent.location.origin;
+                if (origin && origin !== "null") target = origin;
+            } catch (e) { /* nos quedamos con "*" */ }
+            window.parent.postMessage({ rg: kind }, target);
+        } catch (e) { /* sin padre accesible */ }
+    }
+
     function haptic(ms) {
         try { if (navigator.vibrate) navigator.vibrate(ms); } catch (e) { /* sin vibración */ }
     }
@@ -621,6 +634,7 @@
         if (typeof emulator.on === "function") {
             emulator.on("start", function () {
                 if (input) input.wake();   /* el HUD entra a plena opacidad */
+                notifyHost("gameStart");   /* la pagina baja su musica */
                 try {
                     var coarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
                     var stored = emulator.preGetSetting ? emulator.preGetSetting("virtual-gamepad") : null;
