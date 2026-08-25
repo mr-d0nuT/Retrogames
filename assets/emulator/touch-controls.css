@@ -41,13 +41,13 @@
     transition: opacity .3s ease;
 
     /* --- Escala global -------------------------------------------------- */
-    --rg-btn: clamp(46px, 13vmin, 74px);      /* diámetro botón de acción   */
-    --rg-dpad: clamp(112px, 33vmin, 190px);   /* lado de la cruceta         */
-    --rg-gap: clamp(7px, 1.7vmin, 13px);      /* separación entre botones   */
-    --rg-pill-h: clamp(28px, 7.5vmin, 42px);  /* alto de las píldoras       */
-    --rg-pill-fs: clamp(8px, 2.4vmin, 13px);
-    --rg-pill-pad: clamp(7px, 1.8vmin, 14px);
-    --rg-face-fs: clamp(16px, 3.6vmin, 26px);
+    --rg-btn: clamp(52px, 15vmin, 84px);      /* diámetro botón de acción   */
+    --rg-dpad: clamp(124px, 36vmin, 210px);   /* lado de la palanca         */
+    --rg-gap: clamp(9px, 2.4vmin, 18px);      /* separación entre botones   */
+    --rg-pill-h: clamp(32px, 8.5vmin, 46px);  /* alto de las píldoras       */
+    --rg-pill-fs: clamp(9px, 2.7vmin, 14px);
+    --rg-pill-pad: clamp(8px, 2.1vmin, 16px);
+    --rg-face-fs: clamp(18px, 4.1vmin, 30px);
 
     /* --- Márgenes de seguridad (JS los reescribe con los del padre) ------ */
     --rg-sat: env(safe-area-inset-top, 0px);
@@ -55,7 +55,7 @@
     --rg-sal: env(safe-area-inset-left, 0px);
     --rg-sar: env(safe-area-inset-right, 0px);
     --rg-edge-x: 12px;
-    --rg-edge-b: 12px;
+    --rg-edge-b: 16px;
     --rg-left: calc(var(--rg-edge-x) + var(--rg-sal));
     --rg-right: calc(var(--rg-edge-x) + var(--rg-sar));
     --rg-bottom: calc(var(--rg-edge-b) + var(--rg-sab));
@@ -66,12 +66,36 @@
     --rg-tone: 148, 163, 184;                 /* gris pizarra por defecto   */
 }
 
+/* Móviles estrechos: con los botones a tamaño grande, tres columnas más la
+   palanca no caben a lo ancho. Aquí el mando encoge un punto. */
+@media (max-width: 380px) {
+    .ejs_virtualGamepad_parent.rg-pad {
+        --rg-btn: clamp(46px, 13.5vmin, 84px);
+        --rg-dpad: clamp(112px, 32vmin, 210px);
+        --rg-gap: clamp(7px, 2vmin, 18px);
+        --rg-pill-h: clamp(30px, 8vmin, 46px);
+        --rg-pill-fs: clamp(8px, 2.5vmin, 14px);
+        --rg-pill-pad: clamp(7px, 1.9vmin, 16px);
+    }
+}
+
+/* En vertical EmulatorJS ancla la imagen arriba y queda mucho negro libre
+   debajo: subimos los controles para tenerlos más a mano. En horizontal la
+   imagen ocupa todo el alto, así que ahí el margen se queda discreto. */
+@media (orientation: portrait) {
+    .ejs_virtualGamepad_parent.rg-pad { --rg-edge-b: 34px; }
+}
+
 /* Tablets y pantallas grandes: más aire contra los bordes. */
 @media (min-width: 780px) and (min-height: 560px) {
     .ejs_virtualGamepad_parent.rg-pad {
         --rg-edge-x: 26px;
-        --rg-edge-b: 22px;
+        --rg-edge-b: 24px;
     }
+}
+
+@media (min-width: 780px) and (min-height: 560px) and (orientation: portrait) {
+    .ejs_virtualGamepad_parent.rg-pad { --rg-edge-b: 48px; }
 }
 
 /* Atenuado por inactividad: sigue siendo pulsable, molesta menos. */
@@ -168,6 +192,18 @@
         grid-auto-flow: row;
         gap: var(--rg-gap);
         justify-content: center;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 380px) {
+    .rg-pad.rg-sys-amiga .rg-band-top {
+        left: var(--rg-left) !important;
+        right: var(--rg-right) !important;
+        transform: none;
+        width: auto !important;
+        bottom: calc(var(--rg-bottom) + var(--rg-tier) + var(--rg-pill-h) + var(--rg-gap) * 2) !important;
+        grid-auto-flow: column;
+        justify-content: space-between;
     }
 }
 

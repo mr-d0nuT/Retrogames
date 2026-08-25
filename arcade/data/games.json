@@ -126,6 +126,12 @@
     "cover": "assets/covers/mystwarr.png"
   },
   {
+    "id": "out-run",
+    "title": "Out Run",
+    "rom": "roms/outrun.zip",
+    "cover": "assets/covers/outrun.png"
+  },
+  {
     "id": "pang",
     "title": "Pang",
     "rom": "roms/pang.zip",

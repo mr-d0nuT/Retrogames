@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </style>
 
             <!-- HUD de controles tactiles (posiciones por sistema y orientacion) -->
-            <link rel="stylesheet" href="../assets/emulator/touch-controls.css?v=5">
+            <link rel="stylesheet" href="../assets/emulator/touch-controls.css?v=6">
         </head>
         <body>
             <div id="game"></div>
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </script>
 
             <script>window.RG_SYSTEM = 'arcade';</script>
-            <script src="../assets/emulator/touch-controls.js?v=5"></script>
+            <script src="../assets/emulator/touch-controls.js?v=6"></script>
             <script src="../emulatorjs/data/loader.js"></script>
         </body>
         </html>
