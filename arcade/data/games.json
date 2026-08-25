@@ -6,6 +6,12 @@
     "cover": "assets/covers/altbeast.png"
   },
   {
+    "id": "tetris",
+    "title": "Tetris",
+    "rom": "roms/atetris.zip",
+    "cover": "assets/covers/atetris.png"
+  },
+  {
     "id": "captain-commando",
     "title": "Captain Commando",
     "rom": "roms/captcomm.zip",

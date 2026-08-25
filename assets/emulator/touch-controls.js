@@ -372,7 +372,7 @@
                 delete active[id];
             }
             for (var index in counts) {
-                if (counts[index] > 0) sim(index, 0);
+                if (counts[index] > 0) sim(+index, 0);   /* las claves son texto */
                 counts[index] = 0;
             }
             dstate = { up: 0, down: 0, left: 0, right: 0 };
@@ -447,6 +447,17 @@
         root.addEventListener("touchmove", onMove, { capture: true, passive: false });
         root.addEventListener("touchend", onEnd, { capture: true, passive: false });
         root.addEventListener("touchcancel", onEnd, { capture: true, passive: false });
+
+        /* Red de seguridad: si no queda ningún dedo en la pantalla, no puede
+           quedar nada pulsado. Cubre los touchend que nunca llegan (el dedo se
+           va a la barra del navegador, una llamada entrante, un gesto del
+           sistema…), que dejarían una dirección encasquillada. */
+        function allFingersUp(e) {
+            if (e.touches.length) return;
+            setTimeout(releaseAll, 0);   /* tras la ruta normal de soltado */
+        }
+        document.addEventListener("touchend", allFingersUp, true);
+        document.addEventListener("touchcancel", allFingersUp, true);
 
         /* Nada de teclas encasquilladas al girar el móvil o cambiar de app. */
         window.addEventListener("orientationchange", releaseAll);

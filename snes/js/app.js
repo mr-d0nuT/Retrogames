@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </style>
 
             <!-- HUD de controles tactiles (posiciones por sistema y orientacion) -->
-            <link rel="stylesheet" href="../assets/emulator/touch-controls.css?v=4">
+            <link rel="stylesheet" href="../assets/emulator/touch-controls.css?v=5">
         </head>
         <body>
             <div id="game"></div>
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </script>
 
             <script>window.RG_SYSTEM = 'snes';</script>
-            <script src="../assets/emulator/touch-controls.js?v=4"></script>
+            <script src="../assets/emulator/touch-controls.js?v=5"></script>
             <script src="../emulatorjs/data/loader.js"></script>
         </body>
         </html>
