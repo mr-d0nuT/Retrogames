@@ -33,7 +33,7 @@
     var PAD = {
         B: 0, Y: 1, SELECT: 2, START: 3,
         UP: 4, DOWN: 5, LEFT: 6, RIGHT: 7,
-        A: 8, X: 9, L: 10, R: 11
+        A: 8, X: 9, L: 10, R: 11, L2: 12, R2: 13
     };
 
     /* ----------------------------------------------------------------------
@@ -47,8 +47,10 @@
                 en EJS_defaultOptions. El botón "▲" repite el UP del joystick,
                 que en Amiga es el salto de casi todos los juegos.
                 JOY/MOUSE conmuta el modo raton del nucleo: con el activado la
-                cruceta mueve el puntero y FUEGO/F2 son los clics. Ademas, el
-                dedo sobre la pantalla mueve el raton (ver installPointerBridge).
+                palanca mueve el puntero y FUEGO es el clic. Ademas, el dedo
+                sobre la pantalla mueve el raton (ver installPointerBridge).
+                F1 y F2 son teclas de verdad (RETROK_F1/F2): mediante ellas
+                arrancan muchisimos juegos ("Press F1 for 1 player").
        ---------------------------------------------------------------------- */
     var LAYOUTS = {
         snes: {
@@ -81,12 +83,15 @@
                 "puae_mapper_y": "RETROK_RETURN",
                 "puae_mapper_l": "MOUSE_LEFT_BUTTON",
                 "puae_mapper_r": "MOUSE_RIGHT_BUTTON",
+                "puae_mapper_l2": "RETROK_F1",
+                "puae_mapper_r2": "RETROK_F2",
                 "puae_mapper_select": "TOGGLE_VKBD",
                 "puae_mapper_start": "SWITCH_JOYMOUSE"
             },
             buttons: [
                 { id: "jump", text: "▲", input: PAD.UP, location: "right", shape: "round", label: "Saltar" },
-                { id: "fire2", text: "F2", input: PAD.A, location: "right", shape: "round", label: "Disparo 2" },
+                { id: "f1", text: "F1", input: PAD.L2, location: "right", shape: "round", label: "Tecla F1" },
+                { id: "f2", text: "F2", input: PAD.R2, location: "right", shape: "round", label: "Tecla F2" },
                 { id: "fire", text: "FIRE", input: PAD.B, location: "right", shape: "round", label: "Disparo" },
                 { id: "mouse_l", text: "MOUSE L", input: PAD.L, location: "top", shape: "pill" },
                 { id: "mouse_r", text: "MOUSE R", input: PAD.R, location: "top", shape: "pill" },
@@ -164,8 +169,18 @@
     }
 
     /* ----------------------------------------------------------------------
-       3. Cruceta: dibujo vectorial sobre la superficie táctil de EmulatorJS
+       3. Mando direccional: dibujo vectorial sobre la superficie tactil
+       ----------------------------------------------------------------------
+       SNES conserva la cruceta (sus juegos son de cruz). Arcade y Amiga usan
+       una palanca de bola roja: el dedo arrastra la bola y el angulo se lee de
+       forma continua, que es lo que hace llevaderos los cuartos de circulo de
+       los juegos de lucha. La superficie tactil es la misma en los dos casos,
+       asi que la logica de entrada no cambia.
        ---------------------------------------------------------------------- */
+
+    var STICK_SYSTEMS = { arcade: true, amiga: true };
+    var KNOB_TRAVEL = 23;      /* recorrido de la bola, en unidades del viewBox */
+    var KNOB_RANGE = 0.36;     /* fraccion del lado con la que la bola llega al tope */
 
     var DPAD_PATH =
         "M33,13 A11,11 0 0 1 44,2 L56,2 A11,11 0 0 1 67,13 L67,26 A7,7 0 0 0 74,33 " +
@@ -173,9 +188,42 @@
         "L67,87 A11,11 0 0 1 56,98 L44,98 A11,11 0 0 1 33,87 L33,74 A7,7 0 0 0 26,67 " +
         "L13,67 A11,11 0 0 1 2,56 L2,44 A11,11 0 0 1 13,33 L26,33 A7,7 0 0 0 33,26 Z";
 
+    var STICK_ART =
+        '<svg class="rg-dpad-art rg-stick-art" viewBox="0 0 100 100" aria-hidden="true" focusable="false">' +
+            '<defs>' +
+                '<radialGradient id="rg-ball-grad" cx="34%" cy="27%" r="76%">' +
+                    '<stop offset="0%" stop-color="#ffc0c4"/>' +
+                    '<stop offset="30%" stop-color="#ff3b52"/>' +
+                    '<stop offset="100%" stop-color="#7a0012"/>' +
+                '</radialGradient>' +
+            '</defs>' +
+            '<circle class="rg-stick-base" cx="50" cy="50" r="45"/>' +
+            '<circle class="rg-stick-gate" cx="50" cy="50" r="30"/>' +
+            '<g class="rg-stick-marks">' +
+                '<circle class="rg-mark rg-mark-up" cx="50" cy="10" r="2.6"/>' +
+                '<circle class="rg-mark rg-mark-down" cx="50" cy="90" r="2.6"/>' +
+                '<circle class="rg-mark rg-mark-left" cx="10" cy="50" r="2.6"/>' +
+                '<circle class="rg-mark rg-mark-right" cx="90" cy="50" r="2.6"/>' +
+                '<circle class="rg-mark-diag" cx="21.7" cy="21.7" r="1.5"/>' +
+                '<circle class="rg-mark-diag" cx="78.3" cy="21.7" r="1.5"/>' +
+                '<circle class="rg-mark-diag" cx="21.7" cy="78.3" r="1.5"/>' +
+                '<circle class="rg-mark-diag" cx="78.3" cy="78.3" r="1.5"/>' +
+            '</g>' +
+            '<g class="rg-knob">' +
+                '<ellipse class="rg-knob-shadow" cx="50" cy="73" rx="16" ry="4.5"/>' +
+                '<circle class="rg-knob-ring" cx="50" cy="50" r="21.5"/>' +
+                '<circle class="rg-knob-ball" cx="50" cy="50" r="20" fill="url(#rg-ball-grad)"/>' +
+                '<ellipse class="rg-knob-shine" cx="43" cy="41" rx="7" ry="4.8" transform="rotate(-28 43 41)"/>' +
+            '</g>' +
+        '</svg>';
+
     function paintDpad(host) {
         if (host.querySelector(".rg-dpad-art")) return;
-        host.insertAdjacentHTML("afterbegin",
+        if (STICK_SYSTEMS[SYSTEM]) {
+            host.insertAdjacentHTML("beforeend", STICK_ART);
+            return;
+        }
+        host.insertAdjacentHTML("beforeend",
             '<svg class="rg-dpad-art" viewBox="0 0 100 100" aria-hidden="true" focusable="false">' +
                 '<defs><clipPath id="rg-dpad-clip"><path d="' + DPAD_PATH + '"/></clipPath></defs>' +
                 '<path class="rg-dpad-body" d="' + DPAD_PATH + '"/>' +
@@ -209,6 +257,26 @@
         var active = Object.create(null);   // id de toque -> destino
         var dstate = { up: 0, down: 0, left: 0, right: 0 };
         var idleTimer = null;
+        var knob = root.querySelector(".rg-knob");
+        var stick = root.querySelector(".rg-stick-art");
+
+        /* Lleva la bola bajo el dedo. Pasado el tope se queda en el borde, pero
+           el angulo se sigue leyendo: se puede rodar el pulgar por fuera de la
+           base sin perder la direccion. */
+        function moveKnob(dx, dy, size) {
+            if (!knob) return;
+            var reach = size * KNOB_RANGE;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            var clamp = (dist > reach && dist > 0) ? reach / dist : 1;
+            var ux = dx * clamp / reach * KNOB_TRAVEL;
+            var uy = dy * clamp / reach * KNOB_TRAVEL;
+            knob.style.transform = "translate(" + ux.toFixed(2) + "px," + uy.toFixed(2) + "px)";
+        }
+
+        function centerKnob() {
+            if (knob) knob.style.transform = "";
+            if (stick) stick.classList.remove("is-active");
+        }
 
         function sim(index, value) {
             var emu = window.EJS_emulator;
@@ -250,6 +318,8 @@
             var box = dpadSurface.getBoundingClientRect();
             var dx = clientX - (box.left + box.width / 2);
             var dy = clientY - (box.top + box.height / 2);
+            moveKnob(dx, dy, box.width);
+            if (stick) stick.classList.add("is-active");
             if (Math.sqrt(dx * dx + dy * dy) < box.width * DEAD_ZONE) return setDpad(0, 0, 0, 0);
 
             var a = Math.atan2(-dy, dx) * 180 / Math.PI;
@@ -293,6 +363,7 @@
                 counts[index] = 0;
             }
             dstate = { up: 0, down: 0, left: 0, right: 0 };
+            centerKnob();
             if (dpadSurface) {
                 dpadSurface.classList.remove("ejs_dpad_up_pressed", "ejs_dpad_down_pressed",
                     "ejs_dpad_left_pressed", "ejs_dpad_right_pressed");
@@ -353,7 +424,7 @@
                 if (!slot) continue;
                 handled = true;
                 delete active[touches[i].identifier];
-                if (slot.dpad) setDpad(0, 0, 0, 0);
+                if (slot.dpad) { setDpad(0, 0, 0, 0); centerKnob(); }
                 else if (slot.button) drop(slot.button);
             }
             if (handled) { e.preventDefault(); e.stopPropagation(); wake(); }
@@ -454,7 +525,55 @@
     }
 
     /* ----------------------------------------------------------------------
-       6. Montaje
+       6. Salir estando en pantalla completa
+       ----------------------------------------------------------------------
+       EmulatorJS pone en pantalla completa SU contenedor, que vive dentro del
+       iframe: la cabecera del modal (con "CERRAR X") deja de dibujarse y no
+       hay forma evidente de salir. Clonamos ese boton dentro del elemento a
+       pantalla completa y lo mostramos solo mientras dure.
+       ---------------------------------------------------------------------- */
+
+    function fullscreenElement() {
+        return document.fullscreenElement || document.webkitFullscreenElement ||
+            document.mozFullScreenElement || document.msFullscreenElement || null;
+    }
+
+    function installFullscreenClose(host) {
+        var button = document.createElement("div");
+        button.className = "rg-close";
+        button.setAttribute("role", "button");
+        button.setAttribute("aria-label", "Cerrar el juego");
+        button.textContent = "CERRAR X";
+        host.appendChild(button);
+
+        var closing = false;
+        function close(e) {
+            if (e) { e.preventDefault(); e.stopPropagation(); }
+            if (closing) return;
+            closing = true;
+            try {
+                if (document.exitFullscreen) document.exitFullscreen();
+                else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            } catch (err) { /* puede que ya no estemos en pantalla completa */ }
+            /* El modal (y con el, este iframe) lo cierra la pagina anfitriona. */
+            try {
+                var parentClose = window.parent.document.getElementById("close-emulator");
+                if (parentClose) { parentClose.click(); return; }
+            } catch (err) { /* otro origen: al menos hemos salido de pantalla completa */ }
+            closing = false;
+        }
+
+        button.addEventListener("touchstart", close, { passive: false });
+        button.addEventListener("click", close);
+
+        function sync() { host.classList.toggle("rg-is-fullscreen", !!fullscreenElement()); }
+        ["fullscreenchange", "webkitfullscreenchange", "mozfullscreenchange", "MSFullscreenChange"]
+            .forEach(function (name) { document.addEventListener(name, sync); });
+        sync();
+    }
+
+    /* ----------------------------------------------------------------------
+       7. Montaje
        ---------------------------------------------------------------------- */
 
     function decorate(emulator) {
@@ -488,6 +607,10 @@
 
         if (SYSTEM === "amiga" && emulator.canvas) {
             installPointerBridge(emulator.canvas);
+        }
+
+        if (emulator.elements && emulator.elements.parent) {
+            installFullscreenClose(emulator.elements.parent);
         }
 
         /* iPadOS se identifica como escritorio, así que EmulatorJS deja el

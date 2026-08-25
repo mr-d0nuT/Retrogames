@@ -331,15 +331,53 @@
     stroke-width: 1.4;
 }
 
-.rg-pad .ejs_dpad_up_pressed    .rg-seg-up,
-.rg-pad .ejs_dpad_down_pressed  .rg-seg-down,
-.rg-pad .ejs_dpad_left_pressed  .rg-seg-left,
-.rg-pad .ejs_dpad_right_pressed .rg-seg-right { opacity: .55; }
+/* El dibujo es hermano de la superficie tactil (va detras de ella en el DOM),
+   de ahi el combinador "~": asi el resaltado funciona tanto con nuestra capa
+   de entrada como con la de EmulatorJS, que pone estas mismas clases. */
+.rg-pad .ejs_dpad_up_pressed    ~ .rg-dpad-art .rg-seg-up,
+.rg-pad .ejs_dpad_down_pressed  ~ .rg-dpad-art .rg-seg-down,
+.rg-pad .ejs_dpad_left_pressed  ~ .rg-dpad-art .rg-seg-left,
+.rg-pad .ejs_dpad_right_pressed ~ .rg-dpad-art .rg-seg-right { opacity: .55; }
 
-.rg-pad .ejs_dpad_up_pressed    .rg-arrow-up,
-.rg-pad .ejs_dpad_down_pressed  .rg-arrow-down,
-.rg-pad .ejs_dpad_left_pressed  .rg-arrow-left,
-.rg-pad .ejs_dpad_right_pressed .rg-arrow-right { fill: #fff; }
+.rg-pad .ejs_dpad_up_pressed    ~ .rg-dpad-art .rg-arrow-up,
+.rg-pad .ejs_dpad_down_pressed  ~ .rg-dpad-art .rg-arrow-down,
+.rg-pad .ejs_dpad_left_pressed  ~ .rg-dpad-art .rg-arrow-left,
+.rg-pad .ejs_dpad_right_pressed ~ .rg-dpad-art .rg-arrow-right { fill: #fff; }
+
+/* --------------------------------------------------------------------------
+   4b. Palanca de bola (Arcade y Amiga)
+   -------------------------------------------------------------------------- */
+
+.rg-pad .rg-stick-base {
+    fill: rgba(9, 12, 26, .62);
+    stroke: rgba(var(--rg-tone), .5);
+    stroke-width: 1.5;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .5));
+}
+
+.rg-pad .rg-stick-gate {
+    fill: rgba(255, 255, 255, .03);
+    stroke: rgba(var(--rg-tone), .16);
+    stroke-width: 1;
+}
+
+.rg-pad .rg-mark { fill: rgba(226, 240, 255, .34); transition: fill .07s linear; }
+.rg-pad .rg-mark-diag { fill: rgba(226, 240, 255, .16); }
+
+.rg-pad .ejs_dpad_up_pressed    ~ .rg-stick-art .rg-mark-up,
+.rg-pad .ejs_dpad_down_pressed  ~ .rg-stick-art .rg-mark-down,
+.rg-pad .ejs_dpad_left_pressed  ~ .rg-stick-art .rg-mark-left,
+.rg-pad .ejs_dpad_right_pressed ~ .rg-stick-art .rg-mark-right { fill: #fff; }
+
+/* La bola vuelve al centro con un pequeño rebote al soltar; mientras el dedo
+   la lleva no hay transicion, para que no vaya por detras del pulgar. */
+.rg-pad .rg-knob { transition: transform .16s cubic-bezier(.22, .9, .28, 1); }
+.rg-pad .rg-stick-art.is-active .rg-knob { transition: none; }
+
+.rg-pad .rg-knob-shadow { fill: rgba(0, 0, 0, .45); }
+.rg-pad .rg-knob-ring { fill: none; stroke: rgba(255, 255, 255, .26); stroke-width: 1.3; }
+.rg-pad .rg-knob-ball { filter: drop-shadow(0 3px 7px rgba(255, 45, 70, .5)); }
+.rg-pad .rg-knob-shine { fill: rgba(255, 255, 255, .5); }
 
 /* --------------------------------------------------------------------------
    5. Distribución y color · SNES
@@ -410,8 +448,8 @@
     grid-template-columns: max-content max-content;
     grid-template-rows: max-content max-content;
     grid-template-areas:
-        ".     jump"
-        "fire2 fire";
+        "f1 jump"
+        "f2 fire";
 }
 
 .rg-sys-amiga .b_jump {
@@ -420,7 +458,9 @@
     font-size: clamp(17px, 4vmin, 28px) !important;
 }
 
-.rg-sys-amiga .b_fire2 { grid-area: fire2; --rg-tone: 255, 143, 59; }
+/* F1 y F2 son teclas del Amiga, no disparos: van con el tono de las teclas. */
+.rg-sys-amiga .b_f1 { grid-area: f1; --rg-tone: 165, 180, 252; font-size: clamp(13px, 2.9vmin, 20px) !important; }
+.rg-sys-amiga .b_f2 { grid-area: f2; --rg-tone: 165, 180, 252; font-size: clamp(13px, 2.9vmin, 20px) !important; }
 
 .rg-sys-amiga .b_fire {
     grid-area: fire;
@@ -465,6 +505,42 @@
        botón para que no se pise con "CERRAR X". */
     .ejs_virtualGamepad_open.rg-menu { top: 52px !important; }
 }
+
+/* --------------------------------------------------------------------------
+   8b. Salir estando en pantalla completa
+       EmulatorJS pone a pantalla completa su propio contenedor, dentro del
+       iframe, asi que la cabecera del modal desaparece. Este boton la sustituye
+       mientras dure, y aparta al de menu para que no se pisen.
+   -------------------------------------------------------------------------- */
+
+.ejs_parent .rg-close {
+    display: none;
+    position: absolute;
+    top: max(9px, env(safe-area-inset-top, 0px));
+    right: max(9px, env(safe-area-inset-right, 0px));
+    z-index: 30;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background: #ef4444;
+    color: #fff;
+    font-family: 'Press Start 2P', ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 10px;
+    letter-spacing: .06em;
+    line-height: 1;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .45);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.ejs_parent.rg-is-fullscreen .rg-close { display: flex; }
+
+.ejs_parent.rg-is-fullscreen .ejs_virtualGamepad_open.rg-menu { top: 56px !important; }
 
 /* --------------------------------------------------------------------------
    9. Restos del gamepad por defecto que no usamos

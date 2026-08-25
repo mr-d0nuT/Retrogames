@@ -128,7 +128,12 @@ document.addEventListener("DOMContentLoaded", () => {
         iframe.style.height = "100%";
         iframe.style.border = "none";
         iframe.id = "emulator-iframe";
-        
+        // Sin esto el navegador rechaza el requestFullscreen de dentro del
+        // iframe ("Permissions check failed") y el boton de pantalla completa
+        // de EmulatorJS no hace nada.
+        iframe.allow = "fullscreen";
+        iframe.allowFullscreen = true;
+
         container.appendChild(iframe);
 
         const iframeDoc = iframe.contentWindow.document;
@@ -162,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </style>
 
             <!-- HUD de controles tactiles (posiciones por sistema y orientacion) -->
-            <link rel="stylesheet" href="../assets/emulator/touch-controls.css?v=3">
+            <link rel="stylesheet" href="../assets/emulator/touch-controls.css?v=4">
         </head>
         <body>
             <div id="game"></div>
@@ -190,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </script>
 
             <script>window.RG_SYSTEM = 'amiga';</script>
-            <script src="../assets/emulator/touch-controls.js?v=3"></script>
+            <script src="../assets/emulator/touch-controls.js?v=4"></script>
             <script src="../emulatorjs/data/loader.js"></script>
         </body>
         </html>
