@@ -6,8 +6,8 @@
     "cover": "assets/covers/altbeast.png"
   },
   {
-    "id": "tetris",
-    "title": "Tetris",
+    "id": "atetris",
+    "title": "atetris",
     "rom": "roms/atetris.zip",
     "cover": "assets/covers/atetris.png"
   },
