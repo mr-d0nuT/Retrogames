@@ -216,6 +216,13 @@ class EmulatorJS {
         this.rewindEnabled = this.preGetSetting("rewindEnabled") === "enabled";
         this.touch = false;
         this.cheats = [];
+        // Parche local sobre EmulatorJS 4.2.3: `allSettings` se creaba dentro de
+        // setupSettingsMenu(), que corre DESPUES de setupDisksMenu(). En juegos
+        // de varios discos (casi todo Amiga) el menu de discos llamaba a
+        // menuOptionChanged("disk", ...) con allSettings todavia undefined y la
+        // partida moria con "Failed to start game". Upstream ya lo inicializa en
+        // el constructor; hacemos lo mismo.
+        this.allSettings = {};
         this.started = false;
         this.volume = (typeof this.config.volume === "number") ? this.config.volume : 0.5;
         if (this.config.defaultControllers) this.defaultControllers = this.config.defaultControllers;
@@ -4253,7 +4260,15 @@ class EmulatorJS {
         if (option === "shader") {
             this.enableShader(value);
         } else if (option === "disk") {
-            this.gameManager.setCurrentDisk(value);
+            // Parche local sobre EmulatorJS 4.2.3: al construir el menu de discos
+            // se "selecciona" el disco actual, lo que disparaba un set_current_disk
+            // redundante antes de que el nucleo estuviera listo; en PUAE eso aborta
+            // el WASM ("unreachable") y la partida no arranca. Solo cambiamos de
+            // disco cuando de verdad es otro.
+            const requestedDisk = parseInt(value, 10);
+            if (!isNaN(requestedDisk) && requestedDisk !== this.gameManager.getCurrentDisk()) {
+                this.gameManager.setCurrentDisk(requestedDisk);
+            }
         } else if (option === "virtual-gamepad") {
             this.toggleVirtualGamepad(value !== "disabled");
         } else if (option === "menu-bar-button") {
@@ -4535,7 +4550,6 @@ class EmulatorJS {
         const nested = this.createElement("div");
         nested.classList.add("ejs_settings_transition");
         this.settings = {};
-        this.allSettings = {};
         const menus = [];
         let parentMenuCt = 0;
 

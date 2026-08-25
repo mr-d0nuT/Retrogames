@@ -433,6 +433,7 @@
 .rg-sys-amiga .b_space { --rg-tone: 165, 180, 252; }
 .rg-sys-amiga .b_enter { --rg-tone: 165, 180, 252; }
 .rg-sys-amiga .b_vkbd { --rg-tone: 240, 171, 252; }
+.rg-sys-amiga .b_joymouse { --rg-tone: 125, 211, 252; }
 .rg-sys-amiga .b_mouse_l,
 .rg-sys-amiga .b_mouse_r { --rg-tone: 125, 211, 252; }
 

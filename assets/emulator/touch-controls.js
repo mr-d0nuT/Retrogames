@@ -43,9 +43,12 @@
                 B=botón 1, A=2, Y=3, X=4, L=5, R=6, SELECT=moneda, START=start.
                 Por eso las etiquetas son los números reales de MAME.
        AMIGA  · PUAE: B=disparo, A=2º disparo, X=Space (por defecto),
-                SELECT=teclado virtual (por defecto). Y, L y R se mapean en
-                EJS_defaultOptions. El botón "▲" repite el UP del joystick,
+                SELECT=teclado virtual (por defecto). Y, L, R y START se mapean
+                en EJS_defaultOptions. El botón "▲" repite el UP del joystick,
                 que en Amiga es el salto de casi todos los juegos.
+                JOY/MOUSE conmuta el modo raton del nucleo: con el activado la
+                cruceta mueve el puntero y FUEGO/F2 son los clics. Ademas, el
+                dedo sobre la pantalla mueve el raton (ver installPointerBridge).
        ---------------------------------------------------------------------- */
     var LAYOUTS = {
         snes: {
@@ -78,7 +81,8 @@
                 "puae_mapper_y": "RETROK_RETURN",
                 "puae_mapper_l": "MOUSE_LEFT_BUTTON",
                 "puae_mapper_r": "MOUSE_RIGHT_BUTTON",
-                "puae_mapper_select": "TOGGLE_VKBD"
+                "puae_mapper_select": "TOGGLE_VKBD",
+                "puae_mapper_start": "SWITCH_JOYMOUSE"
             },
             buttons: [
                 { id: "jump", text: "▲", input: PAD.UP, location: "right", shape: "round", label: "Saltar" },
@@ -88,7 +92,8 @@
                 { id: "mouse_r", text: "MOUSE R", input: PAD.R, location: "top", shape: "pill" },
                 { id: "space", text: "SPACE", input: PAD.X, location: "center", shape: "pill" },
                 { id: "enter", text: "ENTER", input: PAD.Y, location: "center", shape: "pill" },
-                { id: "vkbd", text: "TECLADO", input: PAD.SELECT, location: "center", shape: "pill" }
+                { id: "vkbd", text: "TECLADO", input: PAD.SELECT, location: "center", shape: "pill" },
+                { id: "joymouse", text: "JOY/MOUSE", input: PAD.START, location: "center", shape: "pill", label: "Cambiar entre joystick y raton" }
             ]
         }
     };
@@ -372,7 +377,84 @@
     }
 
     /* ----------------------------------------------------------------------
-       5. Montaje
+       5. Amiga: arrastrar por la pantalla mueve el raton
+       ----------------------------------------------------------------------
+       PUAE toma el raton de los eventos de raton del navegador, asi que
+       traducimos el dedo a movimiento relativo sobre el lienzo. Un toque corto
+       y quieto es un clic izquierdo; arrastrar SOLO mueve el puntero. (Antes
+       cada arrastre empezaba con un clic, asi que era imposible apuntar en
+       juegos como Lemmings sin pulsar lo primero que hubiera debajo.)
+       ---------------------------------------------------------------------- */
+
+    var POINTER = { speed: 1.6, tapMs: 260, tapPx: 12, clickMs: 90 };
+
+    function installPointerBridge(canvas) {
+        var touchId = null, startX = 0, startY = 0, lastX = 0, lastY = 0, startAt = 0, dragged = false;
+
+        function mouse(type, x, y, mx, my) {
+            /* Sin burbujeo a proposito: el nucleo escucha en el propio lienzo,
+               mientras que EmulatorJS abre su barra de menu con cualquier
+               mousemove que suba hasta el contenedor. Asi el raton llega al
+               juego sin que el menu tape los controles a cada arrastre. */
+            var ev = new MouseEvent(type, {
+                bubbles: false, cancelable: true, view: window, button: 0,
+                clientX: x, clientY: y
+            });
+            if (typeof mx === "number") {
+                Object.defineProperty(ev, "movementX", { value: mx });
+                Object.defineProperty(ev, "movementY", { value: my });
+            }
+            canvas.dispatchEvent(ev);
+        }
+
+        function mine(list) {
+            for (var i = 0; i < list.length; i++) {
+                if (list[i].identifier === touchId) return list[i];
+            }
+            return null;
+        }
+
+        canvas.addEventListener("touchstart", function (e) {
+            if (touchId !== null) return;               /* solo el primer dedo */
+            var t = e.changedTouches[0];
+            touchId = t.identifier;
+            startX = lastX = t.clientX;
+            startY = lastY = t.clientY;
+            startAt = Date.now();
+            dragged = false;
+            e.preventDefault();
+        }, { passive: false });
+
+        canvas.addEventListener("touchmove", function (e) {
+            var t = mine(e.changedTouches);
+            if (!t) return;
+            var dx = t.clientX - lastX, dy = t.clientY - lastY;
+            lastX = t.clientX;
+            lastY = t.clientY;
+            if (Math.abs(t.clientX - startX) > POINTER.tapPx ||
+                Math.abs(t.clientY - startY) > POINTER.tapPx) dragged = true;
+            if (dx || dy) mouse("mousemove", t.clientX, t.clientY, dx * POINTER.speed, dy * POINTER.speed);
+            e.preventDefault();
+        }, { passive: false });
+
+        function release(e) {
+            var t = mine(e.changedTouches);
+            if (!t) return;
+            touchId = null;
+            if (!dragged && Date.now() - startAt < POINTER.tapMs) {
+                mouse("mousedown", t.clientX, t.clientY);
+                haptic(9);
+                setTimeout(function () { mouse("mouseup", t.clientX, t.clientY); }, POINTER.clickMs);
+            }
+            e.preventDefault();
+        }
+
+        canvas.addEventListener("touchend", release, { passive: false });
+        canvas.addEventListener("touchcancel", release, { passive: false });
+    }
+
+    /* ----------------------------------------------------------------------
+       6. Montaje
        ---------------------------------------------------------------------- */
 
     function decorate(emulator) {
@@ -402,6 +484,10 @@
 
         if (emulator.elements && emulator.elements.menuToggle) {
             emulator.elements.menuToggle.classList.add("rg-menu");
+        }
+
+        if (SYSTEM === "amiga" && emulator.canvas) {
+            installPointerBridge(emulator.canvas);
         }
 
         /* iPadOS se identifica como escritorio, así que EmulatorJS deja el
